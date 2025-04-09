@@ -1,66 +1,135 @@
-import type {ReactNode} from 'react';
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import React from "react";
+import clsx from "clsx";
+import Heading from "@theme/Heading";
+import styles from "./styles.module.css";
+
+// Define icons for each feature
+const GraduationIcon = () => (
+  <div className={styles.featureIcon}>
+    <svg
+      width="48"
+      height="48"
+      viewBox="0 0 48 48"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M24 5L2 15L24 25L46 15L24 5Z" fill="#5D37D3" />
+      <path d="M12 33V20L34 30V43" stroke="#5D37D3" strokeWidth="2" />
+      <path
+        d="M24 36C27.3137 36 30 33.3137 30 30C30 26.6863 27.3137 24 24 24C20.6863 24 18 26.6863 18 30C18 33.3137 20.6863 36 24 36Z"
+        fill="#F9A825"
+      />
+    </svg>
+  </div>
+);
+
+const BuilderIcon = () => (
+  <div className={styles.featureIcon}>
+    <svg
+      width="48"
+      height="48"
+      viewBox="0 0 48 48"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect x="12" y="12" width="24" height="24" rx="2" fill="#FFC107" />
+      <path
+        d="M18 22H30"
+        stroke="#FFFFFF"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+      <path
+        d="M18 26H30"
+        stroke="#FFFFFF"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+      <path
+        d="M18 30H24"
+        stroke="#FFFFFF"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
+  </div>
+);
+
+const CommunityIcon = () => (
+  <div className={styles.featureIcon}>
+    <svg
+      width="48"
+      height="48"
+      viewBox="0 0 48 48"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="24" cy="24" r="16" stroke="#4FC3F7" strokeWidth="2" />
+      <path d="M14 24H34" stroke="#4FC3F7" strokeWidth="2" />
+      <path d="M24 14V34" stroke="#4FC3F7" strokeWidth="2" />
+      <circle cx="24" cy="24" r="6" fill="#4FC3F7" fillOpacity="0.3" />
+    </svg>
+  </div>
+);
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
-  description: ReactNode;
+  Icon: React.ComponentType;
+  description: React.ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: "Learn",
+    Icon: GraduationIcon,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum nobis
+        aperiam totam iusto mollitia libero excepturi, a obcaecati quam,
+        dignissimos adipisci aliquam porro quaerat, ullam quibusdam? A quos quae
+        voluptas?
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: "Build",
+    Icon: BuilderIcon,
     description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
+      <>Start building on Layeredge with one of our developer SDKs.</>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: "Community",
+    Icon: CommunityIcon,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Join the Layeredge community to connect, collaborate, and contribute.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Icon, description }: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+    <div className={clsx("col", styles.featureCol)}>
+      <div className={styles.featureCard}>
+        <div className={styles.featureContent}>
+          <Icon />
+          <Heading as="h3" className={styles.featureTitle}>
+            {title}
+          </Heading>
+          <p className={styles.featureDescription}>{description}</p>
+        </div>
       </div>
     </div>
   );
 }
 
-export default function HomepageFeatures(): ReactNode {
+export default function HomepageFeatures(): React.ReactNode {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
+        <div className={clsx("row", styles.featureRow)}>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}

@@ -5,19 +5,119 @@
 
 .heroBanner {
   padding: 4rem 0;
-  text-align: center;
+  text-align: left;
   position: relative;
   overflow: hidden;
+  background-color: #ffffff;
+}
+
+.heroContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 2rem;
+}
+
+.heroLeft {
+  flex: 1;
+  max-width: 600px;
+}
+
+.heroRight {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.heroSubtitle {
+  font-size: 2rem;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+}
+
+.heroDescription {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+/* Style for the primary button to match Nillion */
+.getStartedButton {
+  color: white;
+  border-radius: 2rem;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.getStartedButton:hover {
+  text-decoration: none;
+  color: white;
+}
+
+/* Geometric shape styling */
+.geometricShape {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.square {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  transform-origin: center;
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
   }
-}
+  
+  .heroContainer {
+    flex-direction: column;
+    text-align: center;
+  }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .heroLeft {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .heroRight {
+    justify-content: center;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.8rem;
+  }
 }

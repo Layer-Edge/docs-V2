@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Layeredge',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Bitcoin Backed Internet',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -131,7 +131,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Layeredge, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

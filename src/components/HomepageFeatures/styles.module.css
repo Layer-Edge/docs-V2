@@ -1,11 +1,91 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 2rem 20px;
   width: 100%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.featureRow {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.featureCol {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+}
+
+.featureCard {
+  background-color: #f7f7f7;
+  border: 2px solid #0000;
+  border-radius: 0.2rem;
+  box-shadow: 0 1px 2px 0 #0000001a;
+  color: #1c1e21 !important;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  text-decoration: none !important;
+  transition: .3s;
+  height: 100%;  /* Ensure all cards have same height */
+}
+
+.featureCard:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.featureContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.featureIcon {
+  margin-bottom: 1.5rem;
+}
+
+.featureTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1c1e21;
+}
+
+.featureDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  flex-grow: 1;  /* Allow description to take remaining space */
+}
+
+.featureLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 996px) {
+  .featureCol {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .featureCol {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .featureRow {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .featureCol {
+    padding: 0 0.5rem;
+  }
 }
