@@ -1,0 +1,63 @@
+---
+title: Light Node Verification
+sidebar_position: 1
+---
+
+# Light Node Verification
+
+LayerEdge's Light Node Verification system is a core innovation designed to achieve decentralized, scalable zk-proof validation without compromising security. Rather than requiring every node to validate the entire proof batch, LayerEdge allows each Light Node to **verify only a small, randomly selected subset** of zk-proofs.
+
+This design:
+
+* Dramatically reduces per-node computation
+* Maintains collective integrity and correctness of the full batch
+* Encourages permissionless participation from a global pool of verifiers
+
+Together, Light Nodes form a **distributed and tamper-resistant zk-verification layer**, where **honest sampling and randomized verification** ensure security with minimal overhead.
+
+## How Light Nodes Work
+
+Light Nodes participate in the validation of zk-proof batches by:
+
+1. Randomly selecting a **subset of zk-proofs** from an aggregated batch.
+2. **Retrieving and verifying** only those selected proofs.
+3. **Submitting an attestation** or dispute based on their results.
+4. Receiving **token rewards** or bonuses for accuracy and fraud detection.
+
+This design allows the network to scale to **millions of zk-proofs** without requiring each verifier to re-execute or review the full set.
+
+## Incentivization & Penalties
+
+| Behavior | Result |
+|----------|--------|
+| Submitting valid attestations | $EDGE token rewards |
+| Catching invalid proofs | Bonus bounties |
+| Failing to verify or lying | Economic penalty / exclusion |
+
+This system creates a robust **economic alignment** that favors honest verification.
+
+## Cross-Protocol Interoperability
+
+Light Nodes are proof-framework agnostic and can:
+
+* Verify Groth16, Halo2, STARK-based proofs, zkVM outputs, and more.
+* Participate in verifying **rollups, zkML, DePIN data, identity attestations**, and other modular zk-based protocols.
+
+This general-purpose design ensures that LayerEdge Light Nodes are **not tied to any one application domain** and can evolve alongside zk tooling.
+
+## Summary
+
+| Feature | Description |
+|---------|-------------|
+| **Core Function** | Verifies random subset of aggregated zk-proofs |
+| **Security Model** | Random sampling + exponential fraud resistance |
+| **Resource Profile** | Lightweight; runs on standard devices |
+| **Economic Role** | Earns $EDGE tokens via validation and fraud detection |
+| **Randomness Source** | Bitcoin block header + nodeSeed + VRF |
+| **Consensus Anchoring** | Synchronized to latest Bitcoin block for randomness fairness |
+
+Light Nodes are the **practical bridge between large-scale zk computation and verifiable finality on Bitcoin**. They form the base layer of decentralized trust within the LayerEdge ecosystem, allowing:
+
+* Anyone to participate in securing zk-proof batches,
+* Protocols to offload trust to a resilient validator mesh,
+* And the LayerEdge network to scale proof volume indefinitely — **without centralized validators or specialized hardware**. 
