@@ -3,177 +3,176 @@ sidebar_position: 5
 ---
 # Bitcoin Anchoring
 
-## Introduction
+At the end of the recursive proof aggregation process, the LayerEdge protocol generates a final succinct zk-proof, denoted as $\pi_{agg}$. This single proof encapsulates the correctness of potentially thousands or millions of individual zk-proofs submitted by various protocols and applications across the network.
 
-Fluidity interacts with LevelEStar.
+To establish **hard, irreversible finality**, LayerEdge **anchors** $\pi_{agg}$ directly onto the **Bitcoin blockchain**—leveraging Bitcoin’s Proof-of-Work (PoW) consensus to achieve the highest level of security and censorship resistance.
 
-What makes Fluidity useful?
+Anchoring on Bitcoin does not require any change to Bitcoin itself. LayerEdge uses existing primitives such as **OP_RETURN** and **Taproot script paths**, and is designed to adopt **OP_CAT** when it becomes available in the future.
 
-Bitcoin Anchoring enables Fluidity to be *verifiably proven to exist at a point in time*. This unlocks powerful use cases, particularly with smart primitives on other chains. The high security and immutability of the Bitcoin blockchain enables Fluidity to offer valuable security guarantees to public blockchain applications and ecosystems.
-
-Powerful when combined with on/off chain oracles, native Bitcoin smart contracts, and integration with various L1/L2 ecosystems to become the highest level of security and consensus.
-
-## Why Bitcoin?
-
-It has a 99.98% uptime—much higher than other networks. Bitcoin is still *the most secure chain* with deep liquidity and over $1M USD in lost opportunity cost to reorg one BTC block after 6 confirmations (according to Bitwise).
+---
 
 ## Why Anchor on Bitcoin?
 
-Security is *top of mind* for builders with valuable assets in the blockchain ecosystem. By anchoring to Bitcoin, the protocol offers:
+Bitcoin is the most secure and immutable base layer in the blockchain ecosystem. By anchoring to Bitcoin, LayerEdge:
 
-### Certainty
+- Inherits **Bitcoin's energy-based finality**
+- Gains **censorship resistance** and tamper-proof guarantees
+- Enables external auditors and third parties to **independently verify zk-proof inclusion**
+- Avoids reliance on centralized sequencers or optimistic finality models
 
-- **Strong finality consensus-based finality** (i.e., theoretical guarantees)
-- **Exceptional consensus strength** (i.e., practical guarantees)
-- **Enables protocol auditors and third parties to independently verify on-chain disclosures**
-- **Allows dapps on connected chains/rollups to optimize finality models**
-- **Cross-chain interoperability** and communication of the embedded finalized state across the entire Web3
-- Bitcoin → matched greatest possible verification without adding computation on Bitcoin itself
+Anchoring allows LayerEdge to offload verification computation to off-chain provers while settling **trust** on Bitcoin — making it possible to scale verification without scaling computation on Bitcoin itself.
+
+---
 
 ## Anchoring Lifecycle
 
-1. **Application Plans a transaction for final Stage**
-   - Decide what state will be finalized (e.g., a snapshot)
-   - e.g., ETHGlobal is in a finalized (committed) state: Finalized / Signed
-
-2. **The application is embedded on Bitcoin through one of the supported methods:**
+1. Aggregation Engine generates the final proof $\pi_{agg}$
+2. A hash or commitment of $\pi_{agg}$ is created:
+   - e.g. H($\pi_{agg}$) or a structured commitment hash (metadata + proof digest)
+3. This commitment is **anchored on Bitcoin** through one of the supported methods:
    - OP_RETURN
    - Taproot Scripts
-   - Ordinal Inscription, etc.
+   - OP_CAT (future)
+4. Light Clients, DA services, or anyone monitoring the network can independently verify that:
+   - $\pi_{agg}$ was generated
+   - It was committed to Bitcoin L1
+   - It is associated with a valid set of aggregated zk-proofs
 
-3. **Light Client Awareness**
-   - Bitcoin-to-altchain monitoring for indexers can independently verify final state
-   - Stage one protocols
-   - Enable higher bandwidth
-   - It is essential with a state of X digital record of assets
+---
 
 ## Anchoring Mechanisms
 
 ### 1. OP_RETURN (Current - Lightweight Anchoring)
 
-- Encode up to 80 bytes of arbitrary data in Bitcoin transaction
-- Protocol periodically (every 1 hour now) commits to an entropy anchor on the final transaction root
+- Embeds up to 80 bytes of arbitrary data in a Bitcoin transaction.
+- LayerEdge uses this to commit the hash H($\pi_{agg}$) or Merkle roots from the Data Availability layer.
 
-**Advantages**
-- Simple and widely adopted by on-chain indexers
-- Requires no extra verification logic
-- Widely accessible with robust toolsets
+**Advantages**:
+- Simple and widely supported by all Bitcoin nodes.
+- Requires no extra verification logic.
+- Works immediately with minimal overhead.
 
-**Disadvantages**
-- Cannot support linked proofs or multicloud links
-- Able to interact only with a narrow spectrum of networks
+**Disadvantages**:
+- Cannot support direct parsing or conditional logic.
+- Data is opaque; only useful for one-way commitments.
 
 ### 2. Taproot Script Paths (Supported - Programmable Anchoring)
 
-- Uses Bitcoin Taproot to allow Merkle-based proof paths for commit to structured collections (on or off-chain)
+- Uses Bitcoin Taproot to encode **Merkleized script paths** that commit to structured verification logic or commitments.
 - Enables conditions like:
-  - "Only spend if proof committed equals consensus root"
-  - "Reveal and hash matching threshold range"
+  - “Only spend if zk-proof commitment equals expected root”
+  - “Reveal proof hash matching timestamp range”
 
-**Example Use Cases**
-- Finalized state specific conditions
-- Multiparty proofs committed to shared Merkle tree roots
+**Example Use Cases**:
+- Proving timestamped rollup state transitions
+- Multi-party proofs committed to shared Taproot script trees
 
-**Advantages**
-- Programmability without needing Bitcoin's conservative design
-- Ties certainty and features with Taproot's complex format
-- Embeddable directly from a script via Schnorr signing
+**Advantages**:
+- Programmability without violating Bitcoin’s conservative design
+- Low on-chain overhead due to Taproot’s compact format
+- Future extensibility for stateful verification workflows
 
-### 3. OP_CAT (Future - Standard On-chain Parsing)
+---
 
-- OP_CAT enables secure parsing where script execution flows from a result
-- Allows for a much more Land direct committed interpretation of proof commitments and various ways to bridge Bitcoin finality
+### 3. OP_CAT (Future - Structured On-chain Parsing)
 
-**Advantages**
+- **OP_CAT** is a proposed Bitcoin opcode enabling string/byte concatenation in script.
+- If reactivated, it would allow LayerEdge to construct **concatenated zk-proof commitments** and validate them within Bitcoin Script.
+
+**Capabilities**:
 - Parse structured commitments on-chain
-- Enforce partial gradient parsing and encoding
-- Specifically deploy commitments via a connect structure
+- Perform partial zk-proof parsing and matching
+- Aggregate multiple commitments into a compact structure
 
-**Benefits**
-- Provides for direct on-chain commit validation
-- Enables higher protocol processing volume on Bitcoin
-- Shows the path to incorporate cross-chain protocols from both input and validation-only transactions
+**Benefits**:
+- Up to **95% reduction in proof parsing cost**.
+- Enables **light zk-proof processing natively on Bitcoin**.
+- Opens the door to **Bitcoin-native rollup settlement layers** that don’t require full execution, only verification.
 
-## Fluidity as Bitcoin's PubV
+---
 
-Bitcoin anchoring delivers cryptographic finality combined with pure Proof-of-Stake to integrate under Fluidity's powerful tools.
+## Finality via Bitcoin’s PoW
 
-Create a cryptographic commitment as becomes a Bitcoin asset:
+Bitcoin anchoring delivers **cryptographic finality** unmatched by any Proof-of-Stake or delegated model.
 
-- It is globally visible and verifiable
-- Ensures finality once Bitcoin blocks confirm (having met policy 10 confirmations)
-- It makes the largest chain consensus social security, network work builds
+Once a LayerEdge commitment is included in a Bitcoin block:
 
-### Fluidity Function:
+- It is **globally visible and immutable**
+- It requires significant economic cost to reverse (reorg-proof after ~6 confirmations)
+- It inherits the **longest chain consensus** model ensuring liveness and finality
 
-<!-- Image description: Diagram showing how finality interacts with Fluidity -->
-<!-- Remove the comment and add proper image URL when available -->
+### Finality Function:
 
+$$
+Finality(\pi_{agg}) = Commit(\pi_{agg}) \wedge Confirm(BitcoinBlock_{withPoW})
+$$
 
-The clever simplification in the mechanics of Fluidity:
+This allows LayerEdge to offer two types of finality:
 
-- **End Family** - enables ultimate cryptographic finality proof
-- **Root Family** - method to elevate one element's importance
+- **Soft Finality**: Available off-chain via aggregation & DA proof
+- **Hard Finality**: Confirmed on Bitcoin via anchored transaction
+
+---
 
 ## Interaction With Other Layers
 
-| Layer/Name | Function & Encoding |
+| Component | Function in Anchoring |
 |------------|---------------------|
-| Application Layer | Creates an encoding |
-| Linguistic Layer | Determines finality, merkings, record total |
-| End Layer | Canonical format of final proof and associated metadata |
-| Linguistic Tree | Provides partial recognition, encoding, formatting, and commitment |
-| Bitcoin Structure | Protocol / Addresses / layer for record state of different transaction formats |
-| Light Clients | Communicates judgment via light client interface |
+| Aggregation Layer | Generates $\pi_{agg}$, the final proof |
+| DA Layer | Commits hashes of input proofs and associated metadata |
+| LayerEdge BSN | Publishes anchor transaction metadata, timestamps, and references |
+| Bitcoin Blockchain | Provides L1 settlement layer for proof hash or structured commitment |
+| Light Clients | Observe Bitcoin for specific OP_RETURN/Taproot outputs to verify finality |
+
 
 ## Developer Integration Example
 
-A protocol looking to anchor to Level/Fluidity can:
+A protocol submitting zk-proofs to LayerEdge can:
 
-1. Find all the records in protocol (e.g., starting as key-value models)
-2. Reserve the key name in validation protocol
-3. Generate that state-derived model (keep a copy)
-4. Create a commitment proof (e.g., Merkle root KECCAK with OP_SHA256)
-5. Record final height and call via immediate reference
+1. Submit multiple zk-proofs over a period (e.g. for rollup blocks)
+2. Monitor the DA layer to confirm inclusion
+3. Receive final aggregated proof πagg
+4. Watch Bitcoin for the anchor transaction (e.g., via mempool API or block explorer)
+5. Record block height and txid as immutable reference
 
-This provides a firm L2 anchor, certainty a call can always derive to final Bitcoin chain.
+This provides a fully trustless, verifiable audit trail tied directly to the Bitcoin chain.
 
 ## Security Considerations
 
-- Level of risk versus desired anchoring consensus increases → if users want to introduce extra verification delay
-- Anchoring cycles deterministic under constraint affecting resistance to censorship or reorgs
-- Even in the event of a Bitcoin reorganization (rare), the fundamental proofs are still independently stored and can recover
+- LayerEdge does **not depend on Bitcoin consensus changes** — it uses existing infrastructure
+- Anchored data is immutable once committed, ensuring resistance to censorship or reorgs
+- Even in the event of off-chain coordination failure, any honest party can independently prove or disprove anchoring inclusion
 
 ## Future-Proofing: OP_CAT Readiness
 
-Although not yet activated, LevelEStar architecture is at a certain readiness for OP_CAT:
+Although not yet available, LayerEdge’s architecture is built to **natively support OP_CAT**:
 
-- Builds scripts with multiple outputs linked to final periods
-- Structured encoding to parse CBOR
-- Ensures the elegant flow from built-up anchoring to derived pruning of OP_CAT tree
+- Script templates are modular and can adapt to new opcodes
+- Verification stack can selectively trigger script-based commitments
+- System can migrate from hash-only anchoring to **structured parsing** once OP_CAT is live
 
-The system is certified "Prepared for the foreseeable future opportunities"
+This makes LayerEdge **future-proof for Bitcoin-native zk-rollup systems**.
 
 ## Summary
 
 | Feature | Value |
 |---------|-------|
-| Finality Layer | Bitcoin |
-| Anchoring | OP_RETURN, Taproot script pathway |
-| Archive Mechanism | KECCAK + SHA256 + Tagged |
-| Protocol Readiness | OP_CAT future (_...ready_) |
+| Finality Layer | Bitcoin L1 |
+| Anchoring Types | OP_RETURN (current), Taproot scripts (current), OP_CAT (future) |
+| Proofs Anchored | Aggregated zk-proofs ($\pi_{agg}$) |
+| Security Model | Bitcoin PoW (global consensus) |
 | Stability Rating | Fully redundant |
-| Immutability | Maximum: after path confirmation |
-| Compatibility | Designed to bridge with Fluidity |
-| Future Extension | LevelEStar Compatibility: preserving verifiability and finality |
+| Reversibility | Irreversible after block confirmations |
+| Compatibility | Requires no Bitcoin forks or changes |
+| Future Extensions | zk-rollup anchoring, on-chain zk-proof parsing, composable proof hashes |
 
 ## Closing Thoughts
 
-Bitcoin anchoring and Fluidity form Level from a dedicated ETL (extract-transform-load) process:
+Bitcoin anchoring is what transforms LayerEdge from a zk-protocol into a **trustless settlement infrastructure**. It brings together:
 
-- architecturally refined
-- focused on application flow value
-- immutable cryptographic record
-- the Bitcoin as the final source of truth
+- zk-computation off-chain
+- Recursive aggregation for scale
+- Modular DA for availability
+- And **Bitcoin for the final stamp of truth**
 
-The level data store serving protocol is about aligning composition with the strongest finality hash solution.
+This is not just about saving blockspace — it’s about **aligning computation with the strongest finality layer ever built**.

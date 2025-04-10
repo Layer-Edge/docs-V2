@@ -2,7 +2,6 @@
 sidebar_position: 1
 ---
 
-
 # Proof Aggregation Layer
 
 ## Introduction: Bitcoin's Security for zk-Proofs
@@ -11,7 +10,7 @@ LayerEdge transforms Bitcoin from a passive store of value into a **verifiable i
 
 This system allows:
 
-- Thousands or millions of zk-proofs to be **recursively compressed** into a single succinct proof
+- Thousands or millions of zk-proofs to be **recursively compressed into a single succinct proof**
 - The result to be **anchored on Bitcoin** in a tamper-proof, cost-efficient way
 - Developers to scale verifiable computation without overwhelming Bitcoin L1
 
@@ -61,9 +60,11 @@ These proofs are passed to the **Verification Layer**, where they are normalized
 
 ### Concept
 
-Rather than verifying every zk-proof one by one, LayerEdge uses **recursive composition** to combine all proofs π1,π2,...,πn into a single final proof πagg, which attests to the correctness of all constituent proofs.
+Rather than verifying every zk-proof one by one, LayerEdge uses **recursive composition** to combine all proofs $\pi_1, \pi_2, \ldots, \pi_n$ into a single final proof $\pi_{\text{agg}}$, which attests to the correctness of all constituent proofs.
 
-πagg = ⊕(π1, π2, ..., πn)
+$$
+\pi_{\text{agg}} = \bigoplus(\pi_1, \pi_2, \ldots, \pi_n)
+$$
 
 This drastically reduces:
 
@@ -128,8 +129,8 @@ The Proof Aggregation Layer ties together four core architectural systems in Lay
 
 ### 2. General Prover / Verifier System
 - Aggregates normalized proofs recursively
-- Uses proof-friendly circuits (Halo2, Nova, Plonky2)
-- Produces a final aggregated zk-proof πagg[i..j]
+- Uses proof-friendly circuits (Halo2, Nova, Plonky3)
+- Produces a final aggregated zk-proof $\pi_{\text{agg}}$
 
 ### 3. Data Availability Layer (DA)
 - Commits each zk-proof's hash in a Merkle tree
@@ -140,7 +141,7 @@ The Proof Aggregation Layer ties together four core architectural systems in Lay
 - Anchors πagg on Bitcoin using:
   - OP_RETURN (hash-only)
   - Taproot scripts (conditional logic)
-  - OP_CAT (future on-chain pairing)
+  - OP_CAT (future on-chain parsing)
 - Inherits finality from Bitcoin's PoW consensus
 
 ## Why This Design Works
@@ -179,6 +180,15 @@ This creates a system where:
 - **Light clients** can verify that their data was included
 - **Protocols** can build trustless zk-rollups with Bitcoin settlement
 - **Auditors** can confirm zk-proof correctness without re-execution
+
+# Related Subpages
+
+This section ties into the following technical components:
+
+- [Verification Layer](/docs/proof-aggregation-layer/verification-layer)
+- [General Prover / Verifier System](/docs/proof-aggregation-layer/general-prover-verifier-system)
+- [Data Availability Layer](/docs/proof-aggregation-layer/data-availability-layer-da-layer)
+- [Bitcoin Anchoring](/docs/proof-aggregation-layer/bitcoin-anchoring)
 
 ## Conclusion
 

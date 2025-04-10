@@ -15,6 +15,8 @@ Bitcoin is the most secure and censorship-resistant blockchain in existence. How
 Despite these challenges, developers continue building L2s, rollups, and decentralized applications that want to inherit Bitcoin's security. But without scalable verification, most are **forced to compromise**: 
 They either skip proof verification altogether or settle on alternate chains—**breaking Bitcoin's trust model**.
 
+---
+
 ### The Problem LayerEdge Solves
 
 LayerEdge addresses this gap by building a **shared proof verification network anchored on Bitcoin**, solving:
@@ -31,6 +33,8 @@ LayerEdge addresses this gap by building a **shared proof verification network a
 4. **Inaccessible Bitcoin Finality**:
    Many rollups and applications want to settle on Bitcoin but cannot do so affordably. LayerEdge enables **shared settlement via script-level anchoring (OP_RETURN, Taproot, OP_CAT)**, making Bitcoin finality accessible to all.
 
+---
+
 ### Why Bitcoin Needs It
 
 Without LayerEdge, Bitcoin's security is effectively siloed—**available only to protocols willing to bear massive costs or operate with weak assumptions**.
@@ -42,6 +46,8 @@ LayerEdge **makes Bitcoin programmable for verifiable computation**, without com
 * **Enabling secure, off-chain computation to anchor** back to Bitcoin
 * **Facilitating composability across zk-powered protocols**
 * **Making economic security scalable and shared**
+
+---
 
 ### Changing the Status Quo
 

@@ -10,6 +10,8 @@ The history of blockchains is a history of tradeoffs. As the demand for scalable
 
 Bitcoin was the first to prove that trust can be enforced without intermediaries. Ethereum extended that vision by supporting arbitrary computation. But both — and many that followed — remain fundamentally constrained by their monolithic execution and verification models.
 
+---
+
 ### Blockchain's Core Bottleneck: Global Redundant Verification
 
 Blockchains guarantee integrity by requiring every node to re-execute and re-verify all transactions. This "global interpreter" model creates **a single-threaded world computer**, where:
@@ -21,6 +23,8 @@ Blockchains guarantee integrity by requiring every node to re-execute and re-ver
 This design protects against fraud but also severely limits scalability.
 
 Even with improvements like block propagation, signature aggregation, and optimistic rollups — the **underlying burden of re-verification persists**.
+
+---
 
 ### Different Chains, Same Problem
 
@@ -39,6 +43,8 @@ Across all these systems, the challenge remains:
 **How can we scale trust?**
 
 Not computation, not throughput — but **verifiable trust in computation results**, without forcing every node to re-check everything.
+
+---
 
 ### ZK Proofs Changed the Game — But Only Halfway
 
@@ -76,6 +82,8 @@ In today's state:
 * No shared infrastructure exists to **aggregate** verification across ecosystems and amortize the cost
 
 This lack of a **common zk-verification layer** has created fragmentation, redundancy, and prohibitive entry barriers — especially for protocols that want to rely on **Bitcoin's finality** without inheriting its limitations.
+
+---
 
 ### Framing the Need for LayerEdge
 
