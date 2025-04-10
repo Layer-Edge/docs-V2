@@ -1,0 +1,81 @@
+---
+title: Modular Verification on Bitcoin
+sidebar_position: 3
+---
+
+# Modular Verification on Bitcoin
+
+LayerEdge supports **modular verification** of off-chain state transitions by **splitting complex updates into verifiable sub-transitions**, each backed by its own succinct proof. These sub-proofs (or their hashes/commitments) are **anchored to Bitcoin periodically**, ensuring tamper-evidence, transparency, and challengeability.
+
+This modularity enhances **granularity, scalability, and fault isolation** within the State Transition Verification (STV) process.
+
+## Anchoring Sub-Transitions
+
+Rather than representing an entire rollup state evolution with a single zk-proof, LayerEdge supports anchoring of **multiple modular sub-proofs**.
+
+Each sub-transition has:
+
+* Its own **zk-SNARK or zk-STARK**
+* A commitment (e.g., Merkle leaf or direct hash)
+* A timestamped anchoring operation on Bitcoin via Taproot, OP_RETURN, or in future, OP_CAT
+
+These sub-proofs are periodically posted or committed to Bitcoin, offering an immutable checkpoint history of system state evolution.
+
+## Why Modular Proofs?
+
+| Feature | Benefit |
+|---------|---------|
+| **Granularity** | Each sub-transition can be verified individually, enabling fine-grained fraud detection. |
+| **Parallelism** | Independent sub-proofs can be computed, verified, and disputed in parallel — optimizing system throughput. |
+| **Challenge Efficiency** | Disputes can be scoped to just one sub-transition instead of an entire batch or epoch. |
+
+This model **dramatically improves verification efficiency and fault tolerance** in high-throughput environments.
+
+## Challenging a Transition
+
+The system is designed for **open verification and dispute resolution**. If an entity observes any incorrect transition, they can initiate a formal challenge.
+
+### Detecting a Suspicious State
+
+* Participants (e.g., Light Nodes or external watchtowers) constantly monitor the state roots and sub-transition commitments.
+* If any proof appears **malformed, incorrect, or inconsistent**, they can trigger a challenge.
+
+### Submitting a Dispute — `T_disprove`
+
+If a sub-transition appears invalid:
+
+1. A **T_disprove transaction** is posted on Bitcoin or LayerEdge's verification chain.
+2. This transaction includes:
+   * The index of the faulty sub-transition
+   * The raw data for re-verification
+   * A potentially contradictory proof or claim
+
+The **on-chain verifier logic** is then triggered to compare the submitted proof to the expected transition function output.
+
+### Proving Fraud
+
+If the sub-proof fails validation:
+
+* The entire **batch containing that sub-transition is invalidated**
+* The **operator or aggregator is penalized**
+* The **challenger is rewarded** (see 4.3 for details on incentive design)
+
+This approach ensures that **fraudulent computation is always traceable and punishable**, without forcing the system to re-check everything.
+
+## System Overview
+
+| Feature | Description |
+|---------|-------------|
+| **Sub-Transition Splitting** | State updates are broken into fine-grained components, each verifiable independently. |
+| **Anchoring Method** | Each sub-proof or Merkle root is posted to Bitcoin (e.g., Taproot, OP_RETURN). |
+| **Dispute Flow** | Any participant can challenge a specific sub-transition using `T_disprove`. |
+| **On-Chain Verification** | Disputed proofs are re-verified on Bitcoin or LayerEdge chain with full cryptographic integrity. |
+| **Security Outcome** | Invalid transitions lead to slashing of malicious actors and reward for challengers. |
+
+Modular verification ensures that LayerEdge remains:
+
+* **Scalable**: by parallelizing validation
+* **Auditable**: through transparent proof anchoring
+* **Secure**: with rapid, localized challenge resolution
+
+It is a foundational design choice for enabling **Bitcoin-anchored ZK computation** that is robust, decentralized, and economically sustainable. 
