@@ -3,12 +3,24 @@
  * and scoped locally.
  */
 
+/* Hero banner styling */
 .heroBanner {
   padding: 4rem 0;
   text-align: left;
   position: relative;
   overflow: hidden;
+}
+
+/* Light mode specific styles */
+:global([data-theme='light']) .heroBanner {
   background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark mode specific styles */
+:global([data-theme='dark']) .heroBanner {
+  background-color: #121212;
+  color: #ffffff;
 }
 
 .heroContainer {
@@ -31,16 +43,38 @@
   justify-content: flex-end;
 }
 
+/* Hero title - much larger and bolder like Nillion */
 .heroTitle {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 5rem !important; /* Significantly larger */
+  font-weight: 900 !important; /* Extra bold */
   margin-bottom: 0.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em; /* Slight negative letter spacing */
+}
+
+/* Title color in light and dark modes */
+:global([data-theme='light']) .heroTitle {
+  color: #000000;
+}
+
+:global([data-theme='dark']) .heroTitle {
+  color: #ffffff;
 }
 
 .heroSubtitle {
-  font-size: 2rem;
-  font-weight: normal;
+  font-size: 2.5rem !important; /* Also larger */
+  font-weight: 500;
   margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+/* Subtitle color in light and dark modes */
+:global([data-theme='light']) .heroSubtitle {
+  color: #333333;
+}
+
+:global([data-theme='dark']) .heroSubtitle {
+  color: #e0e0e0;
 }
 
 .heroDescription {
@@ -50,6 +84,15 @@
   line-height: 1.6;
 }
 
+/* Description color in light and dark modes */
+:global([data-theme='light']) .heroDescription {
+  color: #555555;
+}
+
+:global([data-theme='dark']) .heroDescription {
+  color: #cccccc;
+}
+
 .buttons {
   display: flex;
   align-items: center;
@@ -57,18 +100,37 @@
   gap: 1rem;
 }
 
-/* Style for the primary button to match Nillion */
+/* Get Started button styles */
 .getStartedButton {
   color: white;
   border-radius: 2rem;
   padding: 0.75rem 2rem;
   font-size: 1.1rem;
-  font-weight: bold;
+  font-weight: 500;
   border: none;
-  transition: background-color 0.3s;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.getStartedButton:hover {
+/* Button color in light mode */
+:global([data-theme='light']) .getStartedButton {
+  background-color: #4CAF50;  /* Green color from your current site */
+}
+
+:global([data-theme='light']) .getStartedButton:hover {
+  background-color: #3e8e41;
+  text-decoration: none;
+  color: white;
+}
+
+/* Button color in dark mode - using blue like Nillion */
+:global([data-theme='dark']) .getStartedButton {
+  background-color: #3366ff;
+}
+
+:global([data-theme='dark']) .getStartedButton:hover {
+  background-color: #2955d9;
   text-decoration: none;
   color: white;
 }
@@ -76,25 +138,35 @@
 /* Geometric shape styling */
 .geometricShape {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.square {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  transform-origin: center;
+/* SVG pattern styling */
+.geometricPattern {
+  stroke-width: 1px;
+  fill: none;
 }
 
+/* Pattern color in light mode */
+:global([data-theme='light']) .geometricPattern {
+  stroke: rgba(0, 0, 0, 0.2);
+}
+
+/* Pattern color in dark mode - using blue like Nillion */
+:global([data-theme='dark']) .geometricPattern {
+  stroke: #3366ff;
+}
+
+/* Responsive design */
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
   }
-  
+
   .heroContainer {
     flex-direction: column;
     text-align: center;
@@ -114,10 +186,21 @@
   }
 
   .heroTitle {
-    font-size: 2.5rem;
+    font-size: 3.5rem !important;
   }
 
   .heroSubtitle {
-    font-size: 1.8rem;
+    font-size: 2rem !important;
+  }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+  .heroTitle {
+    font-size: 2.8rem !important;
+  }
+
+  .heroSubtitle {
+    font-size: 1.8rem !important;
   }
 }

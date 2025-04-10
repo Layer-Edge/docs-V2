@@ -1,40 +1,55 @@
+/**
+ * CSS module for the HomepageFeatures component
+ */
+
+/* Features section styling */
 .features {
-  display: flex;
-  align-items: center;
-  padding: 2rem 20px;
+  padding: 4rem 0;
   width: 100%;
-  max-width: 1200px;
-  margin: auto;
 }
 
+/* Feature cards row styling */
 .featureRow {
-  margin-left: -1rem;
-  margin-right: -1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .featureCol {
-  flex: 0 0 33.333333%;
-  max-width: 33.333333%;
-  padding: 0 1rem;
-  margin-bottom: 2rem;
-}
-
-.featureCard {
-  background-color: #f7f7f7;
-  border: 2px solid #0000;
-  border-radius: 0.2rem;
-  box-shadow: 0 1px 2px 0 #0000001a;
-  color: #1c1e21 !important;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  text-decoration: none !important;
-  transition: .3s;
-  height: 100%;  /* Ensure all cards have same height */
+  flex: 1;
+  max-width: 350px;
 }
 
-.featureCard:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+/* Feature card styling */
+.featureCard {
+  height: 100%;
+  padding: 2rem;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Card styles in light mode */
+:global([data-theme='light']) .featureCard {
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+:global([data-theme='light']) .featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Card styles in dark mode */
+:global([data-theme='dark']) .featureCard {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+:global([data-theme='dark']) .featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .featureContent {
@@ -47,45 +62,79 @@
   margin-bottom: 1.5rem;
 }
 
+/* Icon colors in light mode */
+:global([data-theme='light']) .iconPrimary {
+  fill: #5D37D3;
+}
+
+:global([data-theme='light']) .iconSecondary {
+  fill: #FFC107;
+}
+
+:global([data-theme='light']) .iconTertiary {
+  fill: rgba(79, 195, 247, 0.3);
+}
+
+:global([data-theme='light']) .iconStroke {
+  stroke: #5D37D3;
+}
+
+/* Icon colors in dark mode */
+:global([data-theme='dark']) .iconPrimary {
+  fill: #3366ff;
+}
+
+:global([data-theme='dark']) .iconSecondary {
+  fill: #FFC107;
+}
+
+:global([data-theme='dark']) .iconTertiary {
+  fill: rgba(79, 195, 247, 0.3);
+}
+
+:global([data-theme='dark']) .iconStroke {
+  stroke: #3366ff;
+}
+
 .featureTitle {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 1rem;
-  color: #1c1e21;
+}
+
+/* Title color in light and dark modes */
+:global([data-theme='light']) .featureTitle {
+  color: #333333;
+}
+
+:global([data-theme='dark']) .featureTitle {
+  color: #ffffff;
 }
 
 .featureDescription {
-  font-size: 1rem;
+  flex-grow: 1;
   line-height: 1.6;
-  flex-grow: 1;  /* Allow description to take remaining space */
 }
 
-.featureLink {
-  text-decoration: none;
-  color: inherit;
-  display: block;
+/* Description color in light and dark modes */
+:global([data-theme='light']) .featureDescription {
+  color: #555555;
 }
 
-/* Responsive adjustments */
+:global([data-theme='dark']) .featureDescription {
+  color: #cccccc;
+}
+
+/* Responsive design */
 @media screen and (max-width: 996px) {
-  .featureCol {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-
-@media screen and (max-width: 786px) {
-  .featureCol {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  
   .featureRow {
-    margin-left: 0;
-    margin-right: 0;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .featureCol {
-    padding: 0 0.5rem;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 2rem;
   }
 }
