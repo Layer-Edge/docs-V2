@@ -1,9 +1,8 @@
 ---
 sidebar_position: 1
-hide_title: true
 ---
 
-## Why LayerEdge?
+# Why LayerEdge?
 
 **The Missing Verification Layer for Bitcoin**
 

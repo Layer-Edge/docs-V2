@@ -1,9 +1,8 @@
 ---
 sidebar_position: 2
-hide_title: true
 ---
 
-## What is LayerEdge?
+# What is LayerEdge?
 
 **LayerEdge** is a decentralized verification layer that enables scalable, cost-efficient, and secure zk-proof verification on Bitcoin. It is designed to serve as a universal infrastructure layer for verifying off-chain computation—including rollup state transitions, ZK-based applications, AI inference proofs, IoT data attestations, and more—by anchoring zk-proofs to Bitcoin's Proof-of-Work (PoW) for finality.
 

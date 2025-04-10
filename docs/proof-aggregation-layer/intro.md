@@ -3,11 +3,11 @@ sidebar_position: 1
 ---
 
 
-# Introduction
+# Proof Aggregation Layer
 
 ## Introduction: Bitcoin's Security for zk-Proofs
 
-LayerEdge transforms Bitcoin from a passive store of value into a **verifiable infrastructure layer** for off-chain computation. At the heart of this transformation is the **Proof Aggregation Layer** — a modular system that enables recursive zk-proof verification across protocols, applications, and data pipelines, with finality rooted in Bitcoin's Proof-of-Work (PoW).
+LayerEdge transforms Bitcoin from a passive store of value into a **verifiable infrastructure layer** for off-chain computation. At the center of this transformation is the **Proof Aggregation Layer** — a modular system that enables recursive zk-proof verification across protocols, applications, and data pipelines, with finality rooted in Bitcoin's Proof-of-Work (PoW).
 
 This system allows:
 
@@ -75,7 +75,7 @@ This drastically reduces:
 ### How It Works (Step-by-Step)
 
 1. **Proof Generation**  
-   Protocols generate zk-proofs for off-chain computations (e.g., L2 state transitions, ML inference, data attestations).
+   Protocols generate zk-proofs for off-chain computations (e.g. L2 state transitions, ML inference, data attestations).
 
 2. **Proof Submission**  
    These proofs are submitted to the Verification Layer, along with metadata.
@@ -113,7 +113,7 @@ This drastically reduces:
 | Verifier Time | O(n) | O(log n) |
 | Proof Size | Large (n × proof) | Small (single proof) |
 | Bitcoin Settlement | High (per proof tx) | Minimal (1 tx) |
-| Cost per Protocol | $800+ | &lt;$20 in 50-protocol network |
+| Cost per Protocol | $900+ | &lt;$20 in 50-protocol network |
 | Storage Overhead | High | Compressed + Merkle root |
 | Security | Local only | Global + Bitcoin PoW |
 
