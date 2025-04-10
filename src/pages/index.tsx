@@ -81,7 +81,8 @@ export default function Home() {
   return (
       <Layout
           title={`Docs`}
-          description="Documentation for Layeredge">
+          description="Documentation for Layeredge"
+          noFooter>
         <HomepageHeader />
         <main>
           <HomepageFeatures />
