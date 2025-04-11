@@ -69,10 +69,10 @@ Bitcoin lacks the native scripting capabilities to verify them efficiently at al
 
 As zk-based execution and modular architectures grow, one foundational piece is still missing from the global decentralized stack:
 
-:::note
-A shared, scalable, cost-efficient **verification layer** — grounded in Bitcoin — that can serve
+
+> A shared, scalable, cost-efficient **verification layer** — grounded in Bitcoin — that can serve
 **many protocols** without duplication, waste, or trust assumptions.
-:::
+
 
 In today's state:
 
