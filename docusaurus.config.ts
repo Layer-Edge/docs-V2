@@ -68,6 +68,22 @@ const config: Config = {
     ],
   ],
 
+  // Add the network plugin here
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'network',
+        path: './network',
+        routeBasePath: 'network',
+        sidebarPath: './sidebars.ts',
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex],
+        // You can add other options similar to your main docs configuration
+      },
+    ],
+  ],
+
   stylesheets: [
     {
       href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
@@ -94,6 +110,7 @@ const config: Config = {
           position: 'left',
           label: 'Docs',
         },
+        { to: '/network/intro', label: 'Network', position: 'left' },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/orgs/Layer-Edge/repositories',
@@ -111,6 +128,10 @@ const config: Config = {
             {
               label: 'Docs',
               to: '/docs/intro',
+            },
+            {
+              label: 'Network',
+              to: '/network/intro',
             },
           ],
         },
