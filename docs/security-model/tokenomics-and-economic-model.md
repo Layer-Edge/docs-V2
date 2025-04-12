@@ -1,5 +1,6 @@
 ---
-sidebar_position: 1
+title: Tokenomics & Economic Model
+sidebar_position: 5
 ---
 
 # Tokenomics & Economic Model
