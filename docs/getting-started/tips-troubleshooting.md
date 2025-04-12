@@ -7,14 +7,14 @@ sidebar_position: 6
 
 LayerEdge Light Nodes and proof submission systems are designed for security, reliability, and decentralization. To maximize uptime, efficiency, and network contribution, follow these operational best practices:
 
-## Security of Private Keys
+## 1. Security of Private Keys
 
 * All nodes (Light Nodes, aggregators, proof submitters) use cryptographic signing for validation.
 * **Private keys should never be hardcoded** into code files or shared.
 * Use secure vaults (e.g., HashiCorp Vault, GCP Secret Manager) or encrypted `.env` storage.
 * Ensure private keys are accessible only by the process invoking proof verification or submission.
 
-## Monitoring & Logs
+## 2. Monitoring & Logs
 
 * Light Nodes emit logs such as:
    * Discovered Merkle Trees
@@ -27,7 +27,7 @@ LayerEdge Light Nodes and proof submission systems are designed for security, re
    * Failure to fetch tree roots
    * Latency in submission loops
 
-## Testing in a Local Environment
+## 3. Testing in a Local Environment
 
 * For staging or pre-testnet evaluation, LayerEdge allows complete local setup.
 * Simulate network participation using:
@@ -41,7 +41,7 @@ This reduces mainnet risk and allows validation of:
 * Proof formatting
 * Proof-to-verification lifecycle
 
-## Stay Updated
+## 4. Stay Updated
 
 * LayerEdge's GitHub repositories are under active development.
 * Toolchains like RISC Zero or Nova evolve rapidly.
@@ -50,7 +50,7 @@ This reduces mainnet risk and allows validation of:
    * Regularly `git pull` the Light Node and Verification Tester
    * Review changelogs for breaking updates or protocol tweaks
 
-## Review Documentation
+## 5. Review Documentation
 
 * Always consult the `README.md` or `/docs` directories in:
     * [Light Node](https://github.com/Layer-Edge/light-node)
