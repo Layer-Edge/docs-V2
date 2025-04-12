@@ -106,10 +106,10 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Documentation',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Docs',
               to: '/docs/intro',
             },
           ],
@@ -118,16 +118,20 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Twitter',
+              href: 'https://x.com/layeredge',
             },
             {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              href: 'https://discord.com/invite/layeredge',
             },
             {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'Medium',
+              href: 'https://blog.layeredge.io',
+            },
+            {
+              label: 'Telegram',
+              href: 'https://t.me/layeredge',
             },
           ],
         },
