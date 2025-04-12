@@ -79,34 +79,34 @@ type FeatureItem = {
 };
 
 const FeatureList: FeatureItem[] = [
-    {
-        title: "Learn",
-        Icon: GraduationIcon,
-        description: (
-            <>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum nobis
-                aperiam totam iusto mollitia libero excepturi, a obcaecati quam,
-                dignissimos adipisci aliquam porro quaerat, ullam quibusdam? A quos quae
-                voluptas?
-            </>
-        ),
-    },
-    {
-        title: "Build",
-        Icon: BuilderIcon,
-        description: (
-            <>Start building on Layeredge with one of our developer SDKs.</>
-        ),
-    },
-    {
-        title: "Community",
-        Icon: CommunityIcon,
-        description: (
-            <>
-                Join the Layeredge community to connect, collaborate, and contribute.
-            </>
-        ),
-    },
+  {
+    title: "Learn",
+    Icon: GraduationIcon,
+    description: (
+      <>
+        Layeredge is a secure computation network that decentralizes trust for
+        high value data in the same way that blockchains decentralized
+        transactions.
+      </>
+    ),
+  },
+  {
+    title: "Build",
+    Icon: BuilderIcon,
+    description: (
+      <>Start building on Layeredge with one of our developer SDKs.</>
+    ),
+  },
+  {
+    title: "Community",
+    Icon: CommunityIcon,
+    description: (
+      <>
+        Join the Layeredge community to connect, collaborate, and contribute to
+        the future of blind computation.
+      </>
+    ),
+  },
 ];
 
 function Feature({ title, Icon, description }: FeatureItem) {
