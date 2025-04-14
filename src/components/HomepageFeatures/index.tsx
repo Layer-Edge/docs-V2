@@ -116,7 +116,7 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>Start building on Layeredge with one of our developer SDKs.</>
     ),
-    path: "/docs/intro",
+    path: "/docs/getting-started/",
   },
   {
     title: "Community",
@@ -127,7 +127,7 @@ const FeatureList: FeatureItem[] = [
         the future of blind computation.
       </>
     ),
-    path: "/docs/intro",
+    path: "/docs/community-and-support/",
   },
 ];
 

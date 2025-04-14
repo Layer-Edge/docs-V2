@@ -3,11 +3,22 @@ title: Modular Verification on Bitcoin
 sidebar_position: 3
 ---
 
+import ThemedImage from '@theme/ThemedImage';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 # Modular Verification on Bitcoin
 
 LayerEdge supports **modular verification** of off-chain state transitions by **splitting complex updates into verifiable sub-transitions**, each backed by its own succinct proof. These sub-proofs (or their hashes/commitments) are **anchored to Bitcoin periodically**, ensuring tamper-evidence, transparency, and challengeability.
 
 This modularity enhances **granularity, scalability, and fault isolation** within the State Transition Verification (STV) process.
+
+<ThemedImage
+  alt="Block Production in LayerEdge Network"
+  sources={{
+    light: useBaseUrl('/images/VeModule.png'),
+    dark: useBaseUrl('/images/VeModule-dark.png'),
+  }}
+/>
 
 ## Anchoring Sub-Transitions
 

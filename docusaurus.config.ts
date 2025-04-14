@@ -68,22 +68,6 @@ const config: Config = {
     ],
   ],
 
-  // Add the network plugin here
-  plugins: [
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'network',
-        path: './network',
-        routeBasePath: 'network',
-        sidebarPath: './sidebars.ts',
-        remarkPlugins: [remarkMath],
-        rehypePlugins: [rehypeKatex],
-        // You can add other options similar to your main docs configuration
-      },
-    ],
-  ],
-
   stylesheets: [
     {
       href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
@@ -104,14 +88,15 @@ const config: Config = {
         src: 'img/favicon.png',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Docs',
-        },
-        { to: '/network/intro', label: 'Network', position: 'left' },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'tutorialSidebar',
+        //   position: 'left',
+        //   label: 'Docs',
+        // },
+        { to: '/docs/intro', label: 'Learn', position: 'left' },
+        { to: '/docs/getting-started/', label: 'Build', position: 'left' },
+        { to: '/docs/community-and-support/', label: 'Community', position: 'left'},
         {
           href: 'https://github.com/orgs/Layer-Edge/repositories',
           label: 'GitHub',
@@ -126,12 +111,16 @@ const config: Config = {
           title: 'Documentation',
           items: [
             {
-              label: 'Docs',
+              label: 'Learn',
               to: '/docs/intro',
             },
             {
-              label: 'Network',
-              to: '/network/intro',
+              label: 'Build',
+              to: '/docs/getting-started/',
+            },
+            {
+              label: 'Community',
+              to: '/docs/community-and-support/',
             },
           ],
         },
@@ -161,7 +150,7 @@ const config: Config = {
           items: [
             {
               label: 'Website',
-              href: 'https://docs.layeredge.io',
+              href: 'https://layeredge.io/',
             },
             {
               label: 'GitHub',
