@@ -3,6 +3,9 @@ title: Light Node Verification
 sidebar_position: 1
 ---
 
+import ThemedImage from '@theme/ThemedImage';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 # Light Node Verification
 
 LayerEdge's Light Node Verification system is a core innovation designed to achieve decentralized, scalable zk-proof validation without compromising security. Rather than requiring every node to validate the entire proof batch, LayerEdge allows each Light Node to **verify only a small, randomly selected subset** of zk-proofs.
@@ -14,6 +17,14 @@ This design:
 * Encourages permissionless participation from a global pool of verifiers
 
 Together, Light Nodes form a **distributed and tamper-resistant zk-verification layer**, where **honest sampling and randomized verification** ensure security with minimal overhead.
+
+<ThemedImage
+  alt="Block Production in LayerEdge Network"
+  sources={{
+    light: useBaseUrl('/images/PoSources.png'),
+    dark: useBaseUrl('/images/PoSources-dark.png'),
+  }}
+/>
 
 ## How Light Nodes Work
 
