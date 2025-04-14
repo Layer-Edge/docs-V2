@@ -5,7 +5,7 @@
 - Join our [Discord](https://discord.com/invite/layeredge)
 - Telegram groups
   - Subscribe to [Layeredge Official Announcements](https://t.me/layeredge) to stay up to date with the latest Layeredge news
-  - Join [MPC 👀](https://t.me/layeredge), a broader community group for discussing MPC developments, papers, and implementation examples.
+  - Join our [Telegram](https://t.me/layeredge)
 
 ## Support
 
