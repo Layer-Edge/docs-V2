@@ -143,6 +143,10 @@ const config: Config = {
               label: 'Telegram',
               href: 'https://t.me/layeredge',
             },
+            {
+              label: 'Docs',
+              href: 'https://docs.layeredge.io',
+            },
           ],
         },
         {
