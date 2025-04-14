@@ -191,18 +191,6 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Frequently Asked Questions',
-      link: {
-        type: 'doc',
-        id: 'frequently-asked-questions-faqs/index',
-      },
-      items: [
-        // 'frequently-asked-questions-faqs/index',
-        'frequently-asked-questions-faqs/true-rollups-on-bitcoin'
-      ]
-    },
-    {
-      type: 'category',
       label: 'Tokenomics & Economic Model',
       link: {
         type: 'doc',
@@ -215,6 +203,43 @@ const sidebars: SidebarsConfig = {
         'tokenomics-and-economic-model/token-demand-and-reward-framework',
         'tokenomics-and-economic-model/token-flow-and-network-equilibrium'
       ]
+    },
+    {
+      type: 'category',
+      label: 'Frequently Asked Questions',
+      link: {
+        type: 'doc',
+        id: 'frequently-asked-questions-faqs/index',
+      },
+      items: [
+        // 'frequently-asked-questions-faqs/index',
+        'frequently-asked-questions-faqs/true-rollups-on-bitcoin'
+      ]
+    },
+    {
+      type: 'link',
+      label: 'Twitter',
+      href: 'https://x.com/layeredge',
+    },
+    {
+      type: 'link',
+      label: 'Discord',
+      href: 'https://discord.com/invite/layeredge',
+    },
+    {
+      type: 'link',
+      label: 'Medium',
+      href: 'https://blog.layeredge.io',
+    },
+    {
+      type: 'link',
+      label: 'Telegram',
+      href: 'https://t.me/layeredge',
+    },
+    {
+      type: 'link',
+      label: 'GitHub',
+      href: 'https://github.com/orgs/Layer-Edge/repositories',
     },
   ],
 };

@@ -2,10 +2,13 @@
 
 ## Join our community
 
-- Join our [Discord](https://discord.com/invite/layeredge)
-- Telegram groups
-  - Subscribe to [Layeredge Official Announcements](https://t.me/layeredge) to stay up to date with the latest Layeredge news
-  - Join our [Telegram](https://t.me/layeredge)
+- **[Join our Discord](https://discord.com/invite/layeredge)** – Collaborate, ask questions, and chat directly with the LayerEdge team and community.
+- **[Join our Telegram Group](https://t.me/layeredge)** – Real-time discussions, updates, and community support.
+- **[Subscribe to Announcements Channel](https://t.me/layeredgeannouncements)** – Get official updates, product news, and launch alerts.
+- **[Follow us on Twitter](https://x.com/layeredge)** – Stay in the loop with daily insights, updates, and announcements.
+- **[Read our Blog](https://blog.layeredge.io)** – Explore deep dives, protocol updates, and thought leadership.
+- **[Explore our GitHub](https://github.com/orgs/Layer-Edge/repositories)** – Access our open-source repositories, contribute, or fork the protocol
+- **[Follow LayerEdge Foundation on Twitter](https://x.com/layeredgefndn)** – For updates specifically around **$EDGEN token** and governance.
 
 ## Support
 
