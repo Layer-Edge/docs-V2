@@ -1,0 +1,88 @@
+---
+title: Universal Validator Set (UVS)
+sidebar_position: 2
+---
+
+# Universal Validator Set (UVS)
+
+## Overview of UVS
+
+The Universal Validator Set (UVS) is the backbone of LayerEdge, enabling trust-minimized operations for zk-protocols by running full validator nodes. UVS validators play a critical role in validating zk-proofs, and ensuring secure settlements on Bitcoin.
+
+UVS validators are incentivized through a reward mechanism, which is tied to their stake on Babylon and LayerEdge. This document provides a detailed guide on how UVS runners are rewarded and how they can maximize their earnings.
+
+## UVS Validation Process
+
+The diagram below illustrates the flow of the UVS validation process:
+
+![UVS Validation Process](/img/uvs-validation.png)
+
+1. **Stake BTC via Babylon**: Validators stake BTC to provide economic security
+2. **Restaked BTC Enables UVS**: BTC is restaked to power LayerEdge's UVS system
+3. **Validation**: UVS nodes validate zk-proofs for efficient Bitcoin settlement
+4. **Trust-Minimized Settlement**: Aggregated proofs are settled on Bitcoin, ensuring secure and transparent operations
+5. **\$EDGE Staking for Boosted Rewards**: Validators can stake $EDGE tokens to earn higher rewards and additional benefits
+
+
+## How to Become a UVS Runner
+
+1. **Restake BTC via Babylon**: To participate as a UVS validator, you must first stake BTC through Babylon's restaking mechanism. This restaking ensures economic security for the LayerEdge network and zk-protocols utilizing its infrastructure.
+
+2. **Run a Full Validator Node**: Once BTC is restaked, you will be eligible to run a full validator node for LayerEdge. As a UVS runner, your node will:
+   * Validate proofs from multiple zk-protocols on leaf level
+   * Validate the final aggregated proof before settling on Bitcoin
+
+3. **Earn Base Rewards**: By staking BTC and running a UVS node, you will receive base rewards as part of LayerEdge's validator reward mechanism. These rewards are distributed based on the economic security you provide through restaked BTC.
+
+## Boosting Rewards with $EDGE Staking
+
+To unlock higher-tier rewards, UVS runners can stake $EDGE tokens in addition to their restaked BTC. This staking mechanism incentivizes validators to align more closely with LayerEdge's ecosystem and ensures better economic participation.
+
+### Reward Tiers
+
+* **Base Tier**: Rewards for validators restaking BTC via Babylon
+* **Boosted Tier**: Additional rewards for validators who stake \$EDGE tokens. The more \$EDGE tokens staked, the higher the reward multiplier
+
+### Key Benefits of \$EDGE Staking
+
+* **Higher Rewards**: Staking \$EDGE tokens significantly increases the reward potential for UVS runners
+* **Governance Rights**: Staked \$EDGE tokens provide governance rights, enabling validators to participate in LayerEdge's decision-making processes
+
+## Reward Distribution Mechanism
+
+Rewards are distributed periodically and are calculated based on:
+
+1. **Restaked BTC**: The amount of BTC restaked via Babylon
+2. **\$EDGE Staked**: The total \$EDGE tokens staked by the validator
+3. **Validation Activity**: The performance and uptime of the UVS node
+
+### Reward Calculation
+
+* **Base Reward**: Proportional to the amount of BTC restaked
+* **Bonus Multiplier**: Based on the amount of $EDGE tokens staked
+* **Performance Factor**: Rewards are adjusted based on the validator's contribution to proof validation
+
+> Example: A UVS runner with 1 BTC restaked via Babylon and 1,000 \$EDGE staked will earn significantly more rewards compared to a runner with only 1 BTC restaked and no \$EDGE staked.
+
+## Responsibilities of UVS Runners
+
+1. **Maintain Node Uptime**: Ensure your validator node operates consistently with minimal downtime. Performance penalties may apply for prolonged inactivity
+2. **Validate zk-Proofs**: Process proofs from various zk-protocols accurately and efficiently
+3. **Stake Maintenance**: Regularly monitor and manage your BTC and $EDGE stakes to maximize rewards
+
+## Key Benefits of Being a UVS Runner
+
+1. **Earning Potential**: UVS runners earn competitive rewards for their contributions to the LayerEdge network. By staking both BTC and \$EDGE, validators can maximize their income
+2. **Economic Security Alignment**: Restaking BTC via Babylon ensures that UVS runners contribute directly to the economic security of the LayerEdge network
+3. **Modular Ecosystem Support**: UVS runners play a critical role in supporting zk-protocols and decentralized applications, contributing to a scalable and modular Bitcoin ecosystem
+4. **Governance Rights**: Validators staking \$EDGE tokens gain governance influence, allowing them to shape the future of the LayerEdge network
+
+## Join the UVS Network
+
+If you're ready to participate as a UVS runner and contribute to the next evolution of Bitcoin zk protocols, get started today by:
+
+1. Staking BTC through Babylon
+2. Setting up your full validator node
+3. Staking \$EDGE tokens to maximize rewards
+
+For detailed technical setup guides and support, visit our [documentation page](/docs/developer-guide/run-node/setup-guide). 

@@ -1,0 +1,100 @@
+---
+title: Proof Of Aggregation (PoAgg)
+sidebar_position: 1
+---
+
+# Proof Of Aggregation (PoAgg)
+
+## Overview
+
+Proof of Aggregation is LayerEdge's novel consensus mechanism that enables efficient proof verification and aggregation while maintaining security. The system combines traditional blockchain consensus with specialized proof handling capabilities.
+
+![Block Production in LayerEdge Network](/img/PoAgg.jpg)
+
+## Core Components
+
+### 1. Validator Network
+
+* Validators stake EDGE tokens to participate
+* Responsible for block production and validation
+* Verify proofs at leaf level before aggregation
+* Participate in consensus for block finalization
+
+### 2. Block Production Process
+
+* Validators validate consecutive blocks (#n, #n+1, etc.)
+* Each block contains aggregated proofs from multiple sources
+* Validators receive rewards for:
+  * Block validation
+  * Proof verification
+  * Participation in consensus
+
+### 3. Proof Aggregation Layer
+
+The proof aggregation process occurs in three distinct phases:
+
+#### Phase 1: Pre-aggregation Storage
+
+* Individual proofs are received from various sources
+* Proofs are securely stored in a pre-aggregation layer
+* Initial validation checks are performed
+
+#### Phase 2: Leaf-level Verification
+
+* Validators perform detailed verification of individual proofs
+* Each proof is checked for validity before aggregation
+* Failed proofs are rejected at this stage
+
+#### Phase 3: Proof Aggregation
+
+* Valid proofs enter the aggregation sequencer
+* Multiple proofs are combined efficiently
+* Final aggregated proof is produced
+* Aggregated proof is settled on Layer 1 (Bitcoin)
+
+## Validator Rewards
+
+Validators receive rewards from multiple sources:
+
+1. Block production rewards
+2. Proof verification rewards
+3. Aggregation participation rewards
+
+## Security Model
+
+### Staking
+
+* Validators must stake EDGE tokens
+* Stake serves as security deposit
+* Slashing conditions for malicious behavior
+
+### Verification
+
+* Multi-level verification process
+* Leaf-level proof checking
+* Aggregate proof validation
+* Cross-validation among validators
+
+## Settlement Process
+
+1. Final aggregated proof is generated
+2. Proof is verified by validator network
+3. Settlement transaction is prepared
+4. Proof is posted to Layer 1 (Bitcoin)
+
+## Network Benefits
+
+1. **Cost Efficiency**
+   * Shared verification costs
+   * Reduced settlement expenses
+   * Efficient resource utilization
+
+2. **Security**
+   * Multi-layer validation
+   * Economic incentives for honest behavior
+   * Robust slashing conditions
+
+3. **Scalability**
+   * Parallel proof processing
+   * Efficient aggregation
+   * Optimized settlement 
