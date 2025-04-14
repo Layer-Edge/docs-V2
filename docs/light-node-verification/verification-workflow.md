@@ -99,7 +99,7 @@ If a proof fails verification:
 
 ### Token Rewards
 
-* Every Light Node that submits a **valid attestation** receives base token rewards in **$EDGE**.
+* Every Light Node that submits a **valid attestation** receives base token rewards in **$EDGEN**.
 * Rewards are proportional to:  
   * Subset size verified  
   * System load  

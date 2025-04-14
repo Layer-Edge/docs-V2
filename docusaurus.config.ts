@@ -160,8 +160,8 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Website',
+              href: 'https://docs.layeredge.io',
             },
             {
               label: 'GitHub',

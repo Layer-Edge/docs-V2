@@ -20,6 +20,11 @@
   flex-direction: column;
   flex: 1;
   max-width: 350px;
+  text-decoration: none;
+}
+
+.featureCol:hover {
+  text-decoration: none;
 }
 
 /* Feature card styling */

@@ -30,7 +30,7 @@ This design allows the network to scale to **millions of zk-proofs** without req
 
 | Behavior | Result |
 |----------|--------|
-| Submitting valid attestations | $EDGE token rewards |
+| Submitting valid attestations | $EDGEN token rewards |
 | Catching invalid proofs | Bonus bounties |
 | Failing to verify or lying | Economic penalty / exclusion |
 
@@ -52,7 +52,7 @@ This general-purpose design ensures that LayerEdge Light Nodes are **not tied to
 | **Core Function** | Verifies random subset of aggregated zk-proofs |
 | **Security Model** | Random sampling + exponential fraud resistance |
 | **Resource Profile** | Lightweight; runs on standard devices |
-| **Economic Role** | Earns $EDGE tokens via validation and fraud detection |
+| **Economic Role** | Earns $EDGEN tokens via validation and fraud detection |
 | **Randomness Source** | Bitcoin block header + nodeSeed + VRF |
 | **Consensus Anchoring** | Synchronized to latest Bitcoin block for randomness fairness |
 

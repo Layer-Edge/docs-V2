@@ -62,7 +62,7 @@ Malicious Light Nodes that:
 
 ...are penalized in the following ways:
 
-* Loss of EDGE token rewards for that cycle
+* Loss of EDGEN token rewards for that cycle
 * Possible **slashing** of staked assets (if bonded)
 * **Reputation downgrade** within the LayerEdge verifier registry
 * Temporary or permanent exclusion from the validator set
@@ -80,7 +80,7 @@ This aligns network health with economic self-interest.
 
 Light Nodes that verify correctly and/or detect fraud receive:
 
-* **Base verification rewards** in EDGE
+* **Base verification rewards** in EDGEN
 * **Bounty rewards** for catching invalid zk-proofs
 * **Enhanced future selection weight** in the verifier set
 

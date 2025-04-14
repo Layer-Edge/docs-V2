@@ -15,7 +15,7 @@ Proof of Aggregation is LayerEdge's novel consensus mechanism that enables effic
 
 ### 1. Validator Network
 
-* Validators stake EDGE tokens to participate
+* Validators stake EDGEN tokens to participate
 * Responsible for block production and validation
 * Verify proofs at leaf level before aggregation
 * Participate in consensus for block finalization
@@ -64,7 +64,7 @@ Validators receive rewards from multiple sources:
 
 ### Staking
 
-* Validators must stake EDGE tokens
+* Validators must stake EDGEN tokens
 * Stake serves as security deposit
 * Slashing conditions for malicious behavior
 

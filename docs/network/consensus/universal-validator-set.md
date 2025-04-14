@@ -21,7 +21,7 @@ The diagram below illustrates the flow of the UVS validation process:
 2. **Restaked BTC Enables UVS**: BTC is restaked to power LayerEdge's UVS system
 3. **Validation**: UVS nodes validate zk-proofs for efficient Bitcoin settlement
 4. **Trust-Minimized Settlement**: Aggregated proofs are settled on Bitcoin, ensuring secure and transparent operations
-5. **\$EDGE Staking for Boosted Rewards**: Validators can stake $EDGE tokens to earn higher rewards and additional benefits
+5. **\$EDGEN Staking for Boosted Rewards**: Validators can stake $EDGEN tokens to earn higher rewards and additional benefits
 
 
 ## How to Become a UVS Runner
@@ -34,48 +34,48 @@ The diagram below illustrates the flow of the UVS validation process:
 
 3. **Earn Base Rewards**: By staking BTC and running a UVS node, you will receive base rewards as part of LayerEdge's validator reward mechanism. These rewards are distributed based on the economic security you provide through restaked BTC.
 
-## Boosting Rewards with $EDGE Staking
+## Boosting Rewards with $EDGEN Staking
 
-To unlock higher-tier rewards, UVS runners can stake $EDGE tokens in addition to their restaked BTC. This staking mechanism incentivizes validators to align more closely with LayerEdge's ecosystem and ensures better economic participation.
+To unlock higher-tier rewards, UVS runners can stake $EDGEN tokens in addition to their restaked BTC. This staking mechanism incentivizes validators to align more closely with LayerEdge's ecosystem and ensures better economic participation.
 
 ### Reward Tiers
 
 * **Base Tier**: Rewards for validators restaking BTC via Babylon
-* **Boosted Tier**: Additional rewards for validators who stake \$EDGE tokens. The more \$EDGE tokens staked, the higher the reward multiplier
+* **Boosted Tier**: Additional rewards for validators who stake \$EDGEN tokens. The more \$EDGEN tokens staked, the higher the reward multiplier
 
-### Key Benefits of \$EDGE Staking
+### Key Benefits of \$EDGEN Staking
 
-* **Higher Rewards**: Staking \$EDGE tokens significantly increases the reward potential for UVS runners
-* **Governance Rights**: Staked \$EDGE tokens provide governance rights, enabling validators to participate in LayerEdge's decision-making processes
+* **Higher Rewards**: Staking \$EDGEN tokens significantly increases the reward potential for UVS runners
+* **Governance Rights**: Staked \$EDGEN tokens provide governance rights, enabling validators to participate in LayerEdge's decision-making processes
 
 ## Reward Distribution Mechanism
 
 Rewards are distributed periodically and are calculated based on:
 
 1. **Restaked BTC**: The amount of BTC restaked via Babylon
-2. **\$EDGE Staked**: The total \$EDGE tokens staked by the validator
+2. **\$EDGEN Staked**: The total \$EDGEN tokens staked by the validator
 3. **Validation Activity**: The performance and uptime of the UVS node
 
 ### Reward Calculation
 
 * **Base Reward**: Proportional to the amount of BTC restaked
-* **Bonus Multiplier**: Based on the amount of $EDGE tokens staked
+* **Bonus Multiplier**: Based on the amount of $EDGEN tokens staked
 * **Performance Factor**: Rewards are adjusted based on the validator's contribution to proof validation
 
-> Example: A UVS runner with 1 BTC restaked via Babylon and 1,000 \$EDGE staked will earn significantly more rewards compared to a runner with only 1 BTC restaked and no \$EDGE staked.
+> Example: A UVS runner with 1 BTC restaked via Babylon and 1,000 \$EDGEN staked will earn significantly more rewards compared to a runner with only 1 BTC restaked and no \$EDGEN staked.
 
 ## Responsibilities of UVS Runners
 
 1. **Maintain Node Uptime**: Ensure your validator node operates consistently with minimal downtime. Performance penalties may apply for prolonged inactivity
 2. **Validate zk-Proofs**: Process proofs from various zk-protocols accurately and efficiently
-3. **Stake Maintenance**: Regularly monitor and manage your BTC and $EDGE stakes to maximize rewards
+3. **Stake Maintenance**: Regularly monitor and manage your BTC and $EDGEN stakes to maximize rewards
 
 ## Key Benefits of Being a UVS Runner
 
-1. **Earning Potential**: UVS runners earn competitive rewards for their contributions to the LayerEdge network. By staking both BTC and \$EDGE, validators can maximize their income
+1. **Earning Potential**: UVS runners earn competitive rewards for their contributions to the LayerEdge network. By staking both BTC and \$EDGEN, validators can maximize their income
 2. **Economic Security Alignment**: Restaking BTC via Babylon ensures that UVS runners contribute directly to the economic security of the LayerEdge network
 3. **Modular Ecosystem Support**: UVS runners play a critical role in supporting zk-protocols and decentralized applications, contributing to a scalable and modular Bitcoin ecosystem
-4. **Governance Rights**: Validators staking \$EDGE tokens gain governance influence, allowing them to shape the future of the LayerEdge network
+4. **Governance Rights**: Validators staking \$EDGEN tokens gain governance influence, allowing them to shape the future of the LayerEdge network
 
 ## Join the UVS Network
 
@@ -83,6 +83,6 @@ If you're ready to participate as a UVS runner and contribute to the next evolut
 
 1. Staking BTC through Babylon
 2. Setting up your full validator node
-3. Staking \$EDGE tokens to maximize rewards
+3. Staking \$EDGEN tokens to maximize rewards
 
 For detailed technical setup guides and support, visit our [documentation page](/docs/developer-guide/run-node/setup-guide). 
