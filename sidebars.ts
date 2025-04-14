@@ -216,31 +216,6 @@ const sidebars: SidebarsConfig = {
         'frequently-asked-questions-faqs/true-rollups-on-bitcoin'
       ]
     },
-    {
-      type: 'link',
-      label: 'Twitter',
-      href: 'https://x.com/layeredge',
-    },
-    {
-      type: 'link',
-      label: 'Discord',
-      href: 'https://discord.com/invite/layeredge',
-    },
-    {
-      type: 'link',
-      label: 'Medium',
-      href: 'https://blog.layeredge.io',
-    },
-    {
-      type: 'link',
-      label: 'Telegram',
-      href: 'https://t.me/layeredge',
-    },
-    {
-      type: 'link',
-      label: 'GitHub',
-      href: 'https://github.com/orgs/Layer-Edge/repositories',
-    },
   ],
 };
 
