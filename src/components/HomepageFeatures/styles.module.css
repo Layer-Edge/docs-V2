@@ -69,36 +69,36 @@
 
 /* Icon colors in light mode */
 :global([data-theme='light']) .iconPrimary {
-  fill: #5D37D3;
+  fill: #a7934e; /* Updated to gold from #5D37D3 */
 }
 
 :global([data-theme='light']) .iconSecondary {
-  fill: #FFC107;
+  fill: #665622; /* Darker gold for secondary */
 }
 
 :global([data-theme='light']) .iconTertiary {
-  fill: rgba(79, 195, 247, 0.3);
+  fill: rgba(167, 147, 78, 0.3); /* Gold with transparency */
 }
 
 :global([data-theme='light']) .iconStroke {
-  stroke: #5D37D3;
+  stroke: #a7934e; /* Updated to gold from #5D37D3 */
 }
 
 /* Icon colors in dark mode */
 :global([data-theme='dark']) .iconPrimary {
-  fill: #3366ff;
+  fill: #a7934e; /* Updated to gold from #3366ff */
 }
 
 :global([data-theme='dark']) .iconSecondary {
-  fill: #FFC107;
+  fill: #c9bb7c; /* Lighter gold for dark mode */
 }
 
 :global([data-theme='dark']) .iconTertiary {
-  fill: rgba(79, 195, 247, 0.3);
+  fill: rgba(167, 147, 78, 0.3); /* Gold with transparency */
 }
 
 :global([data-theme='dark']) .iconStroke {
-  stroke: #3366ff;
+  stroke: #a7934e; /* Updated to gold from #3366ff */
 }
 
 .featureTitle {

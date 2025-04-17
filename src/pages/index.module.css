@@ -111,29 +111,16 @@
   transition: all 0.3s;
   text-decoration: none;
   display: inline-block;
+  background-color: #a7934e;
 }
 
-/* Button color in light mode */
-:global([data-theme='light']) .getStartedButton {
-  background-color: #4CAF50;  /* Green color from your current site */
-}
-
-:global([data-theme='light']) .getStartedButton:hover {
-  background-color: #3e8e41;
+.getStartedButton:hover {
+  background-color: #a7934e;
   text-decoration: none;
   color: white;
 }
 
-/* Button color in dark mode - using blue like Nillion */
-:global([data-theme='dark']) .getStartedButton {
-  background-color: #3366ff;
-}
-
-:global([data-theme='dark']) .getStartedButton:hover {
-  background-color: #2955d9;
-  text-decoration: none;
-  color: white;
-}
+:global([data-theme='dark']) 
 
 /* Geometric shape styling */
 .geometricShape {
@@ -151,14 +138,8 @@
   fill: none;
 }
 
-/* Pattern color in light mode */
-:global([data-theme='light']) .geometricPattern {
-  stroke: rgba(0, 0, 0, 0.2);
-}
-
-/* Pattern color in dark mode - using blue like Nillion */
-:global([data-theme='dark']) .geometricPattern {
-  stroke: #3366ff;
+.geometricPattern {
+  stroke: #a7934e;
 }
 
 /* Responsive design */
