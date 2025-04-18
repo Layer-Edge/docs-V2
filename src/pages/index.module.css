@@ -111,16 +111,30 @@
   transition: all 0.3s;
   text-decoration: none;
   display: inline-block;
-  background-color: #a7934e;
 }
 
-.getStartedButton:hover {
-  background-color: #a7934e;
+/* Updated button styles for light and dark mode */
+:global([data-theme='light']) .getStartedButton {
+  background-color: #2d2d2d;
+  color: white;
+}
+
+:global([data-theme='light']) .getStartedButton:hover {
+  background-color: #111111;
   text-decoration: none;
   color: white;
 }
 
-:global([data-theme='dark']) 
+:global([data-theme='dark']) .getStartedButton {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+:global([data-theme='dark']) .getStartedButton:hover {
+  background-color: #e6e6e6;
+  text-decoration: none;
+  color: #121212;
+}
 
 /* Geometric shape styling */
 .geometricShape {
@@ -138,8 +152,13 @@
   fill: none;
 }
 
-.geometricPattern {
-  stroke: #a7934e;
+/* Updated geometric pattern colors */
+:global([data-theme='light']) .geometricPattern {
+  stroke: #2d2d2d;
+}
+
+:global([data-theme='dark']) .geometricPattern {
+  stroke: #ffffff;
 }
 
 /* Responsive design */

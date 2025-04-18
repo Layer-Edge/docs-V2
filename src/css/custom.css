@@ -6,30 +6,30 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #a7934e; /* Gold replacing green */
-  --ifm-color-primary-dark: #967f44;
-  --ifm-color-primary-darker: #866e3c;
-  --ifm-color-primary-darkest: #665622;
-  --ifm-color-primary-light: #b8a764;
-  --ifm-color-primary-lighter: #c9bb7c;
-  --ifm-color-primary-lightest: #d9ce95;
+  --ifm-color-primary: #2d2d2d; /* Black replacing gold */
+  --ifm-color-primary-dark: #222222;
+  --ifm-color-primary-darker: #1a1a1a;
+  --ifm-color-primary-darkest: #111111;
+  --ifm-color-primary-light: #3d3d3d;
+  --ifm-color-primary-lighter: #4d4d4d;
+  --ifm-color-primary-lightest: #5d5d5d;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
   /* Custom colors */
-  --layeredge-gold: #a7934e; /* Replaced green with gold */
+  --layeredge-primary: #2d2d2d; /* Replaced gold with black */
   --layeredge-text-color: #333333;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #a7934e; /* Gold replacing blue */
-  --ifm-color-primary-dark: #967f44;
-  --ifm-color-primary-darker: #866e3c;
-  --ifm-color-primary-darkest: #665622;
-  --ifm-color-primary-light: #b8a764;
-  --ifm-color-primary-lighter: #c9bb7c;
-  --ifm-color-primary-lightest: #d9ce95;
+  --ifm-color-primary: #ffffff; /* White replacing gold */
+  --ifm-color-primary-dark: #e6e6e6;
+  --ifm-color-primary-darker: #d9d9d9;
+  --ifm-color-primary-darkest: #b3b3b3;
+  --ifm-color-primary-light: #ffffff;
+  --ifm-color-primary-lighter: #ffffff;
+  --ifm-color-primary-lightest: #ffffff;
   --ifm-background-color: #121212;
   --ifm-background-surface-color: #1e1e1e;
   --ifm-navbar-background-color: #121212;
@@ -37,7 +37,7 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
   /* Custom colors */
-  --layeredge-gold: #a7934e; /* Replaced blue with gold */
+  --layeredge-primary: #ffffff; /* Replaced gold with white */
   --layeredge-text-color: #e0e0e0;
 }
 
@@ -58,6 +58,10 @@
 /* Style the navbar items */
 .navbar__item {
   font-weight: 500;
+}
+
+.navbar__link--active ,.navbar__item:hover{
+  font-weight: 600;
 }
 
 /* Style the sidebar in dark mode */
@@ -153,12 +157,12 @@ code {
 
 [data-theme='light'] code {
   background-color: #f5f5f5;
-  color: #e53935;
+  color: #2d2d2d;
 }
 
 [data-theme='dark'] code {
   background-color: #2d2d2d;
-  color: #ff5252;
+  color: #ffffff;
 }
 
 /* GitHub icon in navbar */

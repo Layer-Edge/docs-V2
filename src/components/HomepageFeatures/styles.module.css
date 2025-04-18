@@ -67,38 +67,38 @@
   margin-bottom: 1.5rem;
 }
 
-/* Icon colors in light mode */
+/* Updated icon colors in light mode */
 :global([data-theme='light']) .iconPrimary {
-  fill: #a7934e; /* Updated to gold from #5D37D3 */
+  fill: #2d2d2d;
 }
 
 :global([data-theme='light']) .iconSecondary {
-  fill: #665622; /* Darker gold for secondary */
+  fill: #4d4d4d;
 }
 
 :global([data-theme='light']) .iconTertiary {
-  fill: rgba(167, 147, 78, 0.3); /* Gold with transparency */
+  fill: rgba(45, 45, 45, 0.3);
 }
 
 :global([data-theme='light']) .iconStroke {
-  stroke: #a7934e; /* Updated to gold from #5D37D3 */
+  stroke: #2d2d2d;
 }
 
-/* Icon colors in dark mode */
+/* Updated icon colors in dark mode */
 :global([data-theme='dark']) .iconPrimary {
-  fill: #a7934e; /* Updated to gold from #3366ff */
+  fill: #ffffff;
 }
 
 :global([data-theme='dark']) .iconSecondary {
-  fill: #c9bb7c; /* Lighter gold for dark mode */
+  fill: #e6e6e6;
 }
 
 :global([data-theme='dark']) .iconTertiary {
-  fill: rgba(167, 147, 78, 0.3); /* Gold with transparency */
+  fill: rgba(255, 255, 255, 0.3);
 }
 
 :global([data-theme='dark']) .iconStroke {
-  stroke: #a7934e; /* Updated to gold from #3366ff */
+  stroke: #ffffff;
 }
 
 .featureTitle {
@@ -128,6 +128,53 @@
 
 :global([data-theme='dark']) .featureDescription {
   color: #cccccc;
+}
+
+/* Menu Styling - Adding styles for active menu items */
+:global(.menu__link) {
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Light mode menu styles */
+:global([data-theme='light']) :global(.menu__link) {
+  color: #555555;
+}
+
+:global([data-theme='light']) :global(.menu__link:hover) {
+  background-color: #f0f0f0;
+  color: #2d2d2d;
+}
+
+:global([data-theme='light']) :global(.menu__link--active) {
+  background-color: #e0e0e0;
+  color: #2d2d2d;
+  font-weight: 600;
+  border-left: 3px solid #2d2d2d;
+}
+
+:global([data-theme='light']) :global(.menu__link--active:not(.menu__link--sublist)) {
+  background-color: #e0e0e0;
+}
+
+/* Dark mode menu styles */
+:global([data-theme='dark']) :global(.menu__link) {
+  color: #cccccc;
+}
+
+:global([data-theme='dark']) :global(.menu__link:hover) {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+:global([data-theme='dark']) :global(.menu__link--active) {
+  background-color: #333333;
+  color: #ffffff;
+  font-weight: 600;
+  border-left: 3px solid #ffffff;
+}
+
+:global([data-theme='dark']) :global(.menu__link--active:not(.menu__link--sublist)) {
+  background-color: #333333;
 }
 
 /* Responsive design */
