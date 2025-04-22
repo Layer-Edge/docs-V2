@@ -84,7 +84,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'https://dr6rqdr0y14sm.cloudfront.net/images/favicon.png',
     algolia: {
       // Your Algolia Application ID
       appId: process.env.ALGOLIA_APP_ID,
@@ -104,7 +104,7 @@ const config: Config = {
       title: 'Layeredge',
       logo: {
         alt: 'Layeredge Logo',
-        src: 'img/favicon.png',
+        src: 'https://dr6rqdr0y14sm.cloudfront.net/images/favicon.png',
       },
       items: [
         { to: '/docs/intro', label: 'Learn', position: 'left' },
