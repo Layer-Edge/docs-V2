@@ -57,19 +57,6 @@ Tokens leave the LayerEdge treasury as **compensation for active participants** 
 
 ---
 
-## Economic Equilibrium: Sustainable by Design
-
-The LayerEdge economy self-regulates through feedback loops between usage, validator participation, and incentives.
-
-| Network Activity | Token Demand | Verifier Rewards | Network Security |
-|------------------|--------------|------------------|------------------|
-| High             | Increases    | Increases        | Improves         |
-| Low              | Decreases    | Decreases        | Adjusts downward |
-
-This **adaptive balance** ensures that node participation grows with usage—and contracts if usage declines—preserving economic sustainability without overpaying idle participants.
-
----
-
 ## Example Scenario: Equilibrium in Action
 
 - A new zk-powered gaming app integrates LayerEdge for off-chain computation proofing

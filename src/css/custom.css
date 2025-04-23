@@ -208,7 +208,11 @@ code {
   margin-top: 0.5rem;
 }
 
+a{
+  color: #346DDB;
+}
 a:hover{
+  color: #346DDB;
   text-decoration: none;
 }
 

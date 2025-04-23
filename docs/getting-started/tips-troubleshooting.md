@@ -53,8 +53,8 @@ This reduces mainnet risk and allows validation of:
 ## 5. Review Documentation
 
 * Always consult the `README.md` or `/docs` directories in:
-    * [Light Node](https://github.com/Layer-Edge/light-node)
-    * [Verification Tester](https://github.com/Layer-Edge/verification-layer-tester)
+    * [`Light Node`](https://github.com/Layer-Edge/light-node)
+    * [`Verification Tester`](https://github.com/Layer-Edge/verification-layer-tester)
 * Special configuration instructions (e.g., Docker builds, OS-specific paths) are frequently posted there.
 
 ## Troubleshooting

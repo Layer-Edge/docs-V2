@@ -1,5 +1,5 @@
 ---
-title: Cryptographic Guarantees & Constructs
+title: Commitments, Challenges & Cryptographic Guarantees & Constructs
 sidebar_position: 4
 ---
 

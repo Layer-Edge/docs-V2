@@ -3,8 +3,9 @@ sidebar_position: 1
 ---
 import ThemedImage from '@theme/ThemedImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import TopicGrid from '@site/src/components/card';
 
-# Proof Aggregation Layer
+# Architecture
 
 ## Introduction: Bitcoin's Security for zk-Proofs
 
@@ -193,12 +194,37 @@ This creates a system where:
 
 # Related Subpages
 
-This section ties into the following technical components:
+LayerEdge is composed of five core architectural modules, each addressing a distinct aspect of secure, scalable, and verifiable computation. This section delves into the intricate technical details of how these components interact and ensures seamless end-to-end functionality.
 
-- [Verification Layer](/docs/proof-aggregation-layer/verification-layer)
-- [General Prover / Verifier System](/docs/proof-aggregation-layer/general-prover-verifier-system)
-- [Data Availability Layer](/docs/proof-aggregation-layer/data-availability-layer-da-layer)
-- [Bitcoin Anchoring](/docs/proof-aggregation-layer/bitcoin-anchoring)
+<TopicGrid
+  topics={[
+    {
+      title: 'Verification Layer',
+      description: "Learn more about LayerEdge's Verification Layer",
+      link: '/docs/architecture/verification-layer'
+    },
+    {
+      title: 'General Prover / Verifier System',
+      description: 'Learn more about General Prover / Verifier System',
+      link: '/docs/architecture/general-prover-verifier-system'
+    },
+    {
+      title: 'Data Availability Layer',
+      description: "Learn more about how underlying proofs remain publicly verifiable",
+      link: '/docs/architecture/data-availability-layer-da-layer'
+    },
+    {
+      title: 'Bitcoin Anchoring',
+      description: 'Read more about how the final aggregated proof is anchored on Bitcoin',
+      link: '/docs/architecture/bitcoin-anchoring'
+    },
+    {
+      title: 'Built on Babylon',
+      description: 'Learn more about how Babylon is integrated with LayerEdge',
+      link: '/docs/architecture/built-on-babylon'
+    }
+  ]}
+/>
 
 ## Conclusion
 

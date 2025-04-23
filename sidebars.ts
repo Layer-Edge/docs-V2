@@ -16,23 +16,23 @@ const sidebars: SidebarsConfig = {
         id: 'intro',
       },
       items: [
-        'introduction-to-layerEdge/what-is-layerEdge',
-        'introduction-to-layerEdge/why-layerEdge'
+        'introduction-to-layerEdge/why-layerEdge',
+        'introduction-to-layerEdge/what-is-layerEdge', 
       ]
     },
     {
       type: 'category',
-      label: 'Proof Aggregation Layer',
+      label: 'Architecture',
       link: {
         type: 'doc',
-        id: 'proof-aggregation-layer/index',
+        id: 'architecture/index',
       },
       items: [
-        // 'proof-aggregation-layer/index',
-        'proof-aggregation-layer/bitcoin-anchoring',
-        'proof-aggregation-layer/data-availability-layer-da-layer',
-        'proof-aggregation-layer/general-prover-verifier-system',
-        'proof-aggregation-layer/verification-layer'
+        'architecture/verification-layer',
+        'architecture/general-prover-verifier-system',
+        'architecture/data-availability-layer-da-layer',
+        'architecture/bitcoin-anchoring',
+        'architecture/built-on-babylon',
       ]
     },
     {
@@ -43,12 +43,11 @@ const sidebars: SidebarsConfig = {
         id: 'light-node-verification/index',
       },
       items: [
-        // 'light-node-verification/index',
-        'light-node-verification/practical-considerations',
-        'light-node-verification/randomized-proof-selection',
         'light-node-verification/role-of-light-nodes',
+        'light-node-verification/randomized-proof-selection',
+        'light-node-verification/verification-workflow',
         'light-node-verification/security-analysis',
-        'light-node-verification/verification-workflow'
+        'light-node-verification/practical-considerations',
       ]
     },
     {
@@ -59,11 +58,10 @@ const sidebars: SidebarsConfig = {
         id: 'state-transition-verification/index',
       },
       items: [
-        // 'state-transition-verification/index',
+        'state-transition-verification/optimistic-execution',
+        'state-transition-verification/modular-verification',
         'state-transition-verification/cryptographic-guarantees',
         'state-transition-verification/full-workflow',
-        'state-transition-verification/modular-verification',
-        'state-transition-verification/optimistic-execution'
       ]
     },
     {
@@ -74,10 +72,9 @@ const sidebars: SidebarsConfig = {
         id: 'high-throughput-architecture/index',
       },
       items: [
-        // 'high-throughput-architecture/index',
-        'high-throughput-architecture/additional-scalability-features',
+        'high-throughput-architecture/verification-complexity-and-parallelized-verification',
         'high-throughput-architecture/aggregator-vs.-verifier-workloads-and-empirical-performance-observations',
-        'high-throughput-architecture/verification-complexity-and-parallelized-verification'
+        'high-throughput-architecture/additional-scalability-features',
       ]
     },
     {
@@ -88,11 +85,10 @@ const sidebars: SidebarsConfig = {
         id: 'security-model/index',
       },
       items: [
-        // 'security-model/index',
-        'security-model/advanced-cryptographic-protections',
         'security-model/bitcoin-pow-anchoring',
+        'security-model/advanced-cryptographic-protections',
+        'security-model/probabilistic-sampling',
         'security-model/economic-incentives',
-        'security-model/probabilistic-sampling'
       ]
     },
 
@@ -110,11 +106,10 @@ const sidebars: SidebarsConfig = {
         id: 'getting-started/index',
       },
       items: [
-        // 'getting-started/index',
         'getting-started/prerequisites',
-        'getting-started/integration-flow',
         'getting-started/running-light-node',
         'getting-started/submitting-proofs',
+        'getting-started/integration-flow',
         'getting-started/tips-troubleshooting'
       ]
     },
@@ -122,30 +117,6 @@ const sidebars: SidebarsConfig = {
       type: 'doc',
       id: 'try-layeredge-devnet/index',
       label: 'Try LayerEdge (Devnet)'
-    },
-    {
-      type: 'category',
-      label: 'Developer Guide',
-      link: {
-        type: 'doc',
-        id: 'developer-guide/index',
-      },
-      items: [
-        // 'developer-guide/index',
-        {
-          type: 'category',
-          label: 'Run Node',
-          // link: {
-          //   type: 'doc',
-          //   id: 'developer-guide/run-node/index',
-          // },
-          items: [
-            // 'developer-guide/run-node/index',
-            'developer-guide/run-node/setup-guide',
-            'developer-guide/run-node/faq-troubleshooting'
-          ]
-        }
-      ]
     },
     {
       type: 'doc',
@@ -169,10 +140,8 @@ const sidebars: SidebarsConfig = {
             id: 'network/consensus/index',
           },
           items: [
-            // 'network/consensus/index',
             'network/consensus/proof-of-aggregation',
             'network/consensus/stochastic-sampling',
-            'network/consensus/universal-validator-set'
           ]
         }
       ]
@@ -197,11 +166,10 @@ const sidebars: SidebarsConfig = {
         id: 'tokenomics-and-economic-model/index',
       },
       items: [
-        // 'tokenomics-and-economic-model/index',
-        'tokenomics-and-economic-model/additional-scalability-features',
         'tokenomics-and-economic-model/layeredge-utility-token-and-incentives',
         'tokenomics-and-economic-model/token-demand-and-reward-framework',
-        'tokenomics-and-economic-model/token-flow-and-network-equilibrium'
+        'tokenomics-and-economic-model/token-flow-and-network-equilibrium',
+        'tokenomics-and-economic-model/additional-scalability-features',
       ]
     },
     {
@@ -211,10 +179,7 @@ const sidebars: SidebarsConfig = {
         type: 'doc',
         id: 'frequently-asked-questions-faqs/index',
       },
-      items: [
-        // 'frequently-asked-questions-faqs/index',
-        'frequently-asked-questions-faqs/true-rollups-on-bitcoin'
-      ]
+      items: []
     },
   ],
 };
