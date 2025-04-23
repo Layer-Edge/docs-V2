@@ -11,7 +11,7 @@ dotenv.config();
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Layeredge',
+  title: 'LayerEdge',
   tagline: 'Bitcoin Backed Internet',
   favicon: 'img/favicon.ico',
 
