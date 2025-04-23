@@ -23,7 +23,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Layeredge', // Usually your GitHub org/user name.
+  organizationName: 'LayerEdge', // Usually your GitHub org/user name.
   projectName: 'Docs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -101,9 +101,9 @@ const config: Config = {
       searchPagePath: 'search',
     },
     navbar: {
-      title: 'Layeredge',
+      title: 'LayerEdge',
       logo: {
-        alt: 'Layeredge Logo',
+        alt: 'LayerEdge Logo',
         src: 'https://dr6rqdr0y14sm.cloudfront.net/images/favicon.png',
       },
       items: [
@@ -176,7 +176,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Layeredge, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} LayerEdge, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
