@@ -166,8 +166,6 @@ This makes LayerEdge **future-proof for Bitcoin-native zk-rollup systems**.
 | Compatibility | Requires no Bitcoin forks or changes |
 | Future Extensions | zk-rollup anchoring, on-chain zk-proof parsing, composable proof hashes |
 
-## Closing Thoughts
-
 Bitcoin anchoring is what transforms LayerEdge from a zk-protocol into a **trustless settlement infrastructure**. It brings together:
 
 - zk-computation off-chain
