@@ -12,7 +12,7 @@ This flow creates a **self-reinforcing economic loop** where demand and supply o
 
 ## Token Flow: How Value Moves Through LayerEdge
 
-### Incoming Tokens (Demand Side)
+### Incoming Utility
 
 These are tokens **entering** the LayerEdge protocol as users, clients, and integrated systems request verification services.
 
@@ -34,7 +34,7 @@ A rollup generating zk-SNARKs every 15 minutes for batched transactions pays ver
 
 ---
 
-### Outgoing Tokens (Supply Side)
+### Outgoing Distribution
 
 Tokens leave the LayerEdge treasury as **compensation for active participants** in the network:
 
@@ -43,8 +43,8 @@ Tokens leave the LayerEdge treasury as **compensation for active participants** 
   - Paid in base LayerEdge tokens + performance bonuses.
 
 - **Light Nodes**
-  - Perform randomized subset verification
-  - Paid per validation cycle and rewarded further for detecting fraud
+  - Perform randomized subset verification.
+  - Paid per validation cycle and rewarded further for detecting fraud.
 
 - **Challenge Settlements**
   - Tokens may be slashed from dishonest actors.
@@ -53,7 +53,15 @@ Tokens leave the LayerEdge treasury as **compensation for active participants** 
 - **Dispute Escrow**
   - For certain STV challenges, tokens may be temporarily held during conflict resolution.
 
-> Some LayerEdge implementations may also use partial burn mechanisms for every transaction—adding deflationary pressure over time.
+> Some LayerEdge implementations may also use partial **burn mechanisms** for every transaction—adding deflationary pressure over time.
+
+---
+
+## Adaptive Economic Equilibrium
+
+LayerEdge is designed to dynamically adapt to real-world usage. Rather than hardcoding fixed reward schedules or relying on speculative token flows, the protocol constantly monitors network activity to calibrate validator incentives.
+
+When usage is high, more EDGEN tokens are circulated to active verifiers. When activity drops, emissions contract automatically—preserving sustainability and eliminating waste. This ensures that only productive work is rewarded, preventing inflationary leakage and keeping token velocity aligned with utility. This prevents overpaying idle validators and keeps rewards sustainable.
 
 ---
 
