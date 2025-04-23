@@ -26,7 +26,7 @@ function HomepageHeader() {
           </div>
         </div>
         <div className={styles.heroRight}>
-          <img src="https://dr6rqdr0y14sm.cloudfront.net/images/main.gif" alt='gif animation'/>
+          <img src="https://dr6rqdr0y14sm.cloudfront.net/images/home.gif" alt='gif animation'/>
         </div>
       </div>
     </header>
