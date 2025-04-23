@@ -2,32 +2,15 @@
 sidebar_position: 3
 ---
 
-# Token Demand & Reward Framework
+# Token Utility & Reward Framework
 
-LayerEdge’s token model is carefully engineered to power an economically sustainable, decentralized network. It ensures that token demand grows organically with usage, and that verification participants—both Light and Full Nodes—are fairly and strategically incentivized. This section dives deeper into the **demand mechanics, reward structure**, and **economic rationale** behind LayerEdge’s utility token.
+LayerEdge’s token model is carefully engineered to power an economically sustainable, decentralized network. It ensures that token demand grows organically with usage, and that verification participants—both Light and Full Nodes—are fairly and strategically incentivized. This section dives deeper into the **utility mechanics, reward structure**, and **economic rationale** behind LayerEdge’s utility token.
 
 ---
 
-## Demand Equation
+## Utility Framework
 
 At its core, the LayerEdge token’s utility is driven by actual demand for decentralized zk-proof verification and state settlement on Bitcoin. This isn’t a speculative or inflation-driven economy—it is a usage-driven, value-for-work system.
-
-### Mathematical Relationship
-
-$$
-D_{Token} \propto (Network\ Usage) \times (Verification\ Frequency)
-$$
-
-Where:
-
-- **Network Usage** includes:
-  - zk-Rollups submitting batched proofs for their user transactions
-  - AI protocols posting proof-of-inference results
-  - DePIN, identity, and gaming systems verifying logic off-chain
-  
-- **Verification Frequency** refers to:
-  - How often these events are settled on LayerEdge
-  - The number of aggregated zk-proofs anchored onto Bitcoin
 
 **Example:**
 
@@ -41,15 +24,12 @@ As the number of such systems and their verification frequencies rise, the **cum
 
 ### Why This Matters
 
-- **Predictable Monetization:** The more the network is used, the more verification tokens are consumed
 - **Non-Speculative Value:** Token value reflects real-world utility, not hype
 - **Economic Security:** High demand → High rewards → More nodes → Higher decentralization → Stronger fraud resistance
 
 ---
 
 ## Reward Framework
-
-### Reward Equation
 
 ### Reward Equation
 
