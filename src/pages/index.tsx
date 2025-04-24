@@ -40,14 +40,15 @@ function HomepageHeader() {
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
-      <Layout
-          title={`Docs`}
-          description="Documentation for LayerEdge"
-          noFooter>
-        <HomepageHeader />
-        <main>
-          <HomepageFeatures />
-        </main>
-      </Layout>
+    <Layout
+      title={`LayerEdge Documentation - Bitcoin Backed Internet`}
+      description="Explore LayerEdge's official documentation to learn how zk-proofs, recursive aggregation, and light node verification bring scalable, trust-minimized computation to Bitcoin. Discover how LayerEdge enables rollups, dApps, and modular chains to verify securely with minimal on-chain cost on Bitcoin."
+      noFooter
+    >
+      <HomepageHeader />
+      <main>
+        <HomepageFeatures />
+      </main>
+    </Layout>
   );
 }
