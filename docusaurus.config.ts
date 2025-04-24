@@ -11,8 +11,8 @@ dotenv.config();
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'LayerEdge',
-  tagline: 'Bitcoin Backed Internet',
+  title: 'LayerEdge Documentation - Bitcoin Backed Internet',
+  tagline: "Explore LayerEdge's official documentation to learn how zk-proofs, recursive aggregation, and light node verification bring scalable, trust-minimized computation to Bitcoin. Discover how LayerEdge enables rollups, dApps, and modular chains to verify securely with minimal on-chain cost on Bitcoin.",
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -84,7 +84,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'https://dr6rqdr0y14sm.cloudfront.net/images/favicon.png',
+    image: 'https://dr6rqdr0y14sm.cloudfront.net/images/meta.jpg',
     algolia: {
       // Your Algolia Application ID
       appId: process.env.ALGOLIA_APP_ID,

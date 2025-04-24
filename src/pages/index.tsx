@@ -15,9 +15,10 @@ function HomepageHeader() {
           <h1 className={styles.heroTitle}>{siteConfig.title}</h1>
           <h2 className={styles.heroSubtitle}>Bitcoin Backed Internet</h2>
           <p className={styles.heroDescription}>
-            LayerEdge is a secure computation network that decentralizes trust
-            for high value data in the same way that blockchains decentralized
-            transactions.
+            LayerEdge is a decentralized verification layer that enables
+            scalable, cost-efficient, and secure zk-proof verification, backed
+            by Bitcoin. It is designed to serve as a universal infrastructure
+            layer for verifying off-chain computation.
           </p>
           <div className={styles.buttons}>
             <Link className={clsx(styles.getStartedButton)} to="/docs/intro">
@@ -26,7 +27,10 @@ function HomepageHeader() {
           </div>
         </div>
         <div className={styles.heroRight}>
-          <img src="https://dr6rqdr0y14sm.cloudfront.net/images/home.gif" alt='gif animation'/>
+          <img
+            src="https://dr6rqdr0y14sm.cloudfront.net/images/home.gif"
+            alt="gif animation"
+          />
         </div>
       </div>
     </header>

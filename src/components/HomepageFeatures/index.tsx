@@ -103,9 +103,10 @@ const FeatureList: FeatureItem[] = [
     Icon: GraduationIcon,
     description: (
       <>
-        LayerEdge is a secure computation network that decentralizes trust for
-        high value data in the same way that blockchains decentralized
-        transactions.
+        LayerEdge is a decentralized verification network that brings
+        trust-minimized computation to Bitcoin by aggregating and verifying
+        zk-proofs from external systems—enabling high-integrity data validation
+        without centralized trust.
       </>
     ),
     path: "/docs/intro",
