@@ -11,8 +11,8 @@ dotenv.config();
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'LayerEdge Documentation - Bitcoin Backed Internet',
-  tagline: "Explore LayerEdge's official documentation to learn how zk-proofs, recursive aggregation, and light node verification bring scalable, trust-minimized computation to Bitcoin. Discover how LayerEdge enables rollups, dApps, and modular chains to verify securely with minimal on-chain cost on Bitcoin.",
+  title: 'LayerEdge',
+  tagline: 'Bitcoin Backed Internet',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
