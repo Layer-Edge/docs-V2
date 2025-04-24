@@ -135,6 +135,10 @@ const config: Config = {
               label: 'Community',
               to: '/docs/community-and-support/',
             },
+            {
+              label: 'Legal Disclaimer',
+              to: '/legal-disclaimer',
+            },
           ],
         },
         {
