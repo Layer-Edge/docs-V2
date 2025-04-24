@@ -103,7 +103,7 @@ const FeatureList: FeatureItem[] = [
     Icon: GraduationIcon,
     description: (
       <>
-        Layeredge is a secure computation network that decentralizes trust for
+        LayerEdge is a secure computation network that decentralizes trust for
         high value data in the same way that blockchains decentralized
         transactions.
       </>
@@ -114,7 +114,7 @@ const FeatureList: FeatureItem[] = [
     title: "Build",
     Icon: BuilderIcon,
     description: (
-      <>Start building on Layeredge with one of our developer SDKs.</>
+      <>Start building on LayerEdge with one of our developer SDKs.</>
     ),
     path: "/docs/getting-started/",
   },
@@ -123,7 +123,7 @@ const FeatureList: FeatureItem[] = [
     Icon: CommunityIcon,
     description: (
       <>
-        Join the Layeredge community to connect, collaborate, and contribute to
+        Join the LayerEdge community to connect, collaborate, and contribute to
         the future of blind computation.
       </>
     ),

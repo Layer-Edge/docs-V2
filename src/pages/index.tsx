@@ -15,7 +15,7 @@ function HomepageHeader() {
           <h1 className={styles.heroTitle}>{siteConfig.title}</h1>
           <h2 className={styles.heroSubtitle}>Bitcoin Backed Internet</h2>
           <p className={styles.heroDescription}>
-            Layeredge is a secure computation network that decentralizes trust
+            LayerEdge is a secure computation network that decentralizes trust
             for high value data in the same way that blockchains decentralized
             transactions.
           </p>
@@ -38,7 +38,7 @@ export default function Home() {
   return (
       <Layout
           title={`Docs`}
-          description="Documentation for Layeredge"
+          description="Documentation for LayerEdge"
           noFooter>
         <HomepageHeader />
         <main>

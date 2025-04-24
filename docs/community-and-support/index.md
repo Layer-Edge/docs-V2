@@ -22,4 +22,4 @@ Got a suggestion for improving the docs? Let us know by [creating a Github Issue
 
 ## Grants
 
-Are you building a startup using Layeredge technology? Apply by emailing [info@layeredge.io](mailto:info@layeredge.io).
+Are you building a startup using LayerEdge technology? Apply by emailing [info@layeredge.io](mailto:info@layeredge.io).

@@ -176,7 +176,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} LayerEdge, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} LayerEdge.`,
     },
     prism: {
       theme: prismThemes.github,
