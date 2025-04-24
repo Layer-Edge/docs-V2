@@ -83,6 +83,10 @@ const config: Config = {
   ],
 
   themeConfig: {
+    metadata: [
+      { name: 'title', content: 'LayerEdge Documentation - Bitcoin Backed Internet' },
+      { name: 'description', content: "Explore LayerEdge's official documentation to learn how zk-proofs, recursive aggregation, and light node verification bring scalable, trust-minimized computation to Bitcoin. Discover how LayerEdge enables rollups, dApps, and modular chains to verify securely with minimal on-chain cost on Bitcoin." },
+    ],
     // Replace with your project's social card
     image: 'https://dr6rqdr0y14sm.cloudfront.net/images/meta.jpg',
     algolia: {
