@@ -170,6 +170,7 @@ const sidebars: SidebarsConfig = {
         'tokenomics-and-economic-model/token-utility-and-reward-framework',
         'tokenomics-and-economic-model/token-flow-and-network-equilibrium',
         'tokenomics-and-economic-model/additional-scalability-features',
+        'tokenomics-and-economic-model/EDGEN-Token',
       ]
     },
     {
