@@ -128,10 +128,10 @@ const sidebars: SidebarsConfig = {
       label: 'Network',
       link: {
         type: 'doc',
-        id: 'network/network-info',
+        id: 'network/consensus/index',
       },
       items: [
-        'network/network-info',
+        // 'network/network-info',
         {
           type: 'category',
           label: 'Consensus',
