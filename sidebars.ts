@@ -91,6 +91,18 @@ const sidebars: SidebarsConfig = {
         'security-model/economic-incentives',
       ]
     },
+    {
+      type: 'category',
+      label: 'Consensus',
+      link: {
+        type: 'doc',
+        id: 'network/consensus/index',
+      },
+      items: [
+        'network/consensus/proof-of-aggregation',
+        'network/consensus/stochastic-sampling',
+      ]
+    },
 
     // BUILD SECTION
     {
@@ -122,29 +134,6 @@ const sidebars: SidebarsConfig = {
       type: 'doc',
       id: 'use-cases/index',
       label: 'Use Cases'
-    },
-    {
-      type: 'category',
-      label: 'Network',
-      link: {
-        type: 'doc',
-        id: 'network/consensus/index',
-      },
-      items: [
-        // 'network/network-info',
-        {
-          type: 'category',
-          label: 'Consensus',
-          link: {
-            type: 'doc',
-            id: 'network/consensus/index',
-          },
-          items: [
-            'network/consensus/proof-of-aggregation',
-            'network/consensus/stochastic-sampling',
-          ]
-        }
-      ]
     },
 
     // COMMUNITY SECTION
