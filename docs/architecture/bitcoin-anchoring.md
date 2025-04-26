@@ -74,26 +74,25 @@ Anchoring allows LayerEdge to offload verification computation to off-chain prov
 
 ---
 
-### 3. OP_CAT (Future - Structured On-chain Parsing)
+### 3. OP_CAT (Future - Structured Onchain Verification)
 
 - **OP_CAT** is a proposed Bitcoin opcode enabling string/byte concatenation in script.
 - If reactivated, it would allow LayerEdge to construct **concatenated zk-proof commitments** and validate them within Bitcoin Script.
 
 **Capabilities**:
 - Parse structured commitments on-chain
-- Perform partial zk-proof parsing and matching
+- Perform partial zk-proof computation
 - Aggregate multiple commitments into a compact structure
 
 **Benefits**:
 - Up to **95% reduction in proof parsing cost**.
-- Enables **light zk-proof processing natively on Bitcoin**.
 - Opens the door to **Bitcoin-native rollup settlement layers** that don’t require full execution, only verification.
 
 ---
 
 ## Finality via Bitcoin’s PoW
 
-Bitcoin anchoring delivers **cryptographic finality** unmatched by any Proof-of-Stake or delegated model.
+Bitcoin anchoring delivers **security guarantees** unmatched by any Proof-of-Stake or delegated model.
 
 Once a LayerEdge commitment is included in a Bitcoin block:
 
@@ -119,8 +118,7 @@ This allows LayerEdge to offer two types of finality:
 | Component | Function in Anchoring |
 |------------|---------------------|
 | Aggregation Layer | Generates $\pi_{agg}$, the final proof |
-| DA Layer | Commits hashes of input proofs and associated metadata |
-| LayerEdge BSN | Publishes anchor transaction metadata, timestamps, and references |
+| LayerEdge BSN | Commits Merkle roots of input zk-proofs and associated metadata, and publishes anchor transaction data (including timestamps and Bitcoin references). |
 | Bitcoin Blockchain | Provides L1 settlement layer for proof hash or structured commitment |
 | Light Clients | Observe Bitcoin for specific OP_RETURN/Taproot outputs to verify finality |
 
@@ -149,7 +147,7 @@ Although not yet available, LayerEdge’s architecture is built to **natively su
 
 - Script templates are modular and can adapt to new opcodes
 - Verification stack can selectively trigger script-based commitments
-- System can migrate from hash-only anchoring to **structured parsing** once OP_CAT is live
+- System can migrate from hash-only anchoring to **verification** once OP_CAT is live
 
 This makes LayerEdge **future-proof for Bitcoin-native zk-rollup systems**.
 
@@ -161,7 +159,6 @@ This makes LayerEdge **future-proof for Bitcoin-native zk-rollup systems**.
 | Anchoring Types | OP_RETURN (current), Taproot scripts (current), OP_CAT (future) |
 | Proofs Anchored | Aggregated zk-proofs ($\pi_{agg}$) |
 | Security Model | Bitcoin PoW (global consensus) |
-| Stability Rating | Fully redundant |
 | Reversibility | Irreversible after block confirmations |
 | Compatibility | Requires no Bitcoin forks or changes |
 | Future Extensions | zk-rollup anchoring, on-chain zk-proof parsing, composable proof hashes |

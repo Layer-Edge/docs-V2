@@ -26,7 +26,7 @@ Each Light Node is assigned a **random subset of proofs** from the aggregated zk
 
 To confirm that these subset proofs are part of the original batch:
 
-* Each proof is verified using its **Merkle path** in the **Data Availability (DA) Layer**.
+* Each proof is verified using its **Merkle path** in the **LayerEdge BSN**.
 * The node computes the Merkle root using the inclusion path and validates it against the published DA root.
 
 This process ensures:
