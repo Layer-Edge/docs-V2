@@ -76,3 +76,5 @@ The GitHub repository includes a demo video that shows how to:
 * Connect to LayerEdge or custom nodes.
 
 It's highly recommended to view this if you're unfamiliar with the tool. 
+
+**Watch the demo here**: https://youtu.be/jawnA9mwhck

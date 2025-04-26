@@ -1,51 +1,51 @@
 ---
 sidebar_position: 4
 ---
-# Data Availability Layer (DA Layer)
+# LayerEdge BSN
 
-The **Data Availability (DA) Layer** in LayerEdge guarantees that all zk-proofs processed within the system remain:
+The **LayerEdge BSN** guarantees that all zk-proofs processed within the system remain:
 
 * **Publicly accessible**
 * **Cryptographically committed**
 * **Tamper-evident**
 * **Efficiently verifiable** without requiring full data replication
 
-This layer is essential for preserving decentralization and trust in a system that handles potentially millions of zk-proofs across rollups, L2s, oracles, and off-chain computation systems.
+This system is essential for preserving decentralization and trust in a network that handles potentially millions of zk-proofs across rollups, L2s, oracles, and off-chain computation systems.
 
 ---
 
 ## Purpose and Role
 
-Traditional blockchain designs often require nodes to store and reprocess all submitted data. This approach doesn't scale, especially for **proof-heavy systems** like zk-rollups or recursive aggregation networks.
+Traditional blockchain designs often require nodes to store and reprocess all submitted data — an approach that doesn't scale for proof-heavy systems like zk-rollups or recursive aggregation networks.
 
-The DA Layer in LayerEdge solves this by providing:
+The **LayerEdge BSN** solves this by providing:
 
 * **Lightweight access to proof inclusion**
 * **Immutable commitments to all proofs in a given batch**
 * **Efficient detection of missing, tampered, or excluded data**
 
-This allows LayerEdge to scale zk-verification while still preserving **auditable and tamper-resistant data inclusion**, even for light nodes.
+This enables zk-verification to scale while maintaining auditable and tamper-resistant data inclusion, even for light clients.
 
 ---
 
 ## Architecture: The LayerEdge BSN
 
-LayerEdge’s DA system is built on a **sovereign Cosmos-based chain** called the **LayerEdge Bitcoin Secured Network (BSN)**.
+The LayerEdge BSN operates as a sovereign Cosmos-based chain purpose-built for data availability and zk-proof anchoring.
 
-### Key Roles of the BSN:
+### Key Functions:
 
-* Publishes Merkle roots representing all zk-proofs submitted in a verification epoch
-* Maintains time-stamped attestations of when proof batches were committed
-* Provides an interface for querying proof inclusion and status
-* Serves as a **proof persistence layer** anchoring zk-verification to a tamper-evident ledger
+* Publishes **Merkle roots** representing zk-proofs submitted in each verification epoch
+* Maintains **timestamped attestations** of when batches are committed
+* Allows **on-demand querying** for proof inclusion and status
+* Serves as a **persistent availability layer** ensuring verifiable proof storage
 
-This sovereign chain acts as the **durable availability and metadata backbone** for the broader LayerEdge protocol.
+The BSN acts as the durable metadata backbone for the broader LayerEdge protocol.
 
 ---
 
 ## Merkle Tree Construction
 
-The DA layer organizes zk-proofs using **Merkle tree commitments**, a structure that allows succinct inclusion verification and tamper detection.
+Proofs submitted to the LayerEdge BSN are organized using **Merkle tree commitments** for secure, efficient verification.
 
 ### Step-by-Step Process
 
@@ -116,8 +116,6 @@ This ensures a **cryptographically sound availability model** for all zk-verific
 
 ## Cross-Layer Interactions
 
-The DA Layer integrates directly with other LayerEdge components:
-
 ### Aggregated Proof Commitment
 
 
@@ -143,7 +141,7 @@ This makes the DA system **foundational for trust-minimized light clients**, ena
 
 ## Use Cases
 
-| Use Case | Role of DA Layer |
+| Use Case | Role of LayerEdge BSN |
 |----------|------------------|
 | zk-Rollup Aggregation | Commits to each rollup’s proofs for later verification |
 | AI Model Auditing | Verifies off-chain zkML inference was committed |
@@ -159,12 +157,11 @@ This makes the DA system **foundational for trust-minimized light clients**, ena
 | Scalable | Batches millions of proofs into a single commitment |
 | Immutable | Once published on BSN, commitments are tamper-proof |
 | Trustless Queries | Light clients can audit participation without full state |
-| ZK-Friendly | Supports Poseidon and other native zk-hashes |
 | Modular Design | Future support for off-chain DA attestations or zkRollup-DA bridges |
 
 ## Summary
 
-The **Data Availability Layer** is a core trust foundation in LayerEdge:
+The **LayerEdge BSN** is a core trust foundation in LayerEdge:
 
 * It allows zk-proofs to be **anchored and verified without full replication**
 * It ensures **data integrity, auditability, and low-bandwidth inclusion verification**

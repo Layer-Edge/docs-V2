@@ -26,7 +26,7 @@ All computations verified by LayerEdge must be paid for in LayerEdge tokens. Thi
 By requiring all clients (e.g., rollups, applications, or individual users) to pay in the native token, LayerEdge ensures that:
 
 - Value flows **directly through the protocol**
-- Increased activity translates into **increased token demand**
+- Increased activity translates into **increased token utility**
 
 This makes the economic model self-reinforcing: more usage leads to more verification, which increases token circulation and network activity.
 
@@ -44,7 +44,7 @@ This creates a persistent **utility loop**, where the LayerEdge token acts as:
 - The **gas** for decentralized verification
 - The **unit of account** for computation validation
 
-## Usage Drives Demand
+## Usage Drives Utility
 
 Because payment in the LayerEdge token is required across:
 
@@ -52,7 +52,7 @@ Because payment in the LayerEdge token is required across:
 - Proof submission costs
 - Aggregation and anchoring services
 
-...the ongoing usage of the protocol results in **recurring and growing demand** for the token.
+...the ongoing usage of the protocol results in **recurring and growing utility** for the token.
 
 ## Why a Native Token?
 

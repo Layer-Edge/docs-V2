@@ -14,36 +14,6 @@ If all Light Nodes independently verify their assigned subset, then:
 
 This **randomized verification architecture** is central to LayerEdge's scalability and decentralization.
 
-## How Randomized Selection Works
-
-Each Light Node uses a combination of global and local entropy to determine its subset of zk-proofs to validate.
-
-### Randomness Sources
-
-**1. Bitcoin Block Headers**
-
-* The **latest block hash** from the Bitcoin main chain is used as a **global source of randomness**.
-* This hash acts as a shared, tamper-resistant seed for **synchronizing all Light Nodes** in the same epoch.
-
-**2. Verifiable Random Functions (VRFs)**
-
-* Each Light Node maintains a **private randomness seed** (`nodeSeed`).
-* The node uses a **VRF** to mix its `nodeSeed` with the latest Bitcoin block hash.
-* This produces a **deterministic but unpredictable** randomness output for selecting proof indices.
-
-### Pseudocode
-
-```typescript
-function RandomSubsetSelection(nodeSeed, blockHeaderHash):
-    combinedRand = Hash(nodeSeed, blockHeaderHash)
-    subset = someDeterministicFunction(combinedRand)
-    return subset
-```
-
-### Output
-
-The result is a **randomized subset of proof indices** that the node is assigned to verify. Every Light Node gets a **unique and unpredictable** subset, but all are deterministically generated and verifiable by others.
-
 ## Why Verifiable Random Functions?
 
 Verifiable Random Functions (VRFs) offer powerful guarantees that make them ideal for secure subset selection in LayerEdge:
@@ -54,7 +24,6 @@ Verifiable Random Functions (VRFs) offer powerful guarantees that make them idea
 | **Verifiability** | Enables third parties to **confirm** that a Light Node's subset was honestly computed |
 | **Tamper Resistance** | Nodes **cannot cheat** by selectively ignoring difficult proofs |
 | **Consistency** | Ensures that randomness selection is **deterministic per node**, based on public and private entropy |
-| **Sybil Mitigation** | Since subset selection is tied to cryptographic identity and recent Bitcoin data, it limits manipulation from fake nodes |
 
 ## Design Implications
 
@@ -77,8 +46,6 @@ Every Light Node's subset can be:
 | Element | Description |
 |---------|-------------|
 | **Subset Type** | Randomized zk-proof indices from the aggregated batch |
-| **Global Seed** | Bitcoin block header hash |
-| **Node Seed** | Node-specific entropy used with VRF |
 | **Selection Function** | Deterministic, tamper-resistant subset generator |
 | **Security Model** | Exponential fraud resistance through decentralized random sampling |
 | **Verifiability** | Subsets are audit-friendly and cryptographically provable |

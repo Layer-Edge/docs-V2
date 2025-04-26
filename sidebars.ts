@@ -91,6 +91,18 @@ const sidebars: SidebarsConfig = {
         'security-model/economic-incentives',
       ]
     },
+    {
+      type: 'category',
+      label: 'Consensus',
+      link: {
+        type: 'doc',
+        id: 'network/consensus/index',
+      },
+      items: [
+        'network/consensus/proof-of-aggregation',
+        'network/consensus/stochastic-sampling',
+      ]
+    },
 
     // BUILD SECTION
     {
@@ -123,29 +135,6 @@ const sidebars: SidebarsConfig = {
       id: 'use-cases/index',
       label: 'Use Cases'
     },
-    {
-      type: 'category',
-      label: 'Network',
-      link: {
-        type: 'doc',
-        id: 'network/consensus/index',
-      },
-      items: [
-        // 'network/network-info',
-        {
-          type: 'category',
-          label: 'Consensus',
-          link: {
-            type: 'doc',
-            id: 'network/consensus/index',
-          },
-          items: [
-            'network/consensus/proof-of-aggregation',
-            'network/consensus/stochastic-sampling',
-          ]
-        }
-      ]
-    },
 
     // COMMUNITY SECTION
     {
@@ -169,7 +158,6 @@ const sidebars: SidebarsConfig = {
         'tokenomics-and-economic-model/layeredge-utility-token-and-incentives',
         'tokenomics-and-economic-model/token-utility-and-reward-framework',
         'tokenomics-and-economic-model/token-flow-and-network-equilibrium',
-        'tokenomics-and-economic-model/additional-scalability-features',
         'tokenomics-and-economic-model/EDGEN-Token',
       ]
     },

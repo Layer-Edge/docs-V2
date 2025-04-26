@@ -32,13 +32,6 @@ This module is essential to:
 
 Aggregation circuits are special zk-circuits that receive multiple zk-proofs as inputs and output a new, single zk-proof that asserts the correctness of all previous ones.
 
-Depending on the design and cryptographic primitives used, LayerEdge supports multiple backends:
-
-- **Halo2**: Optimized for recursive SNARKs with plonkish constraints and native curve support
-- **Nova**: Recursive-friendly architecture using relaxed R1CS + additive commitments
-- **Spartan**: Transparent ZK-SNARK design using polynomial IOPs, suitable for low-trust setups
-- **Plonky3**: Highly performant, recursive STARK-compatible system designed for low-latency aggregation
-
 Each circuit is tailored to balance:
 - Prover time
 - Constraint efficiency
@@ -49,9 +42,9 @@ Each circuit is tailored to balance:
 
 Recursive aggregation is built using binary or fan-in trees, where each level of the tree performs one round of proof aggregation.
 
-- **Leaf Nodes**: Individual normalized zk-proofs
-- **Internal Nodes**: Aggregation steps (pairwise or batched)
-- **Root Node**: Final output — a single zk-proof representing the validity of all the original inputs
+- **Leaf Verifications**: Individual normalized zk-proofs
+- **Internal Verifications**: Aggregation steps (pairwise or batched)
+- **Root Verification**:  Final output — a single zk-proof representing the validity of all the original inputs
 
 This structure ensures:
 - **Logarithmic recursion depth**
@@ -152,7 +145,6 @@ This enables **high-throughput batch verification** — suitable for handling ro
 | Minimal On-Chain Load | Only one final proof is submitted and verified |
 | Parallelism | Subtrees can be built concurrently for high throughput |
 | Efficient Circuit Design | Custom constraint logic for low prover/verifier cost |
-| Proof System Agnostic | Works with multiple zk backends (Halo2, Nova, Plonky3, etc.) |
 | Strong Soundness Guarantees | Final $\pi_{agg}$ implies all input proofs are valid |
 
 ## Summary

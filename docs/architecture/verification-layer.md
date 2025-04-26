@@ -67,30 +67,6 @@ Proof producers interact with the Verification Layer using standardized APIs (e.
 
 ---
 
-### Normalization Logic
-
-The Verification Layer applies format-specific normalization rules depending on the proof system.
-
-#### For Groth16
-
-* Extract and reorder elliptic curve points (A, B, C)
-* Convert compressed curve points into **uncompressed affine coordinates**
-* Standardize encoding over the expected field (e.g., BLS12-381)
-
-#### For STARK-based Systems
-
-* Extract FRI commitments and Merkle root(s)
-* Normalize polynomial evaluations and low-degree test claims
-* Flatten STARK proofs into a "standard claim structure" used for aggregation
-
-#### For ZKVM Proofs (e.g., RISC Zero / SP1)
-
-* Capture execution trace commitments, journal data, and memory hashes
-* Normalize field elements (Poseidon-based) into scalar representations
-* Construct public input digest for circuit compatibility
-
----
-
 ## Validation & Error Handling
 
 Before forwarding any proof to the aggregator system, the Verification Layer ensures:
@@ -130,7 +106,6 @@ As more zk-proving frameworks emerge, the Verification Layer is expected to supp
 
 * **Multi-proof submissions**: For batch uploads from rollup sequencers.
 * **Custom verification key schemas**: For ZKML, recursive rollups, etc.
-* **On-chain key registration**: Allowing verification keys to be published as commitments and referenced trustlessly during normalization
 
 ---
 

@@ -102,7 +102,7 @@ This tight loop creates a **self-regulating, fraud-resistant system**, with no c
 LayerEdge's STV model is designed to combine the **efficiency of off-chain computation** with the **immutability and economic enforcement of Bitcoin anchoring**.
 
 ### Efficiency Gains
-* **Only post proofs, not transactions or state deltas** → Reduces bandwidth, state bloat, and L1 gas use
+
 * **Challenges are rare** → Majority of transitions are finalized cheaply with no extra work
 * **zk-SNARKs and recursive aggregation** → Collapse thousands of transitions into one verifiable proof
 

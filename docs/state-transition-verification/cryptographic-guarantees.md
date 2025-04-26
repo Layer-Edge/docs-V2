@@ -72,44 +72,17 @@ LayerEdge is protocol-agnostic and **built to support modern and future zk-stack
 
 LayerEdge supports a wide range of ZK backends across both SNARK and STARK families, including hybrid zkVMs.
 
-| Framework | Type | Use Case |
-|-----------|------|-----------|
-| **Groth16** | SNARK | Compact proof size, fast verification |
-| **PLONK / Plonky2** | SNARK | Universal setup, efficient recursion |
-| **Halo2** | SNARK | Recursive aggregation with no trusted setup |
-| **Nova** | SNARK | Efficient incremental verification |
-| **STARKy, Fractal, AirSTARK** | STARK | Transparent setup, quantum secure |
-| **RISC Zero, SP1** | ZKVM | General-purpose execution with ZK wrap |
-| **Nexus** | ZKVM | Specialized proof systems optimized for modular zk infra |
+| Framework | Type |
+|-----------|------|
+| **Groth16** | SNARK |
+| **PLONK / Plonky2** | SNARK |
+| **Halo2** | SNARK |
+| **Nova** | SNARK |
+| **STARKy, Fractal, AirSTARK** | STARK |
+| **RISC Zero, SP1** | ZKVM |
+| **Nexus** | ZKVM |
 
 LayerEdge can normalize and aggregate proofs from any of the above systems.
-
-### Taproot & Merklized Execution
-
-#### Taproot (Bitcoin Layer)
-
-* Used to **anchor proofs or commitments** in a compact, privacy-preserving way.
-* Reveals only **executed branch**, hiding unexecuted logic.
-* Reduces script size and network fees for commitments.
-
-#### MAST (Merklized Abstract Syntax Trees)
-
-* Makes **conditional transitions** efficient.
-* Each conditional state path can be a branch in the tree.
-* Proof inclusion and logic execution can be verified independently.
-
-### Quantum-Resistant Signature Systems
-
-To future-proof state commitments and assertions, LayerEdge can integrate **post-quantum cryptographic signatures** for anchoring and attestation.
-
-#### Candidates:
-
-* **Lamport One-Time Signatures**
-* **Winternitz Schemes**
-* **XMSS / SPHINCS+**
-* Future-ready for **NIST PQC standard** adoption
-
-These will allow LayerEdge to operate securely in a **post-quantum world**, ensuring **long-term data integrity** even across decades of anchored state transitions.
 
 ### LayerEdge's STV Assurance Model
 
@@ -118,8 +91,6 @@ These will allow LayerEdge to operate securely in a **post-quantum world**, ensu
 | **T_assert** | Anchors commitments to state transitions on Bitcoin |
 | **T_disprove** | Allows surgical challenges of invalid sub-proofs |
 | **zk-Engines** | Generate the underlying proofs (e.g., Groth16, Halo2, Nova) |
-| **Taproot/MAST** | Efficiently encode on-chain proof logic and branches |
-| **Quantum-Safe Signatures** | Ensures future-proof validity of long-term assertions |
 | **Incentives** | Aligns honesty via slashing & whistleblower rewards |
 
 By combining modern zk tooling with Bitcoin-native cryptographic anchoring and incentive engineering, LayerEdge creates a **verifiable, scalable, and fraud-resistant protocol for decentralized computation**. 
