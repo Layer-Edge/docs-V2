@@ -108,7 +108,8 @@ const config: Config = {
       title: 'LayerEdge',
       logo: {
         alt: 'LayerEdge Logo',
-        src: 'https://dr6rqdr0y14sm.cloudfront.net/images/favicon.png',
+        src: 'https://dr6rqdr0y14sm.cloudfront.net/images/newdarklogo.png',
+        srcDark: 'https://dr6rqdr0y14sm.cloudfront.net/images/darklogo.png',
       },
       items: [
         { to: '/docs/intro', label: 'Learn', position: 'left' },

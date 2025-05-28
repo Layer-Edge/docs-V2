@@ -3,11 +3,17 @@
  */
 
 /* Features section styling */
-.features {
+
+[data-theme='light'] .features {
   padding: 4rem 0;
+  background-color: #DBE2FA;
   width: 100%;
 }
-
+[data-theme='dark'] .features {
+  padding: 4rem 0;
+  background-color: #050917;
+  width: 100%;
+}
 /* Feature cards row styling */
 .featureRow {
   display: flex;
@@ -37,24 +43,30 @@
 
 /* Card styles in light mode */
 :global([data-theme='light']) .featureCard {
-  background-color: #f8f9fa;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(112, 121, 151, 0.08); /* Subtle #707997 tint */
+  box-shadow: 0 4px 8px rgba(5, 9, 23, 0.1);
+  border: 1px solid rgba(112, 121, 151, 0.2);
 }
 
 :global([data-theme='light']) .featureCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgba(5, 9, 23, 0.15);
+  border-color: rgba(112, 121, 151, 0.4);
+  background-color: rgba(219, 226, 250, 0.15); /* Shift to lighter color on hover */
 }
 
 /* Card styles in dark mode */
 :global([data-theme='dark']) .featureCard {
-  background-color: #1e1e1e;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: rgba(16, 20, 34, 0.8); /* Using #101422 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(26, 30, 45, 0.6); /* Using #1A1E2D */
 }
 
 :global([data-theme='dark']) .featureCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  border-color: rgba(219, 226, 250, 0.3);
+  background-color: rgba(26, 30, 45, 0.9); /* Shift to #1A1E2D on hover */
 }
 
 .featureContent {
@@ -69,36 +81,36 @@
 
 /* Updated icon colors in light mode */
 :global([data-theme='light']) .iconPrimary {
-  fill: #2d2d2d;
+  fill: #050917; /* Darkest navy */
 }
 
 :global([data-theme='light']) .iconSecondary {
-  fill: #4d4d4d;
+  fill: #1A1E2D; /* Dark blue */
 }
 
 :global([data-theme='light']) .iconTertiary {
-  fill: rgba(45, 45, 45, 0.3);
+  fill: rgba(112, 121, 151, 0.6); /* Medium blue-gray with transparency */
 }
 
 :global([data-theme='light']) .iconStroke {
-  stroke: #2d2d2d;
+  stroke: #050917;
 }
 
 /* Updated icon colors in dark mode */
 :global([data-theme='dark']) .iconPrimary {
-  fill: #ffffff;
+  fill: #DBE2FA; /* Light periwinkle */
 }
 
 :global([data-theme='dark']) .iconSecondary {
-  fill: #e6e6e6;
+  fill: #707997; /* Medium blue-gray */
 }
 
 :global([data-theme='dark']) .iconTertiary {
-  fill: rgba(255, 255, 255, 0.3);
+  fill: rgba(219, 226, 250, 0.5); /* Light periwinkle with transparency */
 }
 
 :global([data-theme='dark']) .iconStroke {
-  stroke: #ffffff;
+  stroke: #DBE2FA;
 }
 
 .featureTitle {
@@ -109,11 +121,11 @@
 
 /* Title color in light and dark modes */
 :global([data-theme='light']) .featureTitle {
-  color: #333333;
+  color: #050917;
 }
 
 :global([data-theme='dark']) .featureTitle {
-  color: #ffffff;
+  color: #DBE2FA;
 }
 
 .featureDescription {
@@ -123,11 +135,11 @@
 
 /* Description color in light and dark modes */
 :global([data-theme='light']) .featureDescription {
-  color: #555555;
+  color: rgba(5, 9, 23, 0.8);
 }
 
 :global([data-theme='dark']) .featureDescription {
-  color: #cccccc;
+  color: rgba(219, 226, 250, 0.9);
 }
 
 /* Menu Styling - Adding styles for active menu items */
@@ -137,44 +149,44 @@
 
 /* Light mode menu styles */
 :global([data-theme='light']) :global(.menu__link) {
-  color: #555555;
+  color: rgba(26, 30, 45, 0.8); /* Using #1A1E2D */
 }
 
 :global([data-theme='light']) :global(.menu__link:hover) {
-  background-color: #f0f0f0;
-  color: #2d2d2d;
+  background-color: rgba(112, 121, 151, 0.15); /* Using #707997 */
+  color: #050917;
 }
 
 :global([data-theme='light']) :global(.menu__link--active) {
-  background-color: #e0e0e0;
-  color: #2d2d2d;
+  background-color: rgba(219, 226, 250, 0.4); /* Using #DBE2FA */
+  color: #050917;
   font-weight: 600;
-  border-left: 3px solid #2d2d2d;
+  border-left: 3px solid #1A1E2D; /* Using #1A1E2D for border */
 }
 
 :global([data-theme='light']) :global(.menu__link--active:not(.menu__link--sublist)) {
-  background-color: #e0e0e0;
+  background-color: rgba(219, 226, 250, 0.4);
 }
 
 /* Dark mode menu styles */
 :global([data-theme='dark']) :global(.menu__link) {
-  color: #cccccc;
+  color: rgba(219, 226, 250, 0.8);
 }
 
 :global([data-theme='dark']) :global(.menu__link:hover) {
-  background-color: #2d2d2d;
-  color: #ffffff;
+  background-color: rgba(219, 226, 250, 0.1);
+  color: #DBE2FA;
 }
 
 :global([data-theme='dark']) :global(.menu__link--active) {
-  background-color: #333333;
-  color: #ffffff;
+  background-color: rgba(219, 226, 250, 0.15);
+  color: #DBE2FA;
   font-weight: 600;
-  border-left: 3px solid #ffffff;
+  border-left: 3px solid #DBE2FA;
 }
 
 :global([data-theme='dark']) :global(.menu__link--active:not(.menu__link--sublist)) {
-  background-color: #333333;
+  background-color: rgba(219, 226, 250, 0.15);
 }
 
 /* Responsive design */

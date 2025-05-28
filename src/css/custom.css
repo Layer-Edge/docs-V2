@@ -31,16 +31,45 @@
   --ifm-color-primary-light: #ffffff;
   --ifm-color-primary-lighter: #ffffff;
   --ifm-color-primary-lightest: #ffffff;
-  --ifm-background-color: #121212;
-  --ifm-background-surface-color: #1e1e1e;
-  --ifm-navbar-background-color: #121212;
-  --ifm-footer-background-color: #121212;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --docsearch-hit-active-color:#121212;
+  --ifm-background-color: #050917;
+  --ifm-background-surface-color: #0d1426;
+  --ifm-navbar-background-color: #050917;
+  --ifm-footer-background-color: #050917;
+  --ifm-content-color: #ffffff;
+  --ifm-heading-color: #ffffff;
+  --ifm-text-color: #e0e0e0;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+  --docsearch-hit-active-color: #050917;
+  --ifm-heading-color:#050917
+  --ifm-color-content:#346DDB
 
   /* Custom colors */
   --layeredge-primary: #ffffff; /* Replaced gold with white */
   --layeredge-text-color: #e0e0e0;
+}
+[data-theme='light'] {
+  --ifm-color-primary: #ffffff; /* White replacing gold */
+  --ifm-color-primary-dark: #e6e6e6;
+  --ifm-color-primary-darker: #d9d9d9;
+  --ifm-color-primary-darkest: #b3b3b3;
+  --ifm-color-primary-light: #ffffff;
+  --ifm-color-primary-lighter: #ffffff;
+  --ifm-color-primary-lightest: #ffffff;
+  --ifm-background-color: #DBE2FA; /* Changed to light blue */
+  --ifm-background-surface-color: #ffffff; /* Keep cards white for contrast */
+  --ifm-navbar-background-color: #DBE2FA;
+  --ifm-footer-background-color: #DBE2FA;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docsearch-hit-active-color:#121212;
+  --ifm-color-secondary:#121212;
+  --ifm-color-primary:#346DDB;
+  --ifm-color-content:#DBE2FA;
+ 
+ 
+
+  /* Custom colors */
+  --layeredge-primary: #ffffff; /* Replaced gold with white */
+  --layeredge-text-color: #333333; /* Darker text for better contrast on light blue */
 }
 
 /* Style the navbar */
@@ -50,6 +79,18 @@
 
 [data-theme='dark'] .navbar {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar__link ,.navbar__title{
+  color: #050917;
+}
+
+[data-theme='dark'] .navbar__link ,[data-theme='dark'] .navbar__title{
+  color: #DBE2FA;
+}
+
+.clean-btn{
+  background: #ebedf0;
 }
 
 /* Style the navbar brand */
@@ -68,12 +109,15 @@
 
 /* Style the sidebar in dark mode */
 [data-theme='dark'] .menu {
-  background-color: var(--ifm-background-color);
+  background-color: #050917;
 }
 
-/* Style the main content area */
-.main-wrapper {
-  min-height: calc(100vh - 60px - 250px); /* Adjust based on navbar and footer height */
+/* Force dark theme main content background */
+[data-theme='dark'] .main-wrapper,
+[data-theme='dark'] main,
+[data-theme='dark'] .container,
+[data-theme='dark'] article {
+  background-color: #050917 !important;
 }
 
 /* Style the footer */
@@ -82,8 +126,20 @@
 }
 
 [data-theme='dark'] .footer {
-  background-color: #121212;
+  background-color: #050917;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+[data-theme='light'] .footer {
+  background-color: #DBE2FA;
+  border-top: 1px solid rgba(0, 0, 0, 0.05); /* Darker border for light theme */
+}
+
+/* Force footer background in light mode */
+[data-theme='light'] .footer__bottom,
+[data-theme='light'] .footer__links,
+[data-theme='light'] .footer__item,
+[data-theme='light'] .footer__col {
+  background-color: #DBE2FA !important;
 }
 
 /* Style cards */
@@ -107,7 +163,7 @@
 }
 
 [data-theme='dark'] .card {
-  background-color: var(--ifm-background-surface-color);
+  background-color: #0d1426;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -186,9 +242,9 @@ code {
 }
 
 /* Style for dark mode toggle in navbar */
-.navbar__items--right > div:last-child {
+/* .navbar__items--right > div:last-child {
   margin-left: 1rem;
-}
+} */
 
 /* For the hero section images */
 .hero img {
@@ -216,10 +272,33 @@ a:hover{
   text-decoration: none;
 }
 
+.footer__title ,.footer__item a{
+  color: var(--layeredge-text-color);
+}
+
+.footer__title:hover ,.footer__link-item:hover{
+  color: var(--docsearch-hit-active-color) !important;
+  text-decoration: none;
+}
+
 [data-theme='dark'] .DocSearch-Hit[aria-selected=true] a{
   background-color: #5d5d5d;
 }
 
 .footer__link-item:hover{
   color: #f5f5f5;
+}
+
+/* Additional styling for light theme sidebar */
+[data-theme='light'] .menu {
+  background-color: #DBE2FA;
+}
+
+/* Ensure proper contrast for sidebar links in light theme */
+[data-theme='light'] .menu__link {
+  color: #333333;
+}
+
+[data-theme='light'] .menu__link:hover {
+  background-color: rgba(255, 255, 255, 0.7);
 }
