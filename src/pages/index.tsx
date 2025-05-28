@@ -13,7 +13,7 @@ function HomepageHeader() {
       <div className={styles.heroContainer}>
         <div className={styles.heroLeft}>
           <h1 className={styles.heroTitle}>{siteConfig.title}</h1>
-          <h2 className={styles.heroSubtitle}>Bitcoin Backed Internet</h2>
+          <h2 className={styles.heroSubtitle}>People Backed Internet</h2>
           <p className={styles.heroDescription}>
             LayerEdge is a decentralized verification layer that enables
             scalable, cost-efficient, and secure zk-proof verification, backed

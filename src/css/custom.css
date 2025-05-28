@@ -40,6 +40,8 @@
   --ifm-text-color: #e0e0e0;
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
   --docsearch-hit-active-color: #050917;
+  --ifm-heading-color:#050917
+  --ifm-color-content:#346DDB
 
   /* Custom colors */
   --layeredge-primary: #ffffff; /* Replaced gold with white */
@@ -59,6 +61,11 @@
   --ifm-footer-background-color: #DBE2FA;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --docsearch-hit-active-color:#121212;
+  --ifm-color-secondary:#121212;
+  --ifm-color-primary:#346DDB;
+  --ifm-color-content:#DBE2FA;
+ 
+ 
 
   /* Custom colors */
   --layeredge-primary: #ffffff; /* Replaced gold with white */
@@ -72,6 +79,18 @@
 
 [data-theme='dark'] .navbar {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar__link ,.navbar__title{
+  color: #050917;
+}
+
+[data-theme='dark'] .navbar__link ,[data-theme='dark'] .navbar__title{
+  color: #DBE2FA;
+}
+
+.clean-btn{
+  background: #ebedf0;
 }
 
 /* Style the navbar brand */
@@ -223,9 +242,9 @@ code {
 }
 
 /* Style for dark mode toggle in navbar */
-.navbar__items--right > div:last-child {
+/* .navbar__items--right > div:last-child {
   margin-left: 1rem;
-}
+} */
 
 /* For the hero section images */
 .hero img {
@@ -250,6 +269,15 @@ a{
 }
 a:hover{
   color: #346DDB;
+  text-decoration: none;
+}
+
+.footer__title ,.footer__item a{
+  color: var(--layeredge-text-color);
+}
+
+.footer__title:hover ,.footer__link-item:hover{
+  color: var(--docsearch-hit-active-color) !important;
   text-decoration: none;
 }
 
