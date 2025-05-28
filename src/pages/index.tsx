@@ -46,7 +46,7 @@ export default function Home() {
       noFooter
     >
       <HomepageHeader />
-      <main>
+      <main className={styles.main}>
         <HomepageFeatures />
       </main>
     </Layout>

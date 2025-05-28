@@ -6,25 +6,97 @@
 }
 
 .topicCard {
-  border: 1px solid var(--ifm-footer-background-color);
   border-radius: 8px;
   padding: 20px;
-  background-color: var(--ifm-card-background-color);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   height: 100%;
+  transition: all 0.3s ease;
+}
+
+/* Light theme topic cards */
+:global([data-theme='light']) .topicCard {
+  border: 1px solid rgba(112, 121, 151, 0.2); /* Using #707997 */
+  background-color: rgba(112, 121, 151, 0.05); /* Subtle #707997 tint */
+  box-shadow: 0 2px 4px rgba(5, 9, 23, 0.08); /* Using #050917 for shadow */
+}
+
+:global([data-theme='light']) .topicCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(5, 9, 23, 0.12);
+  border-color: rgba(112, 121, 151, 0.4);
+  background-color: rgba(219, 226, 250, 0.15); /* Shift to #DBE2FA on hover */
+}
+
+/* Dark theme topic cards */
+:global([data-theme='dark']) .topicCard {
+  border: 1px solid rgba(26, 30, 45, 0.6); /* Using #1A1E2D */
+  background-color: rgba(16, 20, 34, 0.7); /* Using #101422 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+:global([data-theme='dark']) .topicCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  border-color: rgba(219, 226, 250, 0.3); /* #DBE2FA border on hover */
+  background-color: rgba(26, 30, 45, 0.8); /* Shift to #1A1E2D on hover */
 }
 
 .cardLink {
   text-decoration: none !important;
-  color: var(--ifm-font-color-base);
-}
- 
-.topicCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  display: block;
+  height: 100%;
 }
 
-.titleLink:hover{
-    cursor: pointer;
+/* Light theme card link colors */
+:global([data-theme='light']) .cardLink {
+  color: rgba(5, 9, 23, 0.9); /* Using #050917 */
+}
+
+:global([data-theme='light']) .cardLink:hover {
+  color: #050917;
+}
+
+/* Dark theme card link colors */
+:global([data-theme='dark']) .cardLink {
+  color: rgba(219, 226, 250, 0.9); /* Using #DBE2FA */
+}
+
+:global([data-theme='dark']) .cardLink:hover {
+  color: #DBE2FA;
+}
+
+.titleLink {
+  transition: color 0.2s ease;
+}
+
+.titleLink:hover {
+  cursor: pointer;
+}
+
+/* Light theme title link */
+:global([data-theme='light']) .titleLink:hover {
+  color: #1A1E2D; /* Using #1A1E2D for accent */
+}
+
+/* Dark theme title link */
+:global([data-theme='dark']) .titleLink:hover {
+  color: #707997; /* Using #707997 for subtle accent */
+}
+
+/* Additional enhancements for better visual hierarchy */
+:global([data-theme='light']) .topicCard h3,
+:global([data-theme='light']) .topicCard h4 {
+  color: #050917; /* Darkest color for headings */
+}
+
+:global([data-theme='dark']) .topicCard h3,
+:global([data-theme='dark']) .topicCard h4 {
+  color: #DBE2FA; /* Light color for headings in dark mode */
+}
+
+:global([data-theme='light']) .topicCard p {
+  color: rgba(26, 30, 45, 0.8); /* Using #1A1E2D for body text */
+}
+
+:global([data-theme='dark']) .topicCard p {
+  color: rgba(219, 226, 250, 0.8); /* Light text in dark mode */
 }

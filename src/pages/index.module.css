@@ -4,6 +4,15 @@
  */
 
 /* Hero banner styling */
+.container {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light theme main container */
+[data-theme='light'] .container {
+  background-color: #ffffff;
+  color: #050917;
+}
 .heroBanner {
   padding: 4rem 0;
   text-align: left;
