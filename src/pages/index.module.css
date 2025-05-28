@@ -22,15 +22,16 @@
 
 /* Light mode specific styles */
 :global([data-theme='light']) .heroBanner {
-  background-color: #ffffff;
+  background-color: #DBE2FA;
   color: #000000;
 }
 
 /* Dark mode specific styles */
 :global([data-theme='dark']) .heroBanner {
-  background-color: #121212;
+  background-color: #050917;
   color: #ffffff;
 }
+
 
 .heroContainer {
   display: flex;

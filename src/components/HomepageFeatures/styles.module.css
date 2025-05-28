@@ -3,11 +3,17 @@
  */
 
 /* Features section styling */
-.features {
+
+[data-theme='light'] .features {
   padding: 4rem 0;
+  background-color: #DBE2FA;
   width: 100%;
 }
-
+[data-theme='dark'] .features {
+  padding: 4rem 0;
+  background-color: #050917;
+  width: 100%;
+}
 /* Feature cards row styling */
 .featureRow {
   display: flex;
