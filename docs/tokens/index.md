@@ -1,43 +1,40 @@
-# SOPH Bridging
+# EDGEN Bridging
 
 ## Overview
 
-The SOPH token was minted on Ethereum mainnet and canonically bridged to Sophon as the native fee token. To enable seamless cross-chain functionality, we added an OFTAdapter (Omnichain Fungible Token Adapter) on Sophon that allows easy bridging to other supported chains.
+The EDGEN token was minted on Ethereum mainnet and canonically bridged to Edgen Chain, where it serves as the native gas token. To enable seamless cross-chain functionality, LayerEdge integrates with **Hyperlane**, allowing EDGEN to be bridged across multiple supported blockchains.
 
 ## Contract Addresses
 
 | Chain | Address |
 |-------|---------|
-| Ethereum | `0x6B7774CB12ed7573a7586E7D0e62a2A563dDd3f0` ([**link**](https://etherscan.io/token/0x6B7774CB12ed7573a7586E7D0e62a2A563dDd3f0)) |
-| Sophon | `0x000000000000000000000000000000000000800A` ([**link**](https://sophscan.xyz/token/0x000000000000000000000000000000000000800A)) |
-| Sophon (WSOPH) | `0x2b1A859dE6A55c553520D7780Bc5805712B128F9` ([**link**](https://sophscan.xyz/token/0x2b1A859dE6A55c553520D7780Bc5805712B128F9)) |
-| Sophon (NativeOFTAdapter) | `0x70ff61C1436d19090321A312b1f4be89D62ac55C` ([**link**](https://explorer.sophon.xyz/address/0x70ff61C1436d19090321A312b1f4be89D62ac55C)) |
-| BSC | `0x31DbA3c96481FDe3CD81C2aaF51F2D8bf618C742` ([**link**](https://bscscan.com/token/0x31DbA3c96481FDe3CD81C2aaF51F2D8bf618C742)) |
-| Base | `0x31DbA3c96481FDe3CD81C2aaF51F2D8bf618C742` ([**link**](https://basescan.org/token/0x31DbA3c96481FDe3CD81C2aaF51F2D8bf618C742)) |
-| Arbitrum | `0x31DbA3c96481FDe3CD81C2aaF51F2D8bf618C742` ([**link**](https://arbiscan.io/token/0x31DbA3c96481FDe3CD81C2aaF51F2D8bf618C742)) |
-| Polygon | `0xEb971Fd26783f32694dbB392dD7289de23109148` ([**link**](https://polygonscan.com/token/0xEb971Fd26783f32694dbB392dD7289de23109148)) |
+| Ethereum | `0xAa9806c938836627Ed1a41Ae871c7E1889AE02Ca` ([**link**](https://etherscan.io/address/0xAa9806c938836627Ed1a41Ae871c7E1889AE02Ca)) |
+| Binance Smart Chain | `0x0c808f0464c423d5ea4f4454fcc23b6e2ae75562` ([**link**](https://bscscan.com/address/0x0c808f0464c423d5ea4f4454fcc23b6e2ae75562)) |
+
+EDGEN is the **gas token of the Edgen Chain.**
 
 ## Technical Implementation
 
 ### Architecture:
 
 * **Ethereum Mainnet**: Original ERC20 token contract
-* **Sophon**: Canonically bridged as the native fee token with an additional OFTAdapter for cross-chain bridging
-* **Other Chains**: OFT (Omnichain Fungible Token) implementations that connect through LayerZero
+* **Edgen Chain**: Canonically bridged as the gas token using Hyperlane
+* **Binance Smart Chain (BSC)**: Canonically bridged ERC-20 token using Hyperlane
 
-This design ensures that SOPH maintains its native status on Sophon while providing users with the flexibility to bridge their tokens to other major blockchain networks for DeFi activities and broader ecosystem participation.
+
+This design ensures that **EDGEN maintains its native status on the Edgen Chain**, while giving users the flexibility to bridge tokens to other major blockchain networks like Ethereum and BSC. This enables participation in DeFi, liquidity provisioning, and broader ecosystem integrations.
 
 ## Bridging Flow
 
-* **Ethereum ↔ Sophon**: Use the canonical ZKsync bridge
-* **Sophon ↔ Other Chains**: LayerZero OFT bridging
-* **Ethereum ↔ Other Chain**: Currently not supported
-
-> We want to avoid having multiple SOPH addresses on the same chain
+| From ↔ To | Method |
+|-----------|--------|
+| Ethereum ↔ EdgenChain | Native Hyperlane-powered bridge |
+| BSC ↔ Edgen Chain | Native Hyperlane-powered bridge |
+| Ethereum ↔ BSC | Native Hyperlane-powered bridge |
 
 ## Key Features
 
-* **Native Fee Token**: SOPH serves as the native gas token on Sophon
-* **Cross-Chain Compatibility**: Seamless bridging to major blockchain networks
-* **LayerZero Integration**: Leverages LayerZero's omnichain infrastructure for secure cross-chain transfers
-* **Wrapped Version**: WSOPH available for DeFi applications requiring ERC-20 compatibility
+* **Native Fee Token**: EDGEN serves as the native gas token on Edgen Chain
+* **Cross-Chain Compatibility**: Bridge EDGEN seamlessly across Ethereum, BSC, and Edgen Chain
+* **Hyperlane Integration**: Leverages Hyperlane's infrastructure for secure cross-chain transfers
+* **Wrapped Version**: WEDGEN is available for use in DeFi applications requiring ERC-20 compatibility

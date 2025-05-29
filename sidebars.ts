@@ -258,31 +258,31 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'SOPH Bridging',
+      label: 'EDGEN Bridging',
       link: {
         type: 'doc',
         id: 'tokens/index',
       },
       items: []
     },
-    {
-      type: 'category',
-      label: 'USDC',
-      link: {
-        type: 'doc',
-        id: 'tokens/USDC',
-      },
-      items: []
-    },
-    {
-      type: 'category',
-      label: 'LayerZero Integration',
-      link: {
-        type: 'doc',
-        id: 'tokens/layerzero',
-      },
-      items: []
-    },
+    // {
+    //   type: 'category',
+    //   label: 'USDC',
+    //   link: {
+    //     type: 'doc',
+    //     id: 'tokens/USDC',
+    //   },
+    //   items: []
+    // },
+    // {
+    //   type: 'category',
+    //   label: 'LayerZero Integration',
+    //   link: {
+    //     type: 'doc',
+    //     id: 'tokens/layerzero',
+    //   },
+    //   items: []
+    // },
   ],
 };
 
