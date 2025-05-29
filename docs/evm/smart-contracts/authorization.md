@@ -6,7 +6,7 @@ The user should grant authorization to allow smart contracts to send messages on
 
 `Authorization.sol`
 
-Find the Solidity interface in the [cosmos/evm repo](https://github.com/cosmos/evm)
+Find the Solidity interface in the [cosmos/evm repo](https://github.com/cosmos/)
 
 ## Transactions
 

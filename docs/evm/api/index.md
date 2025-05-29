@@ -8,10 +8,10 @@ The Cosmos EVM supports different clients in order to support Cosmos and Ethereu
 
 | | Description | Default Port |
 |---|---|---|
-| **Cosmos gRPC** | Query or send Cosmos EVM transactions using gRPC | 9090 |
-| **Cosmos REST (gRPC-Gateway)** | Query or send Cosmos EVM transactions using an HTTP RESTful API | 9091 |
-| **Ethereum JSON-RPC** | Query Ethereum-formatted transactions and blocks or send Ethereum txs using JSON-RPC | 8545 |
-| **Ethereum Websocket** | Subscribe to Ethereum logs and events emitted in smart contracts. | 8586 |
+| **Cosmos [gRPC](/docs/evm/api/cosmos-grpc)** | Query or send Cosmos EVM transactions using gRPC | 9090 |
+| **Cosmos REST ([gRPC-Gateway](/docs/evm/api/cosmos-grpc))** | Query or send Cosmos EVM transactions using an HTTP RESTful API | 9091 |
+| **Ethereum [JSON-RPC](/docs/evm/api/ethereum-json-rpc)** | Query Ethereum-formatted transactions and blocks or send Ethereum txs using JSON-RPC | 8545 |
+| **Ethereum [Websocket](/docs/evm/api/ethereum-json-rpc)** | Subscribe to Ethereum logs and events emitted in smart contracts. | 8586 |
 | **Tendermint RPC** | Query transactions, blocks, consensus state, broadcast transactions, etc. | 26657 |
 | **Tendermint Websocket** | Subscribe to Tendermint ABCI events | 26657 |
 | **Command Line Interface (CLI)** | Query or send Cosmos EVM transactions using your Terminal or Console. | N/A |

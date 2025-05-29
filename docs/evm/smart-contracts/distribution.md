@@ -5,10 +5,10 @@
 Distribution.sol is an interface through which Solidity contracts can interact with Cosmos SDK distribution. This is convenient for developers as they don't need to know the implementation details behind the x/distribution module in the Cosmos SDK. Instead, they can interact with distribution functions using the Ethereum interface they are familiar with.
 
 ### Interface Distribution.sol
-Find the Solidity interface in the cosmos/evm repo.
+Find the [Solidity interface in the cosmos/evm repo.](https://github.com/cosmos/evm/blob/main/precompiles/distribution/DistributionI.sol)
 
 ### ABI
-Find the ABI in the cosmos/evm repo.
+Find the [ABI in the cosmos/evm repo.](https://github.com/cosmos/evm/blob/main/precompiles/distribution/abi.json)
 
 ## Transactions
 

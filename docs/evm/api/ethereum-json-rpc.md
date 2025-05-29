@@ -2,19 +2,19 @@
 
 The JSON-PRC Server provides an API that allows you to connect to a Cosmos EVM-enabled blockchain and interact with the EVM. This gives you direct access to reading Ethereum-formatted transactions or sending them to the network.
 
-JSON-RPC is a stateless, light-weight remote procedure call (RPC) protocol. It defines several data structures and the rules around their processing. JSON-RPC is provided on multiple transports. Cosmos EVM supports JSON-RPC over HTTP and WebSocket. Transports must be enabled through command-line flags or through the app.toml configuration file. It uses JSON (RFC 4627) as data format.
+[JSON-RPC](https://www.jsonrpc.org/specification) is a stateless, light-weight remote procedure call (RPC) protocol. It defines several data structures and the rules around their processing. JSON-RPC is provided on multiple transports. Cosmos EVM supports JSON-RPC over HTTP and WebSocket. Transports must be enabled through command-line flags or through the app.toml configuration file. It uses JSON ([RFC 4627](https://www.ietf.org/rfc/rfc4627.txt)) as data format.
 
 More on Ethereum JSON-RPC:
 
-- EthWiki JSON-RPC API
-- Geth JSON-RPC Server
-- Ethereum's PubSub JSON-RPC API
+- [EthWiki JSON-RPC API](https://ethereum.org/en/)
+- [Geth JSON-RPC Server](https://geth.ethereum.org/docs/interacting-with-geth/rpc)
+- [Ethereum's PubSub JSON-RPC API](https://geth.ethereum.org/docs/interacting-with-geth/rpc/pubsub)
 
 ## JSON-RPC over HTTP
 
 Cosmos EVM supports most of the standard web3 JSON-RPC APIs to connect with existing Ethereum-compatible web3 tooling over HTTP. Ethereum JSON-RPC APIs use a namespace system. RPC methods are grouped into several categories depending on their purpose. All method names are composed of the namespace, an underscore, and the actual method name within the namespace. For example, the eth_call method resides in the eth namespace. Access to RPC methods can be enabled on a per-namespace basis.
 
-Find below the JSON-RPC namespaces supported on Cosmos EVM or head over to the documentation for the individual API endpoints and their respective curl commands on the JSON-RPC Methods page.
+Find below the JSON-RPC namespaces supported on Cosmos EVM or head over to the documentation for the individual API endpoints and their respective curl commands on the [JSON-RPC Methods](/docs/evm/api/methods) page.
 
 | Namespace | Description | Supported | Enabled by Default |
 |-----------|-------------|-----------|-------------------|
@@ -33,7 +33,7 @@ Find below the JSON-RPC namespaces supported on Cosmos EVM or head over to the d
 
 ### Filters
 
-Cosmos EVM also supports the Ethereum JSON-RPC filters calls to subscribe to state logs, blocks or pending transactions changes.
+Cosmos EVM also supports the Ethereum [JSON-RPC](/docs/evm/api/methods) filters calls to subscribe to [state logs](https://ethereum.org/en/#eth_newfilter), [blocks](https://ethereum.org/en/#eth_newblockfilter) or [pending transactions](https://ethereum.org/en/#eth_newpendingtransactionfilter) changes.
 
 Under the hood, it uses the Tendermint RPC client's event system to process subscriptions that are then formatted to Ethereum-compatible events.
 
@@ -59,7 +59,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":[
 
 The Ethereum Websocket allows you to subscribe to Ethereum logs and events emitted in smart contracts. This way you don't need to continuously make requests when you want specific information.
 
-Since Cosmos EVM is built with the Cosmos SDK framework and uses Tendermint Core as it's consensus Engine, it inherits the event format from them. However, in order to support the native Web3 compatibility for websockets of the Ethereum's PubSubAPI, Cosmos EVM needs to cast the Tendermint responses retrieved into the Ethereum types.
+Since Cosmos EVM is built with the Cosmos SDK framework and uses Tendermint Core as it's consensus Engine, it inherits the event format from them. However, in order to support the native Web3 compatibility for websockets of the [Ethereum's PubSubAPI](https://geth.ethereum.org/docs/interacting-with-geth/rpc/pubsub), Cosmos EVM needs to cast the Tendermint responses retrieved into the Ethereum types.
 
 You can start a connection with the Ethereum websocket using the --json-rpc.ws-address flag when starting the node (default "0.0.0.0:8546"):
 

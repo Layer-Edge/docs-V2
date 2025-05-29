@@ -10,12 +10,12 @@ Stateful EVM precompiles on the core protocol allow dApps and users to access lo
 
 Find in this section an outline of the currently implemented Cosmos EVM precompiles with transactions, queries, and examples of using them:
 
-- [Authorization interface](/docs/evm/index.md) (read first if you're new to Cosmos SDK Precompiles for the EVM)
-- [Cosmos EVM precompiles shared types](/docs/evm/index.md)
-- [`x/staking` module EVM extension](/docs/evm/index.md)
-- [`x/distribution` module EVM extension](/docs/evm/index.md)
-- [`ibc/transfer` module EVM extension](/docs/evm/index.md)
+- [Authorization interface](/docs/evm/smart-contracts/authorization) (read first if you're new to Cosmos SDK Precompiles for the EVM)
+- [Cosmos EVM precompiles shared types](/docs/evm/smart-contracts/types)
+- [`x/staking` module EVM extension](/docs/evm/smart-contracts/staking)
+- [`x/distribution` module EVM extension](/docs/evm/smart-contracts/distribution)
+- [`ibc/transfer` module EVM extension](/docs/evm/smart-contracts/ibc-transfer)
 
 > **💡 TIP**
 > 
-> **Note**: Find the EVM Precompile Solidity interfaces and examples in the [Cosmos EVM repo](/docs/evm/index.md).
+> **Note**: Find the EVM Precompile Solidity interfaces and examples in the [Cosmos EVM repo](https://github.com/cosmos/evm/tree/main/precompiles).

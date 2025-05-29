@@ -4,7 +4,7 @@ With the release v19.0.0 a new feature called custom improvement proposals has b
 
 ## Operations
 
-Operations are the base components of the Ethereum Virtual Machine (EVM) which allow the execution of the smart contract logic. When a developer builds a smart contract, the code written in Solidity, or Vyper, is not directly interpretable by the EVM. Before being able to execute the code in the blockchain, the contract has to be compiled via one of the available compilers, like solc. The compilation converts the human-readable contract code into a sequence of operations that the virtual machine can interpret and execute to perform state transitions or query the latest committed state. These operations are called opcodes, and are contained in a structure called jump table.
+Operations are the base components of the Ethereum Virtual Machine (EVM) which allow the execution of the smart contract logic. When a developer builds a smart contract, the code written in Solidity, or Vyper, is not directly interpretable by the EVM. Before being able to execute the code in the blockchain, the contract has to be compiled via one of the available compilers, like [solc](https://docs.soliditylang.org/en/latest/using-the-compiler.html). The compilation converts the human-readable contract code into a sequence of operations that the virtual machine can interpret and execute to perform state transitions or query the latest committed state. These operations are called opcodes, and are contained in a structure called jump table.
 
 Each opcode is defined by specifying the logic that has to be executed when it is called inside the EVM, its relationship with the memory, and the gas cost associated with it. More specifically, an opcode is completely defined by:
 
@@ -21,7 +21,7 @@ Within the Cosmos EVM framework, developers can modify any of the previous prope
 
 Improvement proposals are the approach used by Cosmos EVM and Ethereum to modify the behavior of opcodes. They are composed of a function, which has access to the jump table to apply specific changes to operation behavior, and a name.
 
-In the context of Ethereum, these protocol changes are named Ethereum Improvement Proposals (EIPs) and are identified by a unique ID. For example, EIP-1559 is used to introduce the base fee.
+In the context of Ethereum, these protocol changes are named Ethereum Improvement Proposals (EIPs) and are identified by a unique ID. For example, [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) is used to introduce the base fee.
 
 To allow any Cosmos EVM user to define their own specific improvements without overlapping with Cosmos EVM and Ethereum ones, each proposal is identified by a string, that is composed of the chain name and a number. For example, default Cosmos EVM improvements are associated with the string evmos_XXXX. This allows each chain to define their improvements without having to worry about existing or future ID clashes between different chains. Additionally, the ability to start enumeration at 0 is better for chain developers and allows having a better overview of the historical progress for each chain.
 

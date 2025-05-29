@@ -5,10 +5,10 @@
 Staking.sol is an interface through which Solidity contracts can interact with Cosmos SDK staking. This is convenient for developers as they don't need to know the implementation details behind the x/staking module in the Cosmos SDK. Instead, they can interact with staking functions using the Ethereum interface they are familiar with.
 
 ### Interface Staking.sol
-Find the Solidity interface in the cosmos/evm repo.
+Find the [Solidity interface in the cosmos/evm repo.](https://github.com/cosmos/evm/blob/main/precompiles/staking/StakingI.sol)
 
 ### ABI
-Find the ABI in the cosmos/evm repo.
+Find the [ABI in the cosmos/evm repo.](https://github.com/cosmos/evm/blob/main/precompiles/staking/abi.json)
 
 ## Transactions
 

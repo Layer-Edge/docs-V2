@@ -328,7 +328,7 @@ Returns the account balance for a given account address and Block Number.
 
 **Parameters**
 - Account Address
-- Block Number or Block Hash (EIP-1898)
+- Block Number or Block Hash ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
 
 ```bash
 // Request
@@ -345,7 +345,7 @@ Returns the storage address for a given account address.
 **Parameters**
 - Account Address
 - Integer of the position in the storage
-- Block Number or Block Hash (EIP-1898)
+- Block Number or Block Hash ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
 
 ```bash
 // Request
@@ -361,7 +361,7 @@ Returns the total transaction for a given account address and Block Number.
 
 **Parameters**
 - Account Address
-- Block Number or Block Hash (EIP-1898)
+- Block Number or Block Hash ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
 
 ```bash
 // Request
@@ -407,7 +407,7 @@ Returns the code for a given account address and Block Number.
 
 **Parameters**
 - Account Address
-- Block Number or Block Hash (EIP-1898)
+- Block Number or Block Hash ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
 
 ```bash
 // Request
@@ -490,7 +490,7 @@ Object containing:
 - gasPrice: QUANTITY - gasPrice used for each paid gas
 - value: QUANTITY - value sent with this transaction
 - data: DATA - (optional) Hash of the method signature and encoded parameters. For details see Ethereum Contract ABI in the Solidity documentation
-- Block number or Block Hash (EIP-1898)
+- Block number or Block Hash ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
 
 ```bash
 // Request
@@ -695,7 +695,7 @@ Object containing:
 - toBlock: QUANTITY|TAG - (optional, default: "latest") Integer block number, or "latest" for the last mined block or "pending", "earliest" for not yet mined transactions.
 - address: DATA|Array, 20 Bytes - (optional) Contract address or a list of addresses from which logs should originate.
 - topics: Array of DATA, - (optional) Array of 32 Bytes DATA topics. Topics are order-dependent. Each topic can also be an array of DATA with "or" options.
-- blockhash: (optional, future) With the addition of EIP-234, blockHash will be a new filter option which restricts the logs returned to the single block with the 32-byte hash blockHash. Using blockHash is equivalent to fromBlock = toBlock = the block number with hash blockHash. If blockHash is present in in the filter criteria, then neither fromBlock nor toBlock are allowed.
+- blockhash: (optional, future) With the addition of [EIP-234](https://eips.ethereum.org/EIPS/eip-234), blockHash will be a new filter option which restricts the logs returned to the single block with the 32-byte hash blockHash. Using blockHash is equivalent to fromBlock = toBlock = the block number with hash blockHash. If blockHash is present in in the filter criteria, then neither fromBlock nor toBlock are allowed.
 
 ```bash
 // Request
@@ -724,7 +724,7 @@ Returns the account- and storage-values of the specified account including the M
 **Parameters**
 - Address of account or contract
 - Integer of the position in the storage
-- Block Number or Block Hash (EIP-1898)
+- Block Number or Block Hash ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
 
 ```bash
 // Request
@@ -736,7 +736,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getProof","params":["0x12345
 
 # WebSocket Methods
 
-Read about websockets in Tendermint Events
+Read about websockets in [Tendermint Events](/docs/evm/api/tendermint-rpc)
 
 ## eth_subscribe
 

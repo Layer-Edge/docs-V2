@@ -2,7 +2,7 @@
 
 The Tendermint RPC allows you to query transactions, blocks, consensus state, broadcast transactions, etc.
 
-The latest Tendermint RPC documentations can be found here. Tendermint supports the following RPC protocols:
+The latest Tendermint RPC documentations can be found [here](https://docs.tendermint.com/v0.34/rpc/). Tendermint supports the following RPC protocols:
 
 - URI over HTTP
 - JSON-RPC over HTTP
@@ -20,7 +20,7 @@ curl localhost:26657/block?height=5
 
 ## RPC/HTTP
 
-JSONRPC requests can be POST'd to the root RPC endpoint via HTTP. See the list of supported Tendermint RPC endpoints using Swagger here.
+JSONRPC requests can be POST'd to the root RPC endpoint via HTTP. See the list of supported Tendermint RPC endpoints using Swagger [here](/docs/evm/api/).
 
 ## RPC/Websocket
 
@@ -30,18 +30,17 @@ Events are objects that contain information about the execution of the applicati
 
 More on Events:
 
-- Cosmos SDK Events
-- Subscribing to Events via Websocket
+- [Cosmos SDK Events](https://docs.cosmos.network/main/learn/advanced/events)
 
 ### Subscribing to Events via Websocket
 
-Tendermint Core provides a Websocket connection to subscribe or unsubscribe to Tendermint Events. To start a connection with the Tendermint websocket you need to define the address with the --rpc.laddr flag when starting the node (default tcp://127.0.0.1:26657):
+Tendermint Core provides a [Websocket](https://docs.tendermint.com/v0.34/tendermint-core/subscription.html) connection to subscribe or unsubscribe to Tendermint Events. To start a connection with the Tendermint websocket you need to define the address with the --rpc.laddr flag when starting the node (default tcp://127.0.0.1:26657):
 
 ```bash
 evmd start --rpc.laddr="tcp://127.0.0.1:26657"
 ```
 
-Then, start a websocket subscription with ws
+Then, start a websocket subscription with [ws](https://github.com/hashrocket/ws)
 
 ```bash
 # connect to tendermint websocket at port 8080
