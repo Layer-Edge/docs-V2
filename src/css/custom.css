@@ -252,11 +252,18 @@ code {
 }
 
 /* Add this to your custom CSS file */
-.menu__section-title {
+.menu__section-title ,.menu__section-title-sub {
   font-size: 1rem;
-  font-weight: 700;
   color: var(--ifm-menu-color);
   padding: var(--ifm-menu-link-padding-vertical) var(--ifm-menu-link-padding-horizontal);
+}
+
+.menu__section-title {
+  font-weight: 700;
+}
+
+.menu__section-title-sub{
+  font-weight: 500;
 }
 
 .menu__section-title-container {
