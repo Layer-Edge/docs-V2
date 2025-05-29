@@ -40,12 +40,12 @@
   --ifm-text-color: #e0e0e0;
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
   --docsearch-hit-active-color: #050917;
-  --ifm-heading-color:#050917
-  --ifm-color-content:#346DDB
+  --ifm-heading-color: #DBE2FA;
+  --ifm-color-content: #DBE2FA;
 
   /* Custom colors */
-  --layeredge-primary: #ffffff; /* Replaced gold with white */
-  --layeredge-text-color: #e0e0e0;
+  --layeredge-primary:  #DBE2FA; /* Replaced gold with white */
+  --layeredge-text-color:  #DBE2FA;
 }
 [data-theme='light'] {
   --ifm-color-primary: #ffffff; /* White replacing gold */
