@@ -63,7 +63,7 @@
   --docsearch-hit-active-color:#121212;
   --ifm-color-secondary:#121212;
   --ifm-color-primary:#346DDB;
-  --ifm-color-content:#DBE2FA;
+  /* --ifm-color-content:#DBE2FA; */
  
  
 
@@ -89,9 +89,9 @@
   color: #DBE2FA;
 }
 
-.clean-btn{ 
+/* .clean-btn{ 
   background: #0d1426;
-}
+} */
 
 /* Style the navbar brand */
 .navbar__brand {
