@@ -121,7 +121,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'html',
-      value: '<span class="menu__section-title-sub">EDGEN Chain</span>',
+      value: '<span class="menu__section-title-sub">edgen Chain</span>',
       className: 'menu__section-title-container',
     },
     {
@@ -186,7 +186,7 @@ const sidebars: SidebarsConfig = {
 
     {
       type: 'html',
-      value: '<span class="menu__section-title-sub">EDGEN OS</span>',
+      value: '<span class="menu__section-title-sub">edgen OS</span>',
       className: 'menu__section-title-container',
     },
     {
@@ -246,6 +246,40 @@ const sidebars: SidebarsConfig = {
       link: {
         type: 'doc',
         id: 'frequently-asked-questions-faqs/index',
+      },
+      items: []
+    },
+
+    // sub community section
+    {
+      type: 'html',
+      value: '<span class="menu__section-title-sub">Tokens</span>',
+      className: 'menu__section-title-container',
+    },
+    {
+      type: 'category',
+      label: 'SOPH Bridging',
+      link: {
+        type: 'doc',
+        id: 'tokens/index',
+      },
+      items: []
+    },
+    {
+      type: 'category',
+      label: 'USDC',
+      link: {
+        type: 'doc',
+        id: 'tokens/USDC',
+      },
+      items: []
+    },
+    {
+      type: 'category',
+      label: 'LayerZero Integration',
+      link: {
+        type: 'doc',
+        id: 'tokens/layerzero',
       },
       items: []
     },

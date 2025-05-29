@@ -1,3 +1,0 @@
-# EDGEN Token
-
-Coming Soon...

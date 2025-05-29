@@ -260,10 +260,12 @@ code {
 
 .menu__section-title {
   font-weight: 700;
+  font-size: 18px;
 }
 
 .menu__section-title-sub{
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 17px;
 }
 
 .menu__section-title-container {
