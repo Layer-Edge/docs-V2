@@ -113,7 +113,7 @@ const config: Config = {
       },
       items: [
         { to: '/docs/intro', label: 'Learn', position: 'left' },
-        { to: '/docs/getting-started/', label: 'Build', position: 'left' },
+        { to: '/docs/build/', label: 'Build', position: 'left' },
         { to: '/docs/community-and-support/', label: 'Community', position: 'left'},
         {
           href: 'https://github.com/orgs/Layer-Edge/repositories',
