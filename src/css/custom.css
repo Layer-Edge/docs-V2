@@ -179,11 +179,11 @@ table {
 }
 
 [data-theme='light'] th {
-  background-color: #f5f5f5;
+  background-color: #DBE2FA;
 }
 
 [data-theme='dark'] th {
-  background-color: #2d2d2d;
+  background-color: #050917;
 }
 
 [data-theme='light'] td {
@@ -191,7 +191,7 @@ table {
 }
 
 [data-theme='dark'] td {
-  border-color: #333;
+  border-color: #e0e0e0;
 }
 
 /* Style code blocks */
@@ -214,13 +214,13 @@ code {
 }
 
 [data-theme='light'] code {
-  background-color: #f5f5f5;
+  background-color: #DBE2FA;
   color: #2d2d2d;
 }
 
 [data-theme='dark'] code {
   background-color: #2d2d2d;
-  color: #ffffff;
+  color: #DBE2FA;
 }
 
 /* GitHub icon in navbar */
