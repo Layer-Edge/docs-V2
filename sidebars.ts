@@ -121,7 +121,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'html',
-      value: '<span class="menu__section-title-sub">Token 1</span>',
+      value: '<span class="menu__section-title-sub">EDGEN Chain</span>',
       className: 'menu__section-title-container',
     },
     {
@@ -186,7 +186,7 @@ const sidebars: SidebarsConfig = {
 
     {
       type: 'html',
-      value: '<span class="menu__section-title-sub">Token 2</span>',
+      value: '<span class="menu__section-title-sub">EDGEN OS</span>',
       className: 'menu__section-title-container',
     },
     {

@@ -29,6 +29,11 @@
   text-decoration: none;
 }
 
+.tokenCol{
+  max-width: 400px;
+  min-width: 200px;
+}
+
 .featureCol:hover {
   text-decoration: none;
 }

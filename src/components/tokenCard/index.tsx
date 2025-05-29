@@ -27,7 +27,7 @@ function Feature({
   path,
 }: FeatureItem) {
   return (
-    <Link to={path} className={clsx("col", styles.featureCol)}>
+    <Link to={path} className={clsx("col", styles.featureCol ,styles.tokenCol)}>
       <div className={styles.featureCard}>
         <div className={styles.featureContent}>
           {Icon ? (
@@ -40,8 +40,8 @@ function Feature({
                   light: iconLight,
                   dark: iconDark,
                 }}
-                width={48}
-                height={48}
+                // width={auto}
+                height={30}
               />
             </div>
           ) : null}
