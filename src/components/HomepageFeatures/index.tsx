@@ -5,6 +5,112 @@ import Heading from "@theme/Heading";
 import styles from "./styles.module.css";
 
 // Define icons for each feature
+const BookIcon = () => (
+  <div className={styles.featureIcon}>
+    <svg
+      width="48"
+      height="48"
+      viewBox="0 0 48 48"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* Main book body */}
+      <rect
+        x="10"
+        y="12"
+        width="28"
+        height="32"
+        rx="2"
+        className={styles.iconPrimary}
+      />
+      {/* Book spine/binding */}
+      <rect
+        x="10"
+        y="12"
+        width="4"
+        height="32"
+        rx="2"
+        className={styles.iconSecondary}
+      />
+      {/* Book pages indicator */}
+      <rect
+        x="12"
+        y="10"
+        width="26"
+        height="2"
+        rx="1"
+        fill="#FFFFFF"
+        opacity="0.3"
+      />
+      <rect
+        x="12"
+        y="8"
+        width="24"
+        height="2"
+        rx="1"
+        fill="#FFFFFF"
+        opacity="0.2"
+      />
+
+      {/* Text lines on the book cover */}
+      <rect
+        x="16"
+        y="18"
+        width="18"
+        height="1.5"
+        rx="0.75"
+        fill="#FFFFFF"
+        opacity="0.8"
+      />
+      <rect
+        x="16"
+        y="22"
+        width="14"
+        height="1.5"
+        rx="0.75"
+        fill="#FFFFFF"
+        opacity="0.7"
+      />
+      <rect
+        x="16"
+        y="26"
+        width="16"
+        height="1.5"
+        rx="0.75"
+        fill="#FFFFFF"
+        opacity="0.6"
+      />
+      <rect
+        x="16"
+        y="30"
+        width="12"
+        height="1.5"
+        rx="0.75"
+        fill="#FFFFFF"
+        opacity="0.5"
+      />
+      <rect
+        x="16"
+        y="34"
+        width="15"
+        height="1.5"
+        rx="0.75"
+        fill="#FFFFFF"
+        opacity="0.4"
+      />
+      <rect
+        x="16"
+        y="38"
+        width="10"
+        height="1.5"
+        rx="0.75"
+        fill="#FFFFFF"
+        opacity="0.4"
+      />
+    </svg>
+  </div>
+);
+
 const GraduationIcon = () => (
   <div className={styles.featureIcon}>
     <svg
@@ -99,6 +205,19 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
+    title: "Quick Guide",
+    Icon: BookIcon,
+    description: (
+      <>
+        LayerEdge is a decentralized verification network that brings
+        trust-minimized computation to Bitcoin by aggregating and verifying
+        zk-proofs from external systems—enabling high-integrity data validation
+        without centralized trust.
+      </>
+    ),
+    path: "/docs/guide",
+  },
+  {
     title: "Learn",
     Icon: GraduationIcon,
     description: (
@@ -117,7 +236,7 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>Start building on LayerEdge with one of our developer SDKs.</>
     ),
-    path: "/docs/getting-started/",
+    path: "/docs/build/",
   },
   {
     title: "Community",
@@ -125,7 +244,7 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         Join the LayerEdge community to connect, collaborate, and contribute to
-        the future of blind computation.
+        the future of decentralized verification.
       </>
     ),
     path: "/docs/community-and-support/",

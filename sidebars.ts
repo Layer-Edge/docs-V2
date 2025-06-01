@@ -2,6 +2,57 @@ import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
 
 const sidebars: SidebarsConfig = {
   tutorialSidebar: [
+    {
+      type: 'html',
+      value: '<span class="menu__section-title">Quick Guide</span>',
+      className: 'menu__section-title-container',
+    },
+    {
+      type: 'category',
+      label: 'Using Edgen Chain',
+      link: {
+        type: 'doc',
+        id: 'guide/index',
+      },
+      items: []
+    },
+    {
+      type: 'category',
+      label: 'EDGEN',
+      link: {
+        type: 'doc',
+        id: 'tokenomics-and-economic-model/EDGEN-Token',
+      },
+      items: []
+    },
+    {
+      type: 'category',
+      label: 'EDGEN Bridging',
+      link: {
+        type: 'doc',
+        id: 'tokens/index',
+      },
+      items: []
+    },
+    {
+      type: 'category',
+      label: 'EDGEN Staking',
+      link: {
+        type: 'doc',
+        id: 'guide/staking',
+      },
+      items: []
+    },
+    {
+      type: 'category',
+      label: 'Audit',
+      link: {
+        type: 'doc',
+        id: 'guide/audit',
+      },
+      items: []
+    },
+
     // LEARN SECTION
     {
       type: 'html',
@@ -110,85 +161,94 @@ const sidebars: SidebarsConfig = {
       value: '<span class="menu__section-title">Build</span>',
       className: 'menu__section-title-container',
     },
-    // {
-    //   type: 'category',
-    //   label: 'Getting Started',
-    //   link: {
-    //     type: 'doc',
-    //     id: 'build/index',
-    //   },
-    //   items: []
-    // },
-    // {
-    //   type: 'html',
-    //   value: '<span class="menu__section-title-sub">edgen Chain</span>',
-    //   className: 'menu__section-title-container',
-    // },
-    // {
-    //   type: 'category',
-    //   label: 'Getting Started',
-    //   link: {
-    //     type: 'doc',
-    //     id: 'evm/index',
-    //   },
-    //   items: []
-    // },
-    // {
-    //   type: 'category',
-    //   label: 'Smart Contracts',
-    //   link: {
-    //     type: 'doc',
-    //     id: 'evm/smart-contracts/index',
-    //   },
-    //   items: [
-    //     {
-    //       type: 'category',
-    //       label: 'Cosmos SDK Precompiles',
-    //       link: {
-    //         type: 'doc',
-    //         id: 'evm/smart-contracts/cosmos-sdk-precompiles',
-    //       },
-    //       items: [
-    //         'evm/smart-contracts/authorization',
-    //         'evm/smart-contracts/types',
-    //         'evm/smart-contracts/staking',
-    //         'evm/smart-contracts/distribution',
-    //         'evm/smart-contracts/ibc-transfer',
-    //       ]
-    //     },
-    //     'evm/smart-contracts/custom-improvement-proposals',
+    {
+      type: 'category',
+      label: 'Getting Started',
+      link: {
+        type: 'doc',
+        id: 'build/index',
+      },
+      items: []
+    },
+    {
+      type: 'html',
+      value: '<span class="menu__section-title-sub">edgen Chain</span>',
+      className: 'menu__section-title-container',
+    },
+    {
+      type: 'category',
+      label: 'Getting Started',
+      link: {
+        type: 'doc',
+        id: 'evm/index',
+      },
+      items: []
+    },
+    {
+      type: 'category',
+      label: 'Smart Contracts',
+      link: {
+        type: 'doc',
+        id: 'evm/smart-contracts/index',
+      },
+      items: [
+        {
+          type: 'category',
+          label: 'Cosmos SDK Precompiles',
+          link: {
+            type: 'doc',
+            id: 'evm/smart-contracts/cosmos-sdk-precompiles',
+          },
+          items: [
+            'evm/smart-contracts/authorization',
+            'evm/smart-contracts/types',
+            'evm/smart-contracts/staking',
+            'evm/smart-contracts/distribution',
+            'evm/smart-contracts/ibc-transfer',
+          ]
+        },
+        'evm/smart-contracts/custom-improvement-proposals',
        
-    //   ]
-    // },
-    // {
-    //   type: 'category',
-    //   label: 'API',
-    //   link: {
-    //     type: 'doc',
-    //     id: 'evm/api/index',
-    //   },
-    //   items: [
-    //     {
-    //       type: 'category',
-    //       label: 'Ethereum JSON-RPC',
-    //       link: {
-    //         type: 'doc',
-    //         id: 'evm/api/ethereum-json-rpc',
-    //       },
-    //       items: [
-    //         'evm/api/methods'
-    //       ]
-    //     },
-    //     'evm/api/cosmos-grpc',
-    //     'evm/api/tendermint-rpc',
-    //   ]
-    // },
+      ]
+    },
+    {
+      type: 'category',
+      label: 'API',
+      link: {
+        type: 'doc',
+        id: 'evm/api/index',
+      },
+      items: [
+        {
+          type: 'category',
+          label: 'Ethereum JSON-RPC',
+          link: {
+            type: 'doc',
+            id: 'evm/api/ethereum-json-rpc',
+          },
+          items: [
+            'evm/api/methods'
+          ]
+        },
+        'evm/api/cosmos-grpc',
+        'evm/api/tendermint-rpc',
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Network',
+      link: {
+        type: 'doc',
+        id: 'network/index',
+      },
+      items: []
+    },
 
-    // {
-    //   type: 'html',
-    //   value: '<span class="menu__section-title-sub">edgen OS</span>',
-    //   className: 'menu__section-title-container',
-    // },
+    {
+      type: 'html',
+      value: '<span class="menu__section-title-sub">edgen OS</span>',
+      className: 'menu__section-title-container',
+    },
     {
       type: 'category',
       label: 'Getting Started',
@@ -251,20 +311,20 @@ const sidebars: SidebarsConfig = {
     },
 
     // sub community section
-    // {
-    //   type: 'html',
-    //   value: '<span class="menu__section-title-sub">Tokens</span>',
-    //   className: 'menu__section-title-container',
-    // },
-    // {
-    //   type: 'category',
-    //   label: 'EDGEN Bridging',
-    //   link: {
-    //     type: 'doc',
-    //     id: 'tokens/index',
-    //   },
-    //   items: []
-    // },
+    {
+      type: 'html',
+      value: '<span class="menu__section-title-sub">Tokens</span>',
+      className: 'menu__section-title-container',
+    },
+    {
+      type: 'category',
+      label: 'EDGEN Bridging',
+      link: {
+        type: 'doc',
+        id: 'tokens/index',
+      },
+      items: []
+    },
     // {
     //   type: 'category',
     //   label: 'USDC',

@@ -15,10 +15,18 @@ function HomepageHeader() {
           <h1 className={styles.heroTitle}>{siteConfig.title}</h1>
           <h2 className={styles.heroSubtitle}>People Backed Internet</h2>
           <p className={styles.heroDescription}>
-            LayerEdge is a decentralized verification layer that enables
-            scalable, cost-efficient, and secure zk-proof verification, backed
-            by Bitcoin. It is designed to serve as a universal infrastructure
-            layer for verifying off-chain computation.
+            LayerEdge is a dual-layer protocol designed for the People-Backed
+            Internet—where every device can participate in decentralized
+            verification, and every application can anchor trust across chains.
+            At its core are two tightly integrated systems: edgenOS, a
+            decentralized zk-verification layer powered by everyday devices, and
+            Edgen Chain, a high-performance, EVM-compatible L1 built with the
+            Cosmos SDK.{" "}
+          </p>
+          <p className={styles.heroDescription}>
+            Together, they transform zk-proof verification into a global
+            coordination layer, recursively aggregating proofs and anchoring
+            them every 24 hours to multiple blockchains.
           </p>
           <div className={styles.buttons}>
             <Link className={clsx(styles.getStartedButton)} to="/docs/intro">
