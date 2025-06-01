@@ -117,7 +117,7 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>Start building on LayerEdge with one of our developer SDKs.</>
     ),
-    path: "/docs/build/",
+    path: "/docs/getting-started/",
   },
   {
     title: "Community",
