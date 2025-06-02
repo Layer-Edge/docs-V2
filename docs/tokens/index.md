@@ -2,7 +2,7 @@
 
 ## Overview
 
-The EDGEN token was minted on Ethereum mainnet and canonically bridged to Edgen Chain, where it serves as the native gas token. To enable seamless cross-chain functionality, LayerEdge integrates with **Hyperlane**, allowing EDGEN to be bridged across multiple supported blockchains.
+The EDGEN token was minted on Ethereum mainnet and canonically bridged to Edgen Chain, where it serves as the native gas token. To enable seamless cross-chain functionality, LayerEdge integrates with **[Hyperlane](https://docs.hyperlane.xyz/)**, allowing EDGEN to be bridged across multiple supported blockchains.
 
 ## Contract Addresses
 
@@ -28,9 +28,9 @@ This design ensures that **EDGEN maintains its native status on the Edgen Chain*
 
 | From ↔ To | Method |
 |-----------|--------|
-| Ethereum ↔ EdgenChain | Native Hyperlane-powered bridge |
-| BSC ↔ Edgen Chain | Native Hyperlane-powered bridge |
-| Ethereum ↔ BSC | Native Hyperlane-powered bridge |
+| Ethereum ↔ EdgenChain | [Hyperlane Warp Route](https://docs.hyperlane.xyz/docs/protocol/warp-routes/warp-routes-overview) |
+| BSC ↔ Edgen Chain |  [Hyperlane Warp Route](https://docs.hyperlane.xyz/docs/protocol/warp-routes/warp-routes-overview) |
+| Ethereum ↔ BSC |  [Hyperlane Warp Route](https://docs.hyperlane.xyz/docs/protocol/warp-routes/warp-routes-overview) |
 
 ## Key Features
 

@@ -24,13 +24,13 @@ JSONRPC requests can be POST'd to the root RPC endpoint via HTTP. See the list o
 
 ## RPC/Websocket
 
-### Cosmos and Tendermint Events
+### Edgen Chain and Tendermint Events
 
 Events are objects that contain information about the execution of the application and are triggered after a block is committed. They are mainly used by service providers like block explorers and wallet to track the execution of various messages and index transactions. You can get the full list of event categories and values here.
 
 More on Events:
 
-- [Cosmos SDK Events](https://docs.cosmos.network/main/learn/advanced/events)
+- [Edgen Chain SDK Events](https://docs.cosmos.network/main/learn/advanced/events)
 
 ### Subscribing to Events via Websocket
 
@@ -50,7 +50,7 @@ ws ws://localhost:8080/websocket
 > { "jsonrpc": "2.0", "method": "subscribe", "params": ["tm.event='NewBlockHeader'"], "id": 1 }
 ```
 
-The type and attribute value of the query allow you to filter the specific event you are looking for. For example, an Ethereum transaction on a Cosmos EVM chain (MsgEthereumTx) triggers an event of type ethermint and has sender and recipient as attributes. Subscribing to this event would be done like so:
+The type and attribute value of the query allow you to filter the specific event you are looking for. For example, an Ethereum transaction on a Edgen Chain (MsgEthereumTx) triggers an event of type ethermint and has sender and recipient as attributes. Subscribing to this event would be done like so:
 
 ```json
 {
@@ -87,7 +87,7 @@ The main events you can subscribe to are:
 - **ValidatorSetUpdates**: Contains validator set updates for the block.
 
 > **tip**  
-> 👉 The list of events types and values for each Cosmos SDK module can be found in the Modules Specification section. Check the Events page to obtain the event list of each supported module in Cosmos EVM.
+> 👉 The list of events types and values for each Edgen Chain SDK module can be found in the Modules Specification section. Check the Events page to obtain the event list of each supported module in Edgen Chain.
 
 List of all Tendermint event keys:
 
@@ -157,7 +157,7 @@ Example response:
 ```
 
 > **tip**  
-> Note: When querying Ethereum transactions versus Cosmos transactions, the transaction hashes are different. When querying Ethereum transactions, users need to use event query. Here's an example with the CLI:
+> Note: When querying Ethereum transactions versus Edgen Chain transactions, the transaction hashes are different. When querying Ethereum transactions, users need to use event query. Here's an example with the CLI:
 
 ```bash
 curl -X GET "http://localhost:26657/tx_search?query=ethereum_tx.ethereumTxHash%3D0x8d43464891fac6c113e809e14dff1a3e608eae124d629799e42ca0e36562d9d7&prove=false&page=1&per_page=30&order_by=asc" -H "accept: application/json"

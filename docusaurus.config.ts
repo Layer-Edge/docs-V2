@@ -113,8 +113,9 @@ const config: Config = {
         srcDark: 'https://dr6rqdr0y14sm.cloudfront.net/images/darklogo.png',
       },
       items: [
+        { to: '/docs/guide', label: 'Quick Guide', position: 'left' },
         { to: '/docs/intro', label: 'Learn', position: 'left' },
-        { to: '/docs/getting-started/', label: 'Build', position: 'left' },
+        { to: '/docs/build/', label: 'Build', position: 'left' },
         { to: '/docs/community-and-support/', label: 'Community', position: 'left'},
         {
           href: 'https://github.com/orgs/Layer-Edge/repositories',
@@ -130,12 +131,16 @@ const config: Config = {
           title: 'Documentation',
           items: [
             {
+              label: 'Quick Guide',
+              to: '/docs/guide',
+            },
+            {
               label: 'Learn',
               to: '/docs/intro',
             },
             {
               label: 'Build',
-              to: '/docs/getting-started/',
+              to: '/docs/build/',
             },
             {
               label: 'Community',

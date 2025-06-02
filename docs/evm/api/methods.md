@@ -1,6 +1,6 @@
 # Methods
 
-Find below a list of JSON-RPC methods supported on Cosmos EVM, sorted by namespaces.
+Find below a list of JSON-RPC methods supported on Edgen Chain, sorted by namespaces.
 
 ## Curl Examples Explained
 
