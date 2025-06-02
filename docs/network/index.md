@@ -3,9 +3,12 @@
 ## Mainnet
 
 * **RPC URLs:**
-   * https://rpc.layeredge.io
+   * https://layeredge-mainnet-evm.itrocket.net
    * https://layeredge.rpc.subquery.network/public
-   * https://layeredge-mainnet-rpc.itrocket.net
+   * https://rpc.layeredge.io
+   * https://rpc2.layeredge.io
+   * https://rpc.layeredge.foundation
+   * https://rpc2.layeredge.foundation
 
 * **Chain ID:** 4207
 

@@ -4,14 +4,14 @@ The following API's are recommended for development purposes. For maximum contro
 
 ## Clients
 
-The Cosmos EVM supports different clients in order to support Cosmos and Ethereum transactions and queries. You can use Swagger as a REST interface for state queries and transactions:
+The Edgen Chain supports different clients in order to support Cosmos and Ethereum transactions and queries. You can use Swagger as a REST interface for state queries and transactions:
 
 | | Description | Default Port |
 |---|---|---|
-| **Cosmos [gRPC](/docs/evm/api/cosmos-grpc)** | Query or send Cosmos EVM transactions using gRPC | 9090 |
-| **Cosmos REST ([gRPC-Gateway](/docs/evm/api/cosmos-grpc))** | Query or send Cosmos EVM transactions using an HTTP RESTful API | 9091 |
+| **Cosmos [gRPC](/docs/evm/api/cosmos-grpc)** | Query or send Edgen Chain transactions using gRPC | 9090 |
+| **Cosmos REST ([gRPC-Gateway](/docs/evm/api/cosmos-grpc))** | Query or send Edgen Chain transactions using an HTTP RESTful API | 9091 |
 | **Ethereum [JSON-RPC](/docs/evm/api/ethereum-json-rpc)** | Query Ethereum-formatted transactions and blocks or send Ethereum txs using JSON-RPC | 8545 |
 | **Ethereum [Websocket](/docs/evm/api/ethereum-json-rpc)** | Subscribe to Ethereum logs and events emitted in smart contracts. | 8586 |
 | **Tendermint RPC** | Query transactions, blocks, consensus state, broadcast transactions, etc. | 26657 |
 | **Tendermint Websocket** | Subscribe to Tendermint ABCI events | 26657 |
-| **Command Line Interface (CLI)** | Query or send Cosmos EVM transactions using your Terminal or Console. | N/A |
+| **Command Line Interface (CLI)** | Query or send Edgen Chain transactions using your Terminal or Console. | N/A |

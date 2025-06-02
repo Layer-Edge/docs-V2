@@ -209,10 +209,9 @@ const FeatureList: FeatureItem[] = [
     Icon: BookIcon,
     description: (
       <>
-        LayerEdge is a decentralized verification network that brings
-        trust-minimized computation to Bitcoin by aggregating and verifying
-        zk-proofs from external systems—enabling high-integrity data validation
-        without centralized trust.
+        The Alpha Mainnet of Edgen Chain is live. You can now bridge, swap,
+        claim, and stake $EDGEN on LayerEdge’s modular execution layer —
+        seamlessly connected to edgenOS, our decentralized verifier system.
       </>
     ),
     path: "/docs/guide",

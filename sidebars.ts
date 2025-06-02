@@ -9,10 +9,28 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Using Edgen Chain',
+      label: 'Welcome',
       link: {
         type: 'doc',
         id: 'guide/index',
+      },
+      items: []
+    },
+    {
+      type: 'category',
+      label: 'Using Edgen Chain',
+      link: {
+        type: 'doc',
+        id: 'guide/edgenChain',
+      },
+      items: []
+    },
+    {
+      type: 'category',
+      label: 'Using EdgenOS',
+      link: {
+        type: 'doc',
+        id: 'guide/edgenOS',
       },
       items: []
     },
@@ -40,6 +58,15 @@ const sidebars: SidebarsConfig = {
       link: {
         type: 'doc',
         id: 'guide/staking',
+      },
+      items: []
+    },
+    {
+      type: 'category',
+      label: 'Contracts',
+      link: {
+        type: 'doc',
+        id: 'evm/mainnet',
       },
       items: []
     },
@@ -233,6 +260,15 @@ const sidebars: SidebarsConfig = {
         'evm/api/cosmos-grpc',
         'evm/api/tendermint-rpc',
       ]
+    },
+    {
+      type: 'category',
+      label: 'Contracts',
+      link: {
+        type: 'doc',
+        id: 'evm/mainnet',
+      },
+      items: []
     },
     {
       type: 'category',

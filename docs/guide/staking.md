@@ -1,3 +1,0 @@
-# EDGEN Staking
-
-coming soon...

@@ -12,7 +12,7 @@ Find the Solidity interface in the [cosmos/evm repo](https://github.com/cosmos/)
 
 ### `approve`
 
-Approves a list of Cosmos or IBC transactions with a specific amount of tokens
+Approves a list of Edgen Chain or IBC transactions with a specific amount of tokens
 
 ```solidity
 function approve(
@@ -24,7 +24,7 @@ function approve(
 
 ### `revoke`
 
-Revokes authorizations of Cosmos transactions.
+Revokes authorizations of Edgen Chain transactions.
 
 ```solidity
 function revoke(

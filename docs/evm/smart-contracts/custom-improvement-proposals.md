@@ -1,6 +1,6 @@
 # Custom Improvement Proposals
 
-With the release v19.0.0 a new feature called custom improvement proposals has been introduced in the Cosmos EVM framework. Custom improvement proposals allow protocol developers to modify the behavior of the EVM opcodes to tailor their functionalities to the specific needs.
+With the release v19.0.0 a new feature called custom improvement proposals has been introduced in the Edgen Chain framework. Custom improvement proposals allow protocol developers to modify the behavior of the EVM opcodes to tailor their functionalities to the specific needs.
 
 ## Operations
 
@@ -15,17 +15,17 @@ Each opcode is defined by specifying the logic that has to be executed when it i
 - **SetMaxStack**: update the maximum number of items that will be in the stack after executing the operation.
 - **SetMemorySize**: the memory size required by the operation.
 
-Within the Cosmos EVM framework, developers can modify any of the previous properties.
+Within the Edgen Chain framework, developers can modify any of the previous properties.
 
 ## Improvement Proposals
 
-Improvement proposals are the approach used by Cosmos EVM and Ethereum to modify the behavior of opcodes. They are composed of a function, which has access to the jump table to apply specific changes to operation behavior, and a name.
+Improvement proposals are the approach used by Edgen Chain and Ethereum to modify the behavior of opcodes. They are composed of a function, which has access to the jump table to apply specific changes to operation behavior, and a name.
 
 In the context of Ethereum, these protocol changes are named Ethereum Improvement Proposals (EIPs) and are identified by a unique ID. For example, [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) is used to introduce the base fee.
 
-To allow any Cosmos EVM user to define their own specific improvements without overlapping with Cosmos EVM and Ethereum ones, each proposal is identified by a string, that is composed of the chain name and a number. For example, default Cosmos EVM improvements are associated with the string evmos_XXXX. This allows each chain to define their improvements without having to worry about existing or future ID clashes between different chains. Additionally, the ability to start enumeration at 0 is better for chain developers and allows having a better overview of the historical progress for each chain.
+To allow any Edgen Chain user to define their own specific improvements without overlapping with Edgen Chain and Ethereum ones, each proposal is identified by a string, that is composed of the chain name and a number. For example, default Edgen Chain improvements are associated with the string evmos_XXXX. This allows each chain to define their improvements without having to worry about existing or future ID clashes between different chains. Additionally, the ability to start enumeration at 0 is better for chain developers and allows having a better overview of the historical progress for each chain.
 
-Below, you will find an example of how the Cosmos EVM chain uses this functionality to modify the behavior of the CREATE and CREATE2 opcodes. First, the modifier function has to be defined:
+Below, you will find an example of how the Edgen Chain chain uses this functionality to modify the behavior of the CREATE and CREATE2 opcodes. First, the modifier function has to be defined:
 
 ```go
 // Enable0000 contains the logic to modify the CREATE and CREATE2 opcodes
@@ -60,4 +60,4 @@ This approach gives developers the ability to react to security issues or market
 
 ## Additional Resources
 
-Cosmos EVM Custom EIPs: please refer to this document for a detailed description of how opcodes and custom improvement proposals have to be used in the Cosmos EVM framework.
+Edgen Chain Custom EIPs: please refer to this document for a detailed description of how opcodes and custom improvement proposals have to be used in the Edgen Chain framework.
