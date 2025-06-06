@@ -422,8 +422,9 @@ The sign method calculates an Ethereum specific signature with: sign(keccak256("
 
 By adding a prefix to the message makes the calculated signature recognizable as an Ethereum specific signature. This prevents misuse where a malicious DApp can sign arbitrary data (e.g. transaction) and use the signature to impersonate the victim.
 
-> **⚠️ DANGER**  
-> The address to sign with must be unlocked.
+:::danger
+The address to sign with must be unlocked.
+:::
 
 **Parameters**
 - Account Address
@@ -775,8 +776,9 @@ Unsubscribe from an event using the subscription id
 
 ## personal_importRawKey
 
-> **💡 TIP**  
-> Private: Requires authentication.
+:::tip
+Private: Requires authentication.
+:::
 
 Imports the given unencrypted private key (hex encoded string) into the key store, encrypting it with the passphrase.
 
@@ -799,8 +801,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_importRawKey","params":
 
 ## personal_listAccounts
 
-> **💡 TIP**  
-> Private: Requires authentication.
+:::tip
+Private: Requires authentication.
+:::
 
 Returns a list of addresses for accounts this node manages.
 
@@ -814,8 +817,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_listAccounts","params":
 
 ## personal_lockAccount
 
-> **💡 TIP**  
-> Private: Requires authentication.
+:::tip
+Private: Requires authentication.
+:::
 
 Removes the private key with given address from memory. The account can no longer be used to send transactions.
 
@@ -832,8 +836,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_lockAccount","params":[
 
 ## personal_newAccount
 
-> **💡 TIP**  
-> Private: Requires authentication.
+:::tip
+Private: Requires authentication.
+:::
 
 Generates a new private key and stores it in the key store directory. The key file is encrypted with the given passphrase. It returns the address of the new account.
 
@@ -850,8 +855,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_newAccount","params":["
 
 ## personal_unlockAccount
 
-> **💡 TIP**  
-> Private: Requires authentication.
+:::tip
+Private: Requires authentication.
+:::
 
 Decrypts the key with the given address from the key store.
 
@@ -874,15 +880,17 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_unlockAccount","params"
 
 ## personal_sendTransaction
 
-> **💡 TIP**  
-> Private: Requires authentication.
+:::tip
+Private: Requires authentication.
+:::
 
 Validate the given passphrase and submit transaction.
 
 The transaction is the same argument as for eth_sendTransaction and contains the from address. If the passphrase can be used to decrypt the private key belonging to tx.from the transaction is verified, signed and send onto the network.
 
-> **⚠️ DANGER**  
-> The account is not unlocked globally in the node and cannot be used in other RPC calls.
+:::danger
+The account is not unlocked globally in the node and cannot be used in other RPC calls.
+:::
 
 **Parameters**
 
@@ -903,8 +911,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_sendTransaction","param
 
 ## personal_sign
 
-> **💡 TIP**  
-> Private: Requires authentication.
+:::tip
+Private: Requires authentication.
+:::
 
 The sign method calculates an Ethereum specific signature with: sign(keccack256("\x19Ethereum Signed Message:\n" + len(message) + message))),
 
@@ -923,8 +932,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_sign","params":["0xdead
 
 ## personal_ecRecover
 
-> **💡 TIP**  
-> Private: Requires authentication.
+:::tip
+Private: Requires authentication.
+:::
 
 ecRecover returns the address associated with the private key that was used to calculate the signature in personal_sign.
 
@@ -942,8 +952,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_ecRecover","params":["0
 
 ## personal_initializeWallet
 
-> **💡 TIP**  
-> Private: Requires authentication.
+:::tip
+Private: Requires authentication.
+:::
 
 Initializes a new wallet at the provided URL, by generating and returning a new private key.
 
@@ -974,8 +985,9 @@ personal.initializeWallet(url);
 
 ## personal_unpair
 
-> **💡 TIP**  
-> Private: Requires authentication.
+:::tip 
+Private: Requires authentication.
+:::
 
 Unpair deletes a pairing between wallet and the node.
 
@@ -1036,13 +1048,15 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"debug_traceBlockByNumber","param
 
 ## miner_getHashrate
 
-> **💡 TIP**  
-> Private: Requires authentication.
+:::tip
+Private: Requires authentication.
+:::
 
 Get the hashrate in H/s (Hash operations per second).
 
-> **⚠️ DANGER**  
-> Proof-of-Work specific. This endpoint always returns 0.
+:::danger
+Proof-of-Work specific. This endpoint always returns 0.
+:::
 
 ```bash
 // Request
@@ -1054,13 +1068,15 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"miner_setGasPrice","params":[],"
 
 ## miner_setExtra
 
-> **💡 TIP**  
-> Private: Requires authentication.
+:::tip 
+Private: Requires authentication.
+:::
 
 Sets the extra data a validator can include when proposing blocks. This is capped at 32 bytes.
 
-> **⚠️ DANGER**  
-> Unsupported. This endpoint always returns an error
+:::danger
+Unsupported. This endpoint always returns an error
+:::
 
 **Parameters**
 - Data
@@ -1075,8 +1091,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"miner_setExtra","params":["data"
 
 ## miner_setGasPrice
 
-> **💡 TIP**  
-> Private: Requires authentication.
+:::tip 
+Private: Requires authentication.
+:::
 
 Sets the minimal gas price used to accept transactions. Any transaction below this limit is excluded from the validator block proposal process.
 
@@ -1097,13 +1114,15 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"miner_setGasPrice","params":["0x
 
 ## miner_start
 
-> **💡 TIP**  
-> Private: Requires authentication.
+:::tip 
+Private: Requires authentication.
+:::
 
 Start the CPU validation process with the given number of threads.
 
-> **⚠️ DANGER**  
-> Unsupported. This endpoint always returns an error
+:::danger
+Unsupported. This endpoint always returns an error
+:::
 
 **Parameters**
 - Hex Number of threads
@@ -1118,13 +1137,15 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"miner_start","params":["0x1"],"i
 
 ## miner_stop
 
-> **💡 TIP**  
-> Private: Requires authentication.
+:::tip 
+Private: Requires authentication.
+:::
 
 Stop the validation operation.
 
-> **⚠️ DANGER**  
-> Unsupported. This endpoint always performs a no-op.
+:::danger
+Unsupported. This endpoint always performs a no-op.
+:::
 
 ```bash
 // Request
@@ -1133,13 +1154,15 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"miner_stop","params":[],"id":1}'
 
 ## miner_setGasLimit
 
-> **💡 TIP**  
-> Private: Requires authentication.
+:::tip 
+Private: Requires authentication.
+:::
 
 Sets the gas limit the miner will target when mining. Note: on networks where EIP-1559 is activated, this should be set to twice what you want the gas target (i.e. the effective gas used on average per block) to be.
 
-> **⚠️ DANGER**  
-> Unsupported. This endpoint always returns false
+:::danger
+Unsupported. This endpoint always returns false
+:::
 
 **Parameters**
 - Hex gas limit
@@ -1154,8 +1177,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"miner_setGasLimit","params":["0x
 
 ## miner_setEtherbase
 
-> **💡 TIP**  
-> Private: Requires authentication.
+:::tip 
+Private: Requires authentication.
+:::
 
 Sets the etherbase. It changes the wallet where the validator rewards will be deposited.
 

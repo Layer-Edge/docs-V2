@@ -86,8 +86,9 @@ The main events you can subscribe to are:
 - **Tx**: Contains events triggered during DeliverTx (i.e. transaction processing).
 - **ValidatorSetUpdates**: Contains validator set updates for the block.
 
-> **tip**  
-> 👉 The list of events types and values for each Edgen Chain SDK module can be found in the Modules Specification section. Check the Events page to obtain the event list of each supported module in Edgen Chain.
+:::tip
+The list of events types and values for each Edgen Chain SDK module can be found in the Modules Specification section. Check the Events page to obtain the event list of each supported module in Edgen Chain.
+:::
 
 List of all Tendermint event keys:
 
@@ -156,8 +157,9 @@ Example response:
 }
 ```
 
-> **tip**  
-> Note: When querying Ethereum transactions versus Edgen Chain transactions, the transaction hashes are different. When querying Ethereum transactions, users need to use event query. Here's an example with the CLI:
+:::tip
+**Note**: When querying Ethereum transactions versus Edgen Chain transactions, the transaction hashes are different. When querying Ethereum transactions, users need to use event query. Here's an example with the CLI:
+:::
 
 ```bash
 curl -X GET "http://localhost:26657/tx_search?query=ethereum_tx.ethereumTxHash%3D0x8d43464891fac6c113e809e14dff1a3e608eae124d629799e42ca0e36562d9d7&prove=false&page=1&per_page=30&order_by=asc" -H "accept: application/json"

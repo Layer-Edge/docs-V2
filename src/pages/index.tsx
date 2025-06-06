@@ -29,7 +29,7 @@ function HomepageHeader() {
             them every 24 hours to multiple blockchains.
           </p>
           <div className={styles.buttons}>
-            <Link className={clsx(styles.getStartedButton)} to="/docs/intro">
+            <Link className={clsx(styles.getStartedButton)} to="/docs/guide">
               Get Started
             </Link>
           </div>

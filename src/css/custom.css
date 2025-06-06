@@ -179,11 +179,11 @@ table {
 }
 
 [data-theme='light'] th {
-  background-color: #DBE2FA;
+  background-color: rgba(0, 0, 0, 0.03)
 }
 
 [data-theme='dark'] th {
-  background-color: #050917;
+  background-color: rgba(255, 255, 255, 0.07);
 }
 
 [data-theme='light'] td {
