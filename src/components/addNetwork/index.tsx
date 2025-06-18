@@ -23,10 +23,10 @@ declare global {
 
 const LAYEREDGE_NETWORK: NetworkConfig = {
   chainId: "0x106F", // 4207 in decimal
-  chainName: "LayerEdge",
+  chainName: "Edgen Chain",
   nativeCurrency: {
-    name: "LayerEdge",
-    symbol: "ETH",
+    name: "Edgen",
+    symbol: "EDGEN",
     decimals: 18,
   },
   rpcUrls: ["https://rpc.layeredge.io"],
