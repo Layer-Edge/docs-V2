@@ -361,24 +361,6 @@ const sidebars: SidebarsConfig = {
       },
       items: []
     },
-    // {
-    //   type: 'category',
-    //   label: 'USDC',
-    //   link: {
-    //     type: 'doc',
-    //     id: 'tokens/USDC',
-    //   },
-    //   items: []
-    // },
-    // {
-    //   type: 'category',
-    //   label: 'LayerZero Integration',
-    //   link: {
-    //     type: 'doc',
-    //     id: 'tokens/layerzero',
-    //   },
-    //   items: []
-    // },
   ],
 };
 
