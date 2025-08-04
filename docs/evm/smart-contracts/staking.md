@@ -1,6 +1,61 @@
 # Staking
 
-## Solidity Interface & ABI
+
+## LayerEdge Tiered Staking System
+
+The LayerEdgeStaking contract implements a first-come-first-serve tiered system with three tiers offering different APY rates. The system uses two distinct ranking mechanisms:
+
+### Tier Ranking Logic
+
+Tier assignment is determined by the smart contract based on:
+
+1. **Entry Position**: First-come-first-serve basis using `joinId` (position in stakers array)
+2. **Minimum Stake**: Users must stake ≥3,000 EDGEN to be eligible for Tier 1 or 2
+3. **Tier Distribution**:
+   - **Tier 1**: Top 20% of eligible stakers → 50% APY
+   - **Tier 2**: Next 30% of eligible stakers → 35% APY  
+   - **Tier 3**: Remaining 50% + all users with < 3,000 EDGEN → 20% APY
+
+**Key Implementation Details:**
+```solidity
+function _computeTierByRank(uint256 rank, uint256 totalStakers) internal pure returns (Tier) {
+    if (rank == 0 || rank > totalStakers) return Tier.Tier3;
+    (uint256 tier1Count, uint256 tier2Count,) = getTierCountForStakerCount(totalStakers);
+    if (rank <= tier1Count) return Tier.Tier1;
+    else if (rank <= tier1Count + tier2Count) return Tier.Tier2;
+    return Tier.Tier3;
+}
+```
+
+### Individual User Ranking Logic
+
+Individual user ranks within the system are calculated by the indexer for display purposes:
+
+1. **Sorting Criteria**: Users are ranked by `totalStaked` amount in descending order
+2. **Cross-Tier Ranking**: Ranks span across all tiers (Tier 1 users get ranks 1-N, Tier 2 gets N+1-M, etc.)
+3. **Display Purpose**: These ranks are shown on the dashboard but don't affect APY calculations
+4. **Update Frequency**: Rankings are updated periodically by the indexer's `updateRankings` function
+
+
+### APY Calculation with Historical Rates
+
+The system supports dynamic APY changes and calculates rewards based on historical tier membership:
+
+1. **Tier History Tracking**: Each user's tier changes are recorded with timestamps
+2. **APY Period Tracking**: Each tier maintains a history of APY rates with start times
+3. **Proportional Calculation**: Interest is calculated proportionally across different periods
+
+**Interest Calculation Logic:**
+```solidity
+function getTierAPYForPeriod(Tier tier, uint256 startTime, uint256 endTime) 
+    public view returns (uint256) {
+    // Returns weighted average APY for the tier during the specified period
+    // Handles multiple APY changes within the calculation window
+}
+```
+
+
+### Solidity Interface & ABI
 
 Staking.sol is an interface through which Solidity contracts can interact with Edgen Chain SDK staking. This is convenient for developers as they don't need to know the implementation details behind the x/staking module in the Edgen Chain SDK. Instead, they can interact with staking functions using the Ethereum interface they are familiar with.
 
